@@ -1,0 +1,276 @@
+@import "@/styles/abstracts/variables";
+@import "@/styles/abstracts/mixins";
+
+.navigation {
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+
+    a {
+        text-decoration: none;
+        color: $primary-white;
+    }
+
+    &__menu {
+        display: none;
+    }
+
+    &__mobile {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        &__checkbox {
+            display: none;
+        }
+
+        &__button {
+            background-color: $primary-white;
+            height: 4rem;
+            width: 4rem;
+            position: fixed;
+            top: 6rem;
+            right: 6rem;
+            border-radius: 50%;
+            z-index: 2000;
+            box-shadow: 0 1rem 3rem rgba($primary-black, .1);
+            text-align: center;
+            cursor: pointer;
+
+            @include respond(phone) {
+                top: 1rem;
+                right: 1rem;
+            }
+        }
+
+        &__background {
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            position: fixed;
+            top: 6.5rem;
+            right: 6.5rem;
+            background-image: radial-gradient($logo-light-green, $primary-white);
+            z-index: 1;
+            transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+
+            @include respond(phone) {
+                top: 1rem;
+                right: 1.5rem;
+            }
+        }
+
+        &__nav {
+            max-height: 100vh;
+            height: 300vh;
+            position: fixed;
+            max-width: 100vh;
+            overflow: scroll;
+            overflow-x: hidden;
+            bottom: 0;
+            left: 0;
+            z-index: 1500;
+
+            opacity: 0;
+            width: 0;
+            transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        &__list {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            list-style: none;
+            text-align: center;
+            width: 100%;
+        }
+
+        &__link {
+            border: 1px solid $logo-blue;
+            margin: 1rem;
+            border-radius: 25px;
+            width: calc(100% - 2rem);
+            box-shadow: 0 1rem 3rem rgba($primary-black, .1);
+            
+            &:link,
+            &:visited {
+                display: inline-block;
+                font-size: 2rem;
+                font-weight: 300;
+                padding: 1rem 2rem;
+                color: $primary-white;
+                text-decoration: none;
+                text-transform: uppercase;
+                background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $logo-blue 50%);
+                background-size: 220%;
+                transition: all .4s;
+
+                span {
+                    margin-right: 1.5rem;
+                    display: inline-block;
+                }
+            }
+            
+            &:hover,
+            &:active {
+                background-position: 100%;
+                transform: translateX(1rem);
+            }
+        }
+
+        &__checkbox:checked ~ &__background {
+            transform: scale(80);
+        }
+
+        &__checkbox:checked ~ &__nav {
+            opacity: 1;
+            width: 100%;
+        }
+
+        &__icon {
+            position: relative;
+            margin-top: 2rem;
+
+            &,
+            &::before,
+            &::after {
+                width: 1.5rem;
+                height: 2px;
+                background-color: $primary-black;
+                display: inline-block;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition: all .2s;
+            }
+
+            &::before { top: -.8rem; }
+            &::after { top: .8rem; }
+        }
+
+        &__button:hover &__icon::before {
+            top: -1rem;
+        }
+
+        &__button:hover &__icon::after {
+            top: 1rem;
+        }
+
+        &__checkbox:checked + &__button &__icon {
+            background-color: transparent;
+        }
+
+        &__checkbox:checked + &__button &__icon::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        &__checkbox:checked + &__button &__icon::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+}
+
+
+
+
+@media (min-width: 600px) {
+    .navigation {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        padding-top: 0;
+        cursor: pointer;
+
+        &__mobile {
+            display: none;
+        }
+
+        img {
+        height: 20rem;
+        max-height: 20rem;
+        margin-left: -2rem;
+        }
+
+        &__menu {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+
+            &__item {
+                @include navItem;
+                
+                a {
+                    display: inline-grid;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                &:first-child { border-radius: 25px 0 0 25px; }
+                &:first-child:hover { border-radius: 25px 0 0 0; }
+                &:last-child { border-radius: 0 25px 25px 0; }
+            }
+
+            &__dropdown {
+                display: none;
+                position: absolute;
+                top: calc(5rem - 4px);
+                left: -2px;
+                width: calc(100% + 2px);
+
+                &__item {
+                    @include navItem;
+                    height: 5rem;
+                    border-bottom: none;
+
+                    &:last-child { 
+                        border-bottom: 2px solid $logo-blue;
+                        border-radius: 0 0 25px 25px;
+                    }
+                }
+            }
+
+            a:hover + &__dropdown, &__dropdown:hover {
+                display: block;
+            }
+
+            &__horizontalDropdown {
+                display: none;
+                position: absolute;
+                top: -2px;
+                left: calc(100% + 1px);
+                width: 100%;
+
+                &__item {
+                    @include navItem;
+                    height: 5rem;
+                    border-bottom: none;
+
+                    &:first-child {
+                        border-radius: 0 25px 0 0;
+                    }
+
+                    &:last-child { 
+                        border-bottom: 2px solid $logo-blue;
+                        border-radius: 0 0 25px 25px;
+                    }
+                }
+            
+            }
+
+            a:hover + &__horizontalDropdown, &__horizontalDropdown:hover {
+                display: block;
+            }
+        }
+    }
+}
