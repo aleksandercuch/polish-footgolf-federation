@@ -3,7 +3,11 @@ import Link from 'next/link';
 import classes from './main-navigation.module.scss';
 import logo from '@/assets/logo.jpg';
 
+import { useTranslation } from 'react-i18next';
+
 export const MainNavigation = () => {
+    const { t } = useTranslation();
+
     return (
         <div className={classes.navigation}>
             <div>
@@ -20,102 +24,102 @@ export const MainNavigation = () => {
 
                 <nav className={classes.navigation__mobile__nav}>
                     <ul className={classes.navigation__mobile__list}>
-                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>Historia 1</Link></li>
-                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>Historia 2</Link></li>
-                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>Zarząd</Link></li>
-                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>Statut</Link></li>
-                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>Liga Footgolfa 2023</Link></li>
-                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>Polish Open 2023</Link></li>
-                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>Fifa world cup 2023</Link></li>
-                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>Profile Zawodników</Link></li>
-                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>Zapisy Fifa</Link></li>
-                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>Regulaminy</Link></li>
-                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>Logowanie</Link></li>
+                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("navHistoryBarFirst")}</Link></li>
+                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("navHistoryBarSecond")}</Link></li>
+                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("management")}</Link></li>
+                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("statue")}</Link></li>
+                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("postolowoLeauge")}</Link></li>
+                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("polishOpen")}</Link></li>
+                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("fifaWorldCup")}</Link></li>
+                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("playerProfiles")}</Link></li>
+                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("recordsFifa")}</Link></li>
+                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("regulations")}</Link></li>
+                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("login")}</Link></li>
 
                         </ul>
                 </nav>
             </div>
             <div className={classes.navigation__menu}>
                 <div className={classes.navigation__menu__item}>
-                    <a>Federacja</a>
+                    <a>{t("federation")}</a>
                     <div className={classes.navigation__menu__dropdown}>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <a>Historia</a>
+                            <a>{t("history")}</a>
                             <div className={classes.navigation__menu__horizontalDropdown}>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">Item 1</Link>
+                                    <Link href="#">{t('navHistoryBarFirst')}</Link>
                                 </div>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">Item 2</Link>
+                                    <Link href="#">{t('navHistoryBarSecond')}</Link>
                                 </div>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">Item 3</Link>
+                                    <Link href="#">{t('navHistoryBarThird')}</Link>
                                 </div>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">Item 4</Link>
+                                    <Link href="#">{t('navHistoryBarFourth')}</Link>
                                 </div>
                             </div>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href="#">Zarząd</Link>
+                            <Link href="#">{t('management')}</Link>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href="#">Statut</Link>
+                            <Link href="#">{t("statue")}</Link>
                         </div>
                     </div>
                 </div>
                 <div className={classes.navigation__menu__item}>
-                    <a>Rozgrywki</a>
+                    <a>{t("games")}</a>
                     <div className={classes.navigation__menu__dropdown}>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <a>Liga Postołowo 2023</a>
+                            <a>{t("postolowoLeauge")}</a>
                             <div className={classes.navigation__menu__horizontalDropdown}>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">Item 1</Link>
+                                    <Link href="#">{t("leaugeItemOne")}</Link>
                                 </div>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">Item 2</Link>
+                                    <Link href="#">{t("leaugeItemTwo")}</Link>
                                 </div>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">Item 3</Link>
+                                    <Link href="#">{t("leaugeItemThree")}</Link>
                                 </div>
                             </div>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href="#">Polish Open 2023</Link>
+                            <Link href="#">{t("polishOpen")}</Link>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href="#">Fifa world Cup 2023</Link>
+                            <Link href="#">{t("fifaWorldCup")}</Link>
                         </div>
                     </div>
                 </div>
                 <div className={classes.navigation__menu__item}>
-                    <a>Kadra</a>
+                    <a>{t("cadre")}</a>
                     <div className={classes.navigation__menu__dropdown}>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href="#">Profile Zawodników</Link>
+                            <Link href="#">{t("playerProfiles")}</Link>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href="#">Lista</Link>
+                            <Link href="#">{t("list")}</Link>
                         </div>
                     </div>
                 </div>
                 <div className={classes.navigation__menu__item}>
-                    <a>Zapisy i Regulamin</a>
+                    <a>{t("recordsAndRegulations")}</a>
                     <div className={classes.navigation__menu__dropdown}>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href="#">Zapisz FIFA</Link>
+                            <Link href="#">{t("recordsFifa")}</Link>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href="#">Regulamin Ligi 2023</Link>
+                            <Link href="#">{t("regulationsLeauge")}</Link>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href="#">Regulamin Polish Open 2023</Link>
+                            <Link href="#">{t("regulationsPolishOpen")}</Link>
                         </div>
                     </div>
                 </div>
                 <div className={classes.navigation__menu__item}>
-                    <Link href="#">Logowanie</Link>
+                    <Link href="#">{t("login")}</Link>
                 </div>
             </div>
         </div>

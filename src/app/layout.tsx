@@ -1,9 +1,13 @@
+'use client';
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import { MainNavigation } from '@/components/layout/main-navigation'
 
 import './globals.scss'
+
+import './i18n'
 
 const inter = Inter({ subsets: ['latin'] })
 
