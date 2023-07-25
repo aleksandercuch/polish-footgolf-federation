@@ -5,7 +5,18 @@ $logo-light-green: #7ac53c;
 
 $primary-white: #FFFFFF;
 $primary-black: #000000;
+$primary-silver: #aaa1a1;
+
+$dark-blue: #316997;
+
+// GRADIENTS
+$gradient-light-dark-blue: linear-gradient($logo-blue, $dark-blue);
+$gradient-light-dark-green: linear-gradient($logo-light-green, $logo-green);
 
 // FONT
 $default-font-size: 1.6rem;
 
+// WIDTH
+
+$management-border-width: 1rem;
+$management-image-max-wdith: 24rem;

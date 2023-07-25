@@ -1,0 +1,79 @@
+@import "@/styles/abstracts/variables";
+
+.header {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.member {  
+    margin-bottom: 5rem;
+    background-image: $gradient-light-dark-blue;
+    box-shadow: 0 1rem 3rem rgba($primary-black, .1);
+    border-radius: 25px;
+    color: $primary-white;
+
+    p {
+        text-align: justify;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    &:nth-child(even) &__shape {
+        float: right;
+        margin: -1rem -1rem 0 1rem;
+
+        &__img {
+            border-radius: 0 25px 0 25px;
+            background: $gradient-light-dark-green;
+            padding: 1rem 1rem  0 0;
+        }    
+    }
+
+    &:nth-child(odd) &__shape {
+        float: left;
+        margin: -1rem 1rem 0 -1rem;
+        
+        &__img {
+            border-radius: 25px 0 25px 0;
+            background: $gradient-light-dark-green;
+            padding: 1rem 0  0 1rem;
+        }
+    }
+
+    &__shape {
+      position: relative;
+      
+        &__img {
+            backface-visibility: hidden;
+            transition: all .5s;
+            width: 100%;
+            max-width: $management-image-max-wdith;
+            height: auto;
+        }
+
+        &__caption {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            max-width: $management-image-max-wdith;
+            width: 100%;
+            color: $primary-white;
+            text-transform: uppercase;
+            font-size: 1.7rem;
+            text-align: center;
+           opacity: 0;
+            transition: all .5s;
+            backface-visibility: hidden;
+        }
+
+        &:hover &__caption {
+            opacity: 1;
+            bottom: 50%;
+        }
+    
+        &:hover &__img {
+            filter: blur(3px) brightness(90%);
+        }
+    }
+}
