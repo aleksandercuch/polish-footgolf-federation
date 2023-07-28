@@ -1,10 +1,9 @@
 @import "@/styles/abstracts/variables";
 
 @mixin navItem {
-    background-image: linear-gradient($logo-light-green, $logo-green);
+    background-image: $gradient-light-dark-green;
     border: 2px solid $logo-blue;
     position: relative;
-    max-width: 20rem;
     width: 100%;
     color: $primary-white;
     min-height: 5rem;
