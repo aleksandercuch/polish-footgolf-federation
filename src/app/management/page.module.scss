@@ -8,10 +8,9 @@
 
 .member {  
     margin-bottom: 5rem;
-    background-image: $gradient-light-dark-blue;
+    background-image: $gradient-white-silver;
     box-shadow: 0 1rem 3rem rgba($primary-black, .1);
     border-radius: 25px;
-    color: $primary-white;
 
     p {
         text-align: justify;
@@ -25,7 +24,7 @@
 
         &__img {
             border-radius: 0 25px 0 25px;
-            background: $gradient-light-dark-green;
+            background: $gradient-light-dark-blue;
             padding: 1rem 1rem  0 0;
         }    
     }

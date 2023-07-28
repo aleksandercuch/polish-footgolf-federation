@@ -25,8 +25,8 @@ export const MainNavigation = () => {
                 <nav className={classes.navigation__mobile__nav}>
                     <ul className={classes.navigation__mobile__list}>
                         <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("NAV.homePage")}</Link></li>
-                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("NAV.historyBarFirst")}</Link></li>
-                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("NAV.historyBarSecond")}</Link></li>
+                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("NAV.trophies")}</Link></li>
+                        <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("NAV.pastChampions")}</Link></li>
                         <li className={classes.navigation__mobile__item}><Link href="/management" className={classes.navigation__mobile__link}>{t("NAV.management")}</Link></li>
                         <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("NAV.statue")}</Link></li>
                         <li className={classes.navigation__mobile__item}><Link href="#" className={classes.navigation__mobile__link}>{t("NAV.postolowoLeauge")}</Link></li>
@@ -51,16 +51,10 @@ export const MainNavigation = () => {
                             <a>{t("NAV.history")}</a>
                             <div className={classes.navigation__menu__horizontalDropdown}>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">{t('NAV.historyBarFirst')}</Link>
+                                    <Link href="#">{t('NAV.trophies')}</Link>
                                 </div>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">{t('NAV.historyBarSecond')}</Link>
-                                </div>
-                                <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">{t('NAV.historyBarThird')}</Link>
-                                </div>
-                                <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">{t('NAV.historyBarFourth')}</Link>
+                                    <Link href="#">{t('NAV.pastChampions')}</Link>
                                 </div>
                             </div>
                         </div>
@@ -79,13 +73,13 @@ export const MainNavigation = () => {
                             <a>{t("NAV.postolowoLeauge")}</a>
                             <div className={classes.navigation__menu__horizontalDropdown}>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">{t("NAV.leaugeItemOne")}</Link>
+                                    <Link href="#">{t("NAV.createGame")}</Link>
                                 </div>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">{t("NAV.leaugeItemTwo")}</Link>
+                                    <Link href="#">{t("NAV.presentTables")}</Link>
                                 </div>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href="#">{t("NAV.leaugeItemThree")}</Link>
+                                    <Link href="#">{t("NAV.roundsChampions")}</Link>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +117,13 @@ export const MainNavigation = () => {
                     </div>
                 </div>
                 <div className={classes.navigation__menu__item}>
-                    <Link href="#">{t("NAV.login")}</Link>
+                    <Link href="#">{t("NAV.gallery")}</Link>
+                </div>
+                <div className={classes.navigation__menu__item}>
+                    <Link href="#">{t("NAV.contact")}</Link>
+                </div>
+                <div className={classes.navigation__menu__item}>
+                    <Link href="#">{t("NAV.polishFields")}</Link>
                 </div>
             </div>
         </div>
