@@ -119,7 +119,7 @@ export const MainNavigation = () => {
                     <Link href="#">{t("NAV.gallery")}</Link>
                 </div>
                 <div className={classes.navigation__menu__item}>
-                    <Link href="#">{t("NAV.contact")}</Link>
+                    <Link href="/contact">{t("NAV.contact")}</Link>
                 </div>
                 <div className={classes.navigation__menu__item}>
                     <Link href="#">{t("NAV.polishFields")}</Link>

@@ -1,15 +1,9 @@
 @import "@/styles/abstracts/variables";
 
-.header {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 3rem;
-}
-
 .member {  
     margin-bottom: 5rem;
     background-image: $gradient-white-silver;
-    box-shadow: 0 1rem 3rem rgba($primary-black, .1);
+    box-shadow: 0 1rem 3rem rgba($primary-black, .5);
     border-radius: 25px;
     text-align: center;
 

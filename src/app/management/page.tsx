@@ -1,12 +1,13 @@
 import { FC } from 'react';
 import styles from './page.module.scss'
+import { PageHeader } from '@/components/reusable/page-title/page-title';
 
 interface pageProps {}
 
 const page: FC<pageProps> =({}) => {
     return (
         <>
-            <h1 className={styles.header}>Zarząd PFFG</h1>
+            <PageHeader header={"Zarząd PFFG"} />
             <div>
                 <div className={styles.member}>
                     <div className={styles.member__shape}>

@@ -206,6 +206,7 @@
 
             &__item {
                 @include navItem;
+                box-shadow: 0 1rem 3rem rgba($primary-black, .2);
                 
                 a {
                     display: inline-grid;
