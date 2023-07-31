@@ -5,7 +5,7 @@ interface pageProps {}
 
 const page: FC<pageProps> =({}) => {
     return (
-        <div className={styles.management}>
+        <>
             <h1 className={styles.header}>Zarząd PFFG</h1>
             <div>
                 <div className={styles.member}>
@@ -100,24 +100,24 @@ const page: FC<pageProps> =({}) => {
                         efficient ways. Apart from GeeksforGeeks, he has
                         worked with DE Shaw and Co. as a software developer
                         and JIIT Noida as an assistant professor. It is a
-                    good platform to learn programming. It is an
-                    educational website. Prepare for the Recruitment
-                    drive of product based companies like Microsoft,
-                    Amazon, Adobe etc with a free online placement
-                    preparation course. An IIT Roorkee alumnus and founder of GeeksforGeeks.
-                    He loves to solve programming problems in most
-                    efficient ways. Apart from GeeksforGeeks, he has
-                    worked with DE Shaw and Co. as a software developer
-                    and JIIT Noida as an assistant professor. It is a
-                    good platform to learn programming. It is an
-                    educational website. Prepare for the Recruitment
-                    drive of product based companies like Microsoft,
-                    Amazon, Adobe etc with a free online placement
-                    preparation course.
-                </p>
+                        good platform to learn programming. It is an
+                        educational website. Prepare for the Recruitment
+                        drive of product based companies like Microsoft,
+                        Amazon, Adobe etc with a free online placement
+                        preparation course. An IIT Roorkee alumnus and founder of GeeksforGeeks.
+                        He loves to solve programming problems in most
+                        efficient ways. Apart from GeeksforGeeks, he has
+                        worked with DE Shaw and Co. as a software developer
+                        and JIIT Noida as an assistant professor. It is a
+                        good platform to learn programming. It is an
+                        educational website. Prepare for the Recruitment
+                        drive of product based companies like Microsoft,
+                        Amazon, Adobe etc with a free online placement
+                        preparation course.
+                    </p>
+                </div>
             </div>
-        </div>
-        </div>
+        </>
     )
 }
 
