@@ -3,7 +3,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-import { MainNavigation } from '@/components/layout/main-navigation'
+import { MainNavigation } from '@/components/layout/main-navigation/main-navigation'
 
 import './globals.scss'
 
