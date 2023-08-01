@@ -1,4 +1,5 @@
 @import "@/styles/abstracts/variables";
+@import "@/styles/abstracts/animations";
 
 .wrapper {
     border-radius: 25px;
@@ -7,25 +8,32 @@
         width: 100%;
         height: -webkit-fill-available;
     }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
     .gridContainer {
         display: grid;
-        grid-template-columns: repeat(3, minmax(1rem, 0.5fr));
-        grid-template-rows: repeat(3, minmax(1rem, 0.5fr));
+        grid-template-rows: repeat(3, minmax(1rem, 1fr));
         grid-gap: 0.25rem;
         box-shadow: 0 1rem 3rem rgba($primary-black, .5);
 
         //TODO: change if google maps desired
         &__gridImage {
-            grid-row-start: 1;
-            grid-row-end: 3;
-            grid-column-start: 1;
-            grid-column-end: 4;
-
             img {
                 max-height: 45rem;
                 object-fit: cover;
                 object-position: 50% 10%;
             }
+        }
+
+        &__gridMap {
+            display: none;
         }
 
         &__gridItem {
@@ -45,10 +53,54 @@
                     color: $logo-green; 
                 }
             }
+
+            &__button {
+                max-width: 15vh;
+                font-size: 1.2rem;
+                height: 4rem;
+                border-radius: 25px;
+                border: 2px solid $logo-blue;
+                background: $gradient-light-dark-green;
+                color: $primary-white;
+
+                &:hover {
+                    background: $logo-light-green;
+                }
+            
+                &:focus {
+                    outline: none;
+                    animation: pulsate 1s infinite;
+                    background: $logo-light-green;
+                }
+
+            }
         }
 
         &__gridItem:last-child {
             background: $gradient-white-silver;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .wrapper {
+        .gridContainer {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(1rem, 0.5fr));
+            grid-template-rows: repeat(3, minmax(1rem, 0.5fr));
+            grid-gap: 0.25rem;
+            box-shadow: 0 1rem 3rem rgba($primary-black, .5);
+
+            &__gridImage {
+                grid-row-start: 1;
+                grid-row-end: 3;
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            &__gridMap {
+                display: inline-flex;
+            }
         }
     }
 }

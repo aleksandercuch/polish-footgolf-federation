@@ -217,6 +217,10 @@
 
                 &:first-child { border-radius: 25px 0 0 25px; }
                 &:last-child { border-radius: 0 25px 25px 0; }
+
+                &:hover {
+                    background: $logo-light-green;
+                }
             }
 
             &__dropdown {
@@ -231,10 +235,14 @@
                     @include navItem;
                     height: 5rem;
                     border-bottom: none;
-
+                    
                     &:last-child { 
                         border-bottom: 2px solid $logo-blue;
                         border-radius: 0 0 25px 25px;
+                    }
+
+                    &:hover {
+                        background: $logo-light-green;
                     }
                 }
             }
@@ -263,8 +271,11 @@
                         border-bottom: 2px solid $logo-blue;
                         border-radius: 0 0 25px 25px;
                     }
+
+                    &:hover {
+                        background: $logo-light-green;
+                    }
                 }
-            
             }
 
             a:hover + &__horizontalDropdown, &__horizontalDropdown:hover {
