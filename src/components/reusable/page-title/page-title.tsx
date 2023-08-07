@@ -1,4 +1,5 @@
-import styles from './page.title.module.scss'
+// ASSETS
+import classes from './page-title.module.scss';
 
 interface Iprops {
     header: string;
@@ -6,6 +7,6 @@ interface Iprops {
 
 export const PageHeader = (props: Iprops) => {
     return (
-        <h1 className={styles.header}>{props.header}</h1>
+        <h1 className={classes.header}>{props.header}</h1>
     )
 }

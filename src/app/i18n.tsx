@@ -37,6 +37,13 @@ i18next
                         contact: "Kontakt",
                         polishFields: "Footgolf w Polsce",
                         login: "Logowanie",
+                    },
+                    AUTH: {
+                        login: "Logowanie",
+                        registration: "Rejestracja",
+                        userName: "Nazwa użytkownika",
+                        email: "Email",
+                        password: "Hasło",
                     }
                 }
             },
@@ -68,6 +75,13 @@ i18next
                         contact: "Contact",
                         polishFields: "Polish Footgolf",
                         login: "Login"
+                    },
+                    AUTH: {
+                        login: "Login",
+                        registration: "Sign up",
+                        userName: "User name",
+                        email: "Email",
+                        password: "Password",
                     }
                 }
             }
