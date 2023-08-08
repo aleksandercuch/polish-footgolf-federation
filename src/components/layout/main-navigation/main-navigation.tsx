@@ -62,7 +62,7 @@ export const MainNavigation = () => {
                             <Link href="/management">{t('NAV.management')}</Link>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href="#">{t("NAV.statue")}</Link>
+                            <Link href="/statue">{t("NAV.statue")}</Link>
                         </div>
                     </div>
                 </div>

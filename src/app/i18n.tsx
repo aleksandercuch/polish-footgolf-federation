@@ -44,7 +44,7 @@ i18next
                         userName: "Nazwa użytkownika",
                         email: "Email",
                         password: "Hasło",
-                    }
+                    },
                 }
             },
             en: {
