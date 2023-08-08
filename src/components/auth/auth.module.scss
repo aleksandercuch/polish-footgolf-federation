@@ -37,7 +37,7 @@
     &__input {
         width: 60%;
         height: 3rem;
-        background: $gradient-white-silver;
+        background: $primary-white;
         justify-content: center;
         display: flex;
         margin: 2.5rem auto;
@@ -49,7 +49,7 @@
         
     &__login {
         height: 460px;
-        background: #eee;
+        background: $gradient-white-silver;
         border-radius: 60% / 10%;
         transform: translateY(-180px);
         transition: .8s ease-in-out;
