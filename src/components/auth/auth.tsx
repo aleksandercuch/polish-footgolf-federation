@@ -13,7 +13,7 @@ export const Auth = () => {
 
     return (
         <>
-        <div className={classes.auth}>  	
+            <div className={classes.auth}>  	
                 <input type="checkbox" id="chk" className={classes.auth__checkbox} aria-hidden="true" />
                     <div className={classes.auth__signup}>
                         <form className={classes.auth__form}>
