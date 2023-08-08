@@ -1,5 +1,4 @@
 @import "@/styles/abstracts/variables";
-@import "@/styles/abstracts/animations";
 
 .wrapper {
     border-radius: 25px;
@@ -54,25 +53,6 @@
                 }
             }
 
-            &__button {
-                max-width: 15vh;
-                font-size: 1.2rem;
-                height: 4rem;
-                border-radius: 25px;
-                border: 2px solid $logo-blue;
-                background: $gradient-light-dark-green;
-                color: $primary-white;
-
-                &:hover {
-                    background: $logo-light-green;
-                }
-            
-                &:focus {
-                    outline: none;
-                    animation: pulsate 1s infinite;
-                    background: $logo-light-green;
-                }
-            }
         }
 
         &__gridItem:last-child {

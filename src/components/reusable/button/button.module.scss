@@ -1,0 +1,26 @@
+@import "@/styles/abstracts/variables";
+@import "@/styles/abstracts/animations";
+
+.button {
+    width: 60%;
+    height: 40px;
+    justify-content: center;
+    display: block;
+    color: $primary-white;
+    background: $gradient-light-dark-green;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+
+    &:hover {
+        background: $logo-light-green;
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+        background: $logo-light-green;
+    }
+}

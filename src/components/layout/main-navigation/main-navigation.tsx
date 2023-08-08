@@ -1,9 +1,10 @@
+// CORE
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
+// ASSETS
 import classes from './main-navigation.module.scss';
 import logo from '@/assets/logo.jpg';
-
-import { useTranslation } from 'react-i18next';
 
 export const MainNavigation = () => {
     const { t } = useTranslation();
