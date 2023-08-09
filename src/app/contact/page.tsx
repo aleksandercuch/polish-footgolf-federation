@@ -1,15 +1,15 @@
-// CORE
+'use client';
 
+// CORE
 import { FC } from 'react';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 // COMPONENTS
-
 import { PageHeader } from '@/components/reusable/page-title/page-title';
 import { Button } from '@/components/reusable/button/button';
 
 // ASSETS
-
 import  * as PhoneIcon from '@/assets/svg/phone.svg';
 import  * as MarkerIcon from '@/assets/svg/map-marker.svg';
 import  * as EmailIcon from '@/assets/svg/email.svg';
@@ -18,9 +18,11 @@ import classes from './page.module.scss'
 interface pageProps {}
 
 const page: FC<pageProps> =({}) => {
+    const { t } = useTranslation();
+
     return (
         <>
-            <PageHeader header={"Kontakt z PFFG"} />
+            <PageHeader header={t("NAV.contact")} />
             <div className={classes.wrapper}>
                 <div className={classes.gridContainer}>
                     <div className={classes.gridContainer__gridImage}>

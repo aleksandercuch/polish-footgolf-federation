@@ -44,7 +44,15 @@ i18next
                         userName: "Nazwa użytkownika",
                         email: "Email",
                         password: "Hasło",
-                    }
+                    },
+                    STATUE: {
+                        data: "Dane PFFG",
+                        download: "Pobierz Statut",
+                        address: "Adres siedziby",
+                        legalForm: "Forma prawna",
+                        registrationDate: "Data rejestracji",
+                        organizationSize: "Wielkość organizacji",
+                    },
                 }
             },
             en: {
