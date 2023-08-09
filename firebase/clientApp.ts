@@ -1,13 +1,15 @@
-import firebase from "firebase/app";
+// API
+import firebase, { initializeApp } from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
-import { getStorage, ref } from "firebase/storage";
+import { getAnalytics } from "firebase/analytics";
+import { getStorage } from "firebase/storage";
 
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const clientCredentials = {
+const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
   projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
@@ -17,7 +19,8 @@ const clientCredentials = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT
 };
 
-firebase.initializeApp(clientCredentials);
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 const storage = getStorage();
 
 export {
