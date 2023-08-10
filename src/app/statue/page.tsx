@@ -28,7 +28,9 @@ const page: FC<pageProps> =({}) => {
                     <input type="checkbox" id="chk" className={classes.info__checkbox} aria-hidden="true" />
                     <div className={classes.info__details}>
                         <div className={classes.info__wrapper}>
-                            <label  htmlFor="chk" aria-hidden="true" className={classes.info__label} >{t('STATUE.data')}</label>
+                            <div className={classes.info__header}>
+                                <label  htmlFor="chk" aria-hidden="true" className={classes.info__label} >{t('STATUE.data')}</label>
+                            </div>
                             <div className={classes.info__wrapper__table}>
                                 <div>KRS</div>
                                 <div>0000632232</div>
