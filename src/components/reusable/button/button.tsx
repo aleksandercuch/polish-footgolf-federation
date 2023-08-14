@@ -7,6 +7,6 @@ interface Iprops {
 
 export const Button = (props: Iprops) => {
     return (
-        <button className={classes.button} >{props.content}</button>
+        <button className={classes.button}>{props.content}</button>
     )
 }

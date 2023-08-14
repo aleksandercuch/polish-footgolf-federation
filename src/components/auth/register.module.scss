@@ -6,6 +6,12 @@
 	box-shadow: 5px 20px 50px $primary-black;
     padding: 3rem 2rem 1.5rem;
 
+    &__errorMessage {
+        color: $primary-red;
+        font-size: 1.1rem;
+        margin: 0.5rem 0;
+    }
+
     &__header {
         color: $primary-white;
         font-size: 1.7em;
@@ -22,6 +28,11 @@
         border: none;
         outline: none;
         border-radius: 5px;
+
+        &--error {
+            border: 1px solid $primary-red;
+            
+        }
     }
 
     &__form {
@@ -60,6 +71,20 @@
     &__buttonContainer {
         width: 25rem;
     }
+
+    &__checkboxContainer {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+
+        &--error {
+            > * {
+                outline: 1px solid $primary-red;
+            }
+        }
+    }
+
+
 }
 
 @media (min-width: 1000px) {
@@ -71,6 +96,11 @@
             &__table {
                 grid-template-columns: 12rem 1.5fr;
             }
+        }
+
+        &__radiogroup {
+            height: 35px;
+    
         }
 
         &__input {

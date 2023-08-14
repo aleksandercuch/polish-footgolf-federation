@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import classes from './page.module.scss'
 
 // COMPONENTS
-import { Auth } from '@/components/auth/auth';
+import { Register } from '@/components/auth/register-form';
 import { PageHeader } from '@/components/reusable/page-title/page-title';
 
 
@@ -20,7 +20,7 @@ const page: FC<pageProps> =({}) => {
     return (
        <>
             <PageHeader header={t("AUTH.registration")} />
-            <Auth />
+            <Register />
         </>
     )
 }

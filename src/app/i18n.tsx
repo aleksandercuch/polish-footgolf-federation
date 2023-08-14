@@ -70,6 +70,10 @@ i18next
                         registrationDate: "Data rejestracji",
                         organizationSize: "Wielkość organizacji",
                     },
+                    ERRORS: {
+                        invalidEmail: "Niepoprawny email",
+                        required: "Wymagane",
+                    },
                 }
             },
             en: {
@@ -107,6 +111,7 @@ i18next
                         userName: "User name",
                         email: "Email",
                         password: "Password",
+                        errorMessage: "* Uzupełnij wymagane pola",
                     }
                 }
             }
