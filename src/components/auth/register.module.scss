@@ -12,6 +12,10 @@
         margin: 0.5rem 0;
     }
 
+    &__errorSign {
+        color: $primary-red;
+    }
+
     &__header {
         color: $primary-white;
         font-size: 1.7em;
@@ -48,6 +52,11 @@
             font-size: 1.3rem;
             margin-top: 2.5rem;
             align-items: center;
+
+            label {
+                display: flex;
+                gap: 0.5rem;
+            }
         }
     }
 
@@ -83,8 +92,6 @@
             }
         }
     }
-
-
 }
 
 @media (min-width: 1000px) {

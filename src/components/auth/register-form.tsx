@@ -8,10 +8,13 @@ import cn from "classnames";
 // COMPONTENTS
 import { Button } from '../reusable/button/button';
 import { countryListData } from "./country-list";
-//import FormikControl from './FormikControl';
 
 // ASSETS
 import classes from './register.module.scss';
+
+// API
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import auth from '../../../firebase/clientApp';
 
 export const Register = () => {
     const { t } = useTranslation();
@@ -34,6 +37,13 @@ export const Register = () => {
         },
         onSubmit: values => {
             console.log('AAAAAA values', values);
+            createUserWithEmailAndPassword(auth, values.email, values.password)
+                .then((userCredential) => {
+                    console.log(userCredential);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
         },
         validationSchema: Yup.object({
             email: Yup.string().email(t('ERRORS.invalidEmail')).required(t('ERRORS.required')),
@@ -45,14 +55,12 @@ export const Register = () => {
             city: Yup.string().required(t('ERRORS.required')),
             zip: Yup.string().required(t('ERRORS.required')),
             state: Yup.string().required(t('ERRORS.required')),
-            country: Yup.string().required(t('ERRORS.required')),
             phone: Yup.string().required(t('ERRORS.required')),
             checkbox1: Yup.bool().oneOf([true], t('ERRORS.required')),
             checkbox2: Yup.bool().oneOf([true], t('ERRORS.required')),
         }),
     })
-
-    console.log(formik.errors);
+    console.log("errors", formik.errors);
 
     return (
         <>
@@ -62,7 +70,10 @@ export const Register = () => {
                         <h2 aria-hidden="true" className={classes.auth__header} >{t('AUTH.basicInfo')}</h2>
                         <hr />
                         <div className={classes.auth__form__table}>
-                            <label>{t('AUTH.email')}</label>
+                            <label>
+                                {formik.touched.email && formik.errors.email && (<div className={classes.auth__errorSign}>*</div>)}
+                                {t('AUTH.email')}
+                            </label>
                             <input 
                                 type="email" 
                                 name="email" 
@@ -72,7 +83,10 @@ export const Register = () => {
                                 value={formik.values.email} 
                             />
 
-                            <label>{t('AUTH.password')}</label>
+                            <label>
+                                {formik.touched.password && formik.errors.password && (<div className={classes.auth__errorSign}>*</div>)}
+                                {t('AUTH.password')}
+                            </label>
                             <input 
                                 type="password" 
                                 name="password" 
@@ -82,7 +96,10 @@ export const Register = () => {
                                 value={formik.values.password}  
                             />
 
-                            <label>{t('AUTH.gender')}</label>
+                            <label>
+                                {formik.touched.gender && formik.errors.gender && (<div className={classes.auth__errorSign}>*</div>)}
+                                {t('AUTH.gender')}
+                            </label>
                             <div className={classes.auth__radiogroup}>
                                 <div>
                                     <input 
@@ -108,7 +125,10 @@ export const Register = () => {
                                 </div>
                             </div>
 
-                            <label>{t('AUTH.firstName')}</label>
+                            <label>
+                                {formik.touched.firstName && formik.errors.firstName && (<div className={classes.auth__errorSign}>*</div>)}
+                                {t('AUTH.firstName')}  
+                            </label>
                             <input 
                                 type="text" 
                                 name="firstName" 
@@ -118,7 +138,10 @@ export const Register = () => {
                                 value={formik.values.firstName}  
                             />
 
-                            <label>{t('AUTH.lastName')}</label>
+                            <label>
+                                {formik.touched.lastName && formik.errors.lastName && (<div className={classes.auth__errorSign}>*</div>)}
+                                {t('AUTH.lastName')}
+                            </label>
                             <input 
                                 type="text" 
                                 name="lastName" 
@@ -133,7 +156,10 @@ export const Register = () => {
                         <h2 aria-hidden="true" className={classes.auth__header} >{t('AUTH.contactInfo')}</h2>
                         <hr />
                         <div className={classes.auth__form__table}>
-                            <label>{t('AUTH.streetAndNumber')}</label>
+                            <label>
+                                {formik.touched.street && formik.errors.street && (<div className={classes.auth__errorSign}>*</div>)}
+                                {t('AUTH.streetAndNumber')} 
+                            </label>
                             <input 
                                 type="text" 
                                 name="street" 
@@ -143,7 +169,10 @@ export const Register = () => {
                                 value={formik.values.street}  
                             />
 
-                            <label>{t('AUTH.city')}</label>
+                            <label>
+                                {formik.touched.city && formik.errors.city && (<div className={classes.auth__errorSign}>*</div>)}
+                                {t('AUTH.city')}
+                            </label>
                             <input 
                                 type="text" 
                                 name="city" 
@@ -153,7 +182,10 @@ export const Register = () => {
                                 value={formik.values.city}  
                             />
                             
-                            <label>{t('AUTH.zip')}</label>
+                            <label>
+                                {formik.touched.zip && formik.errors.zip && (<div className={classes.auth__errorSign}>*</div>)}
+                                {t('AUTH.zip')}
+                            </label>
                             <input 
                                 type="text" 
                                 name="zip" 
@@ -163,7 +195,10 @@ export const Register = () => {
                                 value={formik.values.zip}  
                             />
 
-                            <label>{t('AUTH.state')}</label>
+                            <label>
+                                {formik.touched.state && formik.errors.state && (<div className={classes.auth__errorSign}>*</div>)}
+                                {t('AUTH.state')}
+                            </label>
                             <select 
                                 name="state" 
                                 className={ cn(classes.auth__input, formik.touched.state && formik.errors.state && classes["auth__input--error"])}
@@ -176,7 +211,10 @@ export const Register = () => {
                                 })}
                             </select>
 
-                            <label>{t('AUTH.phone')}</label>
+                            <label>
+                                {formik.touched.phone && formik.errors.phone && (<div className={classes.auth__errorSign}>*</div>)}
+                                {t('AUTH.phone')}    
+                            </label>
                             <input 
                                 type="text" 
                                 name="phone" 
