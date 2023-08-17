@@ -1,13 +1,15 @@
 @import "@/styles/abstracts/variables";
 @import "@/styles/abstracts/animations";
 
+
+
 .statue {
-    display: flex;
-    gap: 5rem;
+    gap: 1rem;
+    display: inline-grid;
 }
 
 .image {
-    width: 60%;
+    width: 100%;
 
     img {
         width: 100%;
@@ -15,8 +17,8 @@
 }
 
 .info {
-	width: 35rem;
-	height: 50rem;
+	width: 40rem;
+	height: 45rem;
     margin: 0 auto;
 	overflow: hidden;
 	background: $gradient-light-dark-blue;
@@ -33,7 +35,7 @@
         gap: 2rem;
         grid-template-columns: 1fr 1fr;
         color: $primary-white;
-        
+        font-size: 1.3rem;
     }
     
     &__checkbox {
@@ -45,13 +47,18 @@
         width:100%;
         height: 110%;
     }
-        
+    
+    &__header {
+        background: $gradient-light-dark-green;
+        padding: 2rem;
+        margin-bottom: 3.5rem;
+    }
+
     &__label {
         color: $primary-white;
         font-size: 2.3em;
         justify-content: center;
         display: flex;
-        margin: 4rem;
         font-weight: bold;
         cursor: pointer;
         transition: .5s ease-in-out;
@@ -74,7 +81,7 @@
         height: 460px;
         background: $gradient-white-silver;
         border-radius: 60% / 10%;
-        transform: translateY(-180px);
+        transform: translateY(-100px);
         transition: .8s ease-in-out;
     }
         
@@ -85,7 +92,7 @@
     }
         
     &__checkbox:checked ~ &__download {
-        transform: translateY(-550px);
+        transform: translateY(-40rem);
     }
         
     &__checkbox:checked ~ &__download &__label {
@@ -119,6 +126,21 @@
             transform: translate(-50%, -50%);
             max-width: 10rem;
             max-height: 10rem;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .statue {
+        display: flex;
+        gap: 5rem;
+    }
+
+    .image {
+        width: 60%;
+    
+        img {
+            width: 100%;
         }
     }
 }

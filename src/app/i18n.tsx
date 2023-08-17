@@ -44,6 +44,23 @@ i18next
                         userName: "Nazwa użytkownika",
                         email: "Email",
                         password: "Hasło",
+                        basicInfo: "Podstawowe informacje",
+                        gender: "Gender",
+                        firstName: "Imię",
+                        lastName: "Nazwisko",
+                        male: "Mężczyzna",
+                        female: "Kobieta",
+                        contactInfo: "Dane kontaktowe",
+                        streetAndNumber: "Ulica i nr",
+                        city: "Miasto",
+                        zip: "ZIP",
+                        state: "Kraj",
+                        phone: "Telefon",
+                        avatar: "Awatar",
+                        pickAvatar: "Wybierz zdjęcie",
+                        otherInfo: "Inne informacje",
+                        approvals: "Zgody",
+                        description: "Opis"
                     },
                     STATUE: {
                         data: "Dane PFFG",
@@ -52,6 +69,10 @@ i18next
                         legalForm: "Forma prawna",
                         registrationDate: "Data rejestracji",
                         organizationSize: "Wielkość organizacji",
+                    },
+                    ERRORS: {
+                        invalidEmail: "Niepoprawny email",
+                        required: "Wymagane",
                     },
                 }
             },
@@ -90,6 +111,7 @@ i18next
                         userName: "User name",
                         email: "Email",
                         password: "Password",
+                        errorMessage: "* Uzupełnij wymagane pola",
                     }
                 }
             }

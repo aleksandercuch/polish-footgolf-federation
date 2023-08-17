@@ -4,6 +4,7 @@ import "firebase/auth";
 import "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 import { getStorage } from "firebase/storage";
+import { getAuth } from "firebase/auth";
 
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -20,9 +21,10 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 const analytics = getAnalytics(app);
 const storage = getStorage();
 
 export {
-  storage, firebase as default
+  storage, firebase, auth as default
 }
