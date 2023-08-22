@@ -6,6 +6,11 @@
 	box-shadow: 5px 20px 50px $primary-black;
     padding: 3rem 2rem 1.5rem;
 
+    &__avatar {
+        margin-top: 2.5rem;
+        color: $primary-white;
+    }
+
     &__errorMessage {
         color: $primary-red;
         font-size: 1.1rem;
@@ -75,6 +80,10 @@
     
     &__rowInfo {
         grid-column: 1 / -1;
+        textarea {
+            width: 100%;
+            margin-top: 2.5rem;
+        }
     }
 
     &__buttonContainer {

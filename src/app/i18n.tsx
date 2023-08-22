@@ -45,7 +45,7 @@ i18next
                         email: "Email",
                         password: "Hasło",
                         basicInfo: "Podstawowe informacje",
-                        gender: "Gender",
+                        gender: "Płeć",
                         firstName: "Imię",
                         lastName: "Nazwisko",
                         male: "Mężczyzna",
@@ -60,7 +60,8 @@ i18next
                         pickAvatar: "Wybierz zdjęcie",
                         otherInfo: "Inne informacje",
                         approvals: "Zgody",
-                        description: "Opis"
+                        description: "Opis",
+                        photo: "Awatar"
                     },
                     STATUE: {
                         data: "Dane PFFG",
@@ -73,6 +74,8 @@ i18next
                     ERRORS: {
                         invalidEmail: "Niepoprawny email",
                         required: "Wymagane",
+                        weakPassword: "* Hasło musi zawierać co najmniej 6 znaków",
+                        emailInUse: "* Ten email jest już przypisany do konta"
                     },
                 }
             },
