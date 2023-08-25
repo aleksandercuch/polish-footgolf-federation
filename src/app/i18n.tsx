@@ -40,6 +40,8 @@ i18next
                     },
                     AUTH: {
                         login: "Logowanie",
+                        logIN: "Zaloguj",
+                        forgotPassword: "Zapomniałeś hasła?",
                         registration: "Rejestracja",
                         userName: "Nazwa użytkownika",
                         email: "Email",
@@ -61,7 +63,10 @@ i18next
                         otherInfo: "Inne informacje",
                         approvals: "Zgody",
                         description: "Opis",
-                        photo: "Awatar"
+                        photo: "Awatar",
+                        changePassword: "Zmiana hasła",
+                        send: "Wyślij",
+                        returnToLogin: "Wróć do logowania",
                     },
                     STATUE: {
                         data: "Dane PFFG",
@@ -75,7 +80,8 @@ i18next
                         invalidEmail: "Niepoprawny email",
                         required: "Wymagane",
                         weakPassword: "* Hasło musi zawierać co najmniej 6 znaków",
-                        emailInUse: "* Ten email jest już przypisany do konta"
+                        emailInUse: "* Ten email jest już przypisany do konta",
+                        wrongLoginData: "* Niepoprawny e-mail lub hasło"
                     },
                 }
             },

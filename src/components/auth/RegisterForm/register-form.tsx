@@ -1,13 +1,14 @@
 // CORE
 'use client';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import cn from "classnames";
+import { useRouter } from 'next/navigation'
 
 // COMPONTENTS
-import { Button } from '../reusable/button/button';
+import { Button } from '../../reusable/button/button';
 import { countryListData } from "./country-list";
 
 // ASSETS
@@ -15,10 +16,9 @@ import classes from './register.module.scss';
 import { ERROR_TYPES } from '@/utils/constants/errorEnums';
 
 // API
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import auth, { db, storage } from '../../../firebase/config/clientApp';
+import { db, storage } from '../../../../firebase/config/clientApp';
 import { addDoc, collection } from 'firebase/firestore';
-import { ref, uploadBytes, uploadBytesResumable } from 'firebase/storage';
+import { ref, uploadBytes } from 'firebase/storage';
 
 // CONTEXT
 import { UserAuth } from '@/context/auth-context';
@@ -26,7 +26,8 @@ import { UserAuth } from '@/context/auth-context';
 export const Register = () => {
     const { t } = useTranslation();
     const [file, setFile] = useState<Blob>();
-    const { createUser } = UserAuth();
+    const { createUser, user } = UserAuth();
+    const router = useRouter();
 
     const handleChange = (event: any) => {
         formik.handleChange(event);
@@ -73,7 +74,8 @@ export const Register = () => {
                                 phone: values.phone,
                                 description: values.description,
                                 avatar: link
-                            })
+                            });
+                            router.push('/');
                           });
                     }
                 })
@@ -100,8 +102,10 @@ export const Register = () => {
         }),
     })
 
-    console.log(formik.values);
-
+    useEffect(() => {
+       if (user) router.push('/');
+    }, []);
+    
     return (
         <>
             <div className={classes.auth}>  	
@@ -338,9 +342,9 @@ export const Register = () => {
                                 </>
                             )} 
                         </>
-                    <div className={classes.auth__buttonContainer}>
-                        <Button content={t('AUTH.registration')} />
-                    </div>
+                        <div className={classes.auth__buttonContainer}>
+                            <Button content={t('AUTH.registration')} />
+                        </div>
                     </div>
                 </form>
             </div>

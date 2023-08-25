@@ -1,0 +1,74 @@
+@import "@/styles/abstracts/variables";
+@import "@/styles/abstracts/mixins";
+
+.modalContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: $transparent-black;
+    display: flex;
+}
+
+.auth {
+	@include auth;
+
+    width: 100%;
+    max-width: 35rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+
+    &__header {
+        margin-bottom: 0;
+    }
+
+    &__closePanel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    &__form__table {
+        margin: 2.5rem 0;
+    }
+
+    &__buttonContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        &__forgotPassword {
+            color: $primary-white;
+            cursor: pointer;
+        }
+    }
+    
+    @media (min-width: 1000px) { 
+        &__form {
+            grid-template-columns: 1fr;
+
+            
+            &__table {
+                grid-template-columns: 0.5fr 1.5fr;
+            }
+        }
+
+        &__input {
+            width: 100%;
+        }
+    }
+}
+
+
+

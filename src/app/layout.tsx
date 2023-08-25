@@ -6,6 +6,7 @@ import './i18n'
 
 // COMPONENTS
 import { MainNavigation } from '@/components/layout/main-navigation/main-navigation'
+import { AuthButtons } from '@/components/auth/AuthButtons/auth-buttons';
 
 // ASSETS
 import './globals.scss'
@@ -29,7 +30,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <AuthContextProvider>
+        <div id="modal-root"></div>
           <div className='content-wrapper'>
+            <AuthButtons />
             <MainNavigation />
             {children}
           </div>
