@@ -40,12 +40,14 @@ i18next
                     },
                     AUTH: {
                         login: "Logowanie",
+                        logIN: "Zaloguj",
+                        forgotPassword: "Zapomniałeś hasła?",
                         registration: "Rejestracja",
                         userName: "Nazwa użytkownika",
                         email: "Email",
                         password: "Hasło",
                         basicInfo: "Podstawowe informacje",
-                        gender: "Gender",
+                        gender: "Płeć",
                         firstName: "Imię",
                         lastName: "Nazwisko",
                         male: "Mężczyzna",
@@ -60,7 +62,12 @@ i18next
                         pickAvatar: "Wybierz zdjęcie",
                         otherInfo: "Inne informacje",
                         approvals: "Zgody",
-                        description: "Opis"
+                        description: "Opis",
+                        photo: "Awatar",
+                        changePassword: "Zmiana hasła",
+                        send: "Wyślij",
+                        returnToLogin: "Wróć do logowania",
+                        resetEmailSent: "Wysłaliśmy wiadomość na podany przez Ciebie adres email!"
                     },
                     STATUE: {
                         data: "Dane PFFG",
@@ -73,6 +80,16 @@ i18next
                     ERRORS: {
                         invalidEmail: "Niepoprawny email",
                         required: "Wymagane",
+                        weakPassword: "* Hasło musi zawierać co najmniej 6 znaków",
+                        emailInUse: "* Ten email jest już przypisany do konta",
+                        wrongLoginData: "* Niepoprawny e-mail lub hasło"
+                    },
+                    CONTACT: {
+                        howToFindUs: "Jak nas znaleźć?",
+                        socialMedia: "Social Media",
+                        haveQuestion: "Masz pytanie?",
+                        contactUs: "Zaczep nas na Facebooku!",
+                        write: "napisz"
                     },
                 }
             },

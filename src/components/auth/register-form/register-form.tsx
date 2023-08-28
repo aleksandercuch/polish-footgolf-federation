@@ -1,23 +1,38 @@
 // CORE
 'use client';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import cn from "classnames";
+import { useRouter } from 'next/navigation'
 
 // COMPONTENTS
-import { Button } from '../reusable/button/button';
+import { Button } from '../../reusable/button/button';
 import { countryListData } from "./country-list";
 
 // ASSETS
 import classes from './register.module.scss';
+import { ERROR_TYPES } from '@/utils/constants/errorEnums';
 
 // API
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import auth from '../../../firebase/clientApp';
+import { db, storage } from '../../../../firebase/config/clientApp';
+import { addDoc, collection } from 'firebase/firestore';
+import { ref, uploadBytes } from 'firebase/storage';
+
+// CONTEXT
+import { UserAuth } from '@/context/auth-context';
 
 export const Register = () => {
     const { t } = useTranslation();
+    const [file, setFile] = useState<Blob>();
+    const { createUser, user } = UserAuth();
+    const router = useRouter();
+
+    const handleChange = (event: any) => {
+        formik.handleChange(event);
+        setFile(event.target.files[0]);
+    }
 
     const formik = useFormik({
         initialValues: {
@@ -33,21 +48,45 @@ export const Register = () => {
             phone: '',
             description: '',
             checkbox1: false,
-            checkbox2: false
+            checkbox2: false,
+            avatar: ""
         },
         onSubmit: values => {
-            console.log('AAAAAA values', values);
-            createUserWithEmailAndPassword(auth, values.email, values.password)
-                .then((userCredential) => {
-                    console.log(userCredential);
+            createUser(values.email, values.password)
+                .then(() => {
+                    if(file) {
+                        const storageRef = ref(storage, `UsersAvatars/${file.name}`);
+                        
+                        uploadBytes(storageRef, file).then((snapshot) => {
+                            const link = `gs://${snapshot.metadata.bucket}/${snapshot.metadata.fullPath}`;
+
+                            addDoc(collection(db, 'users'),
+                            {
+                                email: values.email,
+                                gender: values.gender,
+                                firstName: values.firstName,
+                                lastName: values.lastName,
+                                street:values.street,
+                                city: values.city,
+                                zip: values.zip,
+                                state: values.state,
+                                phone: values.phone,
+                                description: values.description,
+                                avatar: link
+                            });
+                            router.push('/');
+                          });
+                    }
                 })
-                .catch((error) => {
-                    console.log(error);
+                .catch((error: any) => {
+                    if (error.code == ERROR_TYPES.EmailInUse) {
+                        formik.setFieldError('email', t("ERRORS.emailInUse"));
+                    }
                 });
         },
         validationSchema: Yup.object({
             email: Yup.string().email(t('ERRORS.invalidEmail')).required(t('ERRORS.required')),
-            password: Yup.string().required(t('ERRORS.required')),
+            password: Yup.string().required(t('ERRORS.required')).min(6, t("ERRORS.weakPassword")),
             gender: Yup.string().required(t('ERRORS.required')),
             firstName: Yup.string().required(t('ERRORS.required')),
             lastName: Yup.string().required(t('ERRORS.required')),
@@ -56,17 +95,21 @@ export const Register = () => {
             zip: Yup.string().required(t('ERRORS.required')),
             state: Yup.string().required(t('ERRORS.required')),
             phone: Yup.string().required(t('ERRORS.required')),
+          //  avatar: Yup.string().required(t('ERRORS.required')),
             checkbox1: Yup.bool().oneOf([true], t('ERRORS.required')),
             checkbox2: Yup.bool().oneOf([true], t('ERRORS.required')),
         }),
     })
-    console.log("errors", formik.errors);
 
+    useEffect(() => {
+       if (user.email) router.push('/');
+    }, [user]);
+    
     return (
         <>
             <div className={classes.auth}>  	
                 <form className={classes.auth__form} onSubmit={formik.handleSubmit}>
-                    <div className={classes.auth__basicInfo}>
+                    <div>
                         <h2 aria-hidden="true" className={classes.auth__header} >{t('AUTH.basicInfo')}</h2>
                         <hr />
                         <div className={classes.auth__form__table}>
@@ -153,6 +196,21 @@ export const Register = () => {
                         </div>
                     </div>
                     <div>
+                        <h2 aria-hidden="true" className={classes.auth__header} >{t('AUTH.photo')}</h2>
+                        <hr />
+                        <input 
+                            type="file" 
+                            accept="image/*" 
+                            name="avatar"
+                            className={classes.auth__avatar}
+                            value={formik.values.avatar}
+                            onChange={(event) => {
+                                handleChange(event);
+                              }}
+                            onBlur={formik.handleBlur}
+                         />
+                    </div>
+                    <div>
                         <h2 aria-hidden="true" className={classes.auth__header} >{t('AUTH.contactInfo')}</h2>
                         <hr />
                         <div className={classes.auth__form__table}>
@@ -163,7 +221,7 @@ export const Register = () => {
                             <input 
                                 type="text" 
                                 name="street" 
-                                className={ cn(classes.auth__input, formik.touched.street && formik.errors.street && classes["auth__input--error"])}
+                                className={cn(classes.auth__input, formik.touched.street && formik.errors.street && classes["auth__input--error"])}
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.street}  
@@ -176,7 +234,7 @@ export const Register = () => {
                             <input 
                                 type="text" 
                                 name="city" 
-                                className={ cn(classes.auth__input, formik.touched.city && formik.errors.city && classes["auth__input--error"])} 
+                                className={cn(classes.auth__input, formik.touched.city && formik.errors.city && classes["auth__input--error"])} 
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.city}  
@@ -189,7 +247,7 @@ export const Register = () => {
                             <input 
                                 type="text" 
                                 name="zip" 
-                                className={ cn(classes.auth__input, formik.touched.zip && formik.errors.zip && classes["auth__input--error"])} 
+                                className={cn(classes.auth__input, formik.touched.zip && formik.errors.zip && classes["auth__input--error"])} 
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.zip}  
@@ -201,7 +259,7 @@ export const Register = () => {
                             </label>
                             <select 
                                 name="state" 
-                                className={ cn(classes.auth__input, formik.touched.state && formik.errors.state && classes["auth__input--error"])}
+                                className={cn(classes.auth__input, formik.touched.state && formik.errors.state && classes["auth__input--error"])}
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.state} >
@@ -218,19 +276,18 @@ export const Register = () => {
                             <input 
                                 type="text" 
                                 name="phone" 
-                                className={ cn(classes.auth__input, formik.touched.phone && formik.errors.phone && classes["auth__input--error"])} 
+                                className={cn(classes.auth__input, formik.touched.phone && formik.errors.phone && classes["auth__input--error"])} 
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.phone}  
                             />
                         </div>
                     </div>
-                    <div className={classes.auth__rowInfo}>
-                        <h2 aria-hidden="true" className={classes.auth__header} >{t('AUTH.otherInfo')}</h2>
+                    <div>
+                        <h2 aria-hidden="true" className={classes.auth__header} >{t('AUTH.description')}</h2>
                         <hr />
-                        <div className={classes.auth__form__table}>
-                            <label>{t('AUTH.description')}</label>
-                            <textarea name="description" cols={40} rows={5} onChange={formik.handleChange} value={formik.values.description} ></textarea>
+                        <div className={classes.auth__rowInfo}>
+                            <textarea name="description" cols={40} rows={10} onChange={formik.handleChange} value={formik.values.description} ></textarea>
                         </div>
                     </div>
                     <div className={classes.auth__rowInfo}>
@@ -264,14 +321,28 @@ export const Register = () => {
                         </div>
                     </div>
                     <div>
-                        {Object.keys(formik.errors).length !== 0  && (
-                            <div className={classes.auth__errorMessage}>
-                                <p>{t("AUTH.errorMessage")}</p>
-                            </div>
-                        )}
-                    <div className={classes.auth__buttonContainer}>
-                        <Button content={t('AUTH.registration')} />
-                    </div>
+                        <>
+                            {Object.keys(formik.errors).length !== 0  && (
+                                <>
+                                    {formik.errors.email?.includes(t("ERRORS.emailInUse")) && (
+                                        <div className={classes.auth__errorMessage}>
+                                            <p>{t("ERRORS.emailInUse")}</p>
+                                        </div>
+                                    )}
+                                    {formik.errors.password?.includes(t("ERRORS.weakPassword")) && (
+                                        <div className={classes.auth__errorMessage}>
+                                            <p>{t("ERRORS.weakPassword")}</p>
+                                        </div>
+                                    )}
+                                    <div className={classes.auth__errorMessage}>
+                                        <p>{t("AUTH.errorMessage")}</p>
+                                    </div>
+                                </>
+                            )} 
+                        </>
+                        <div className={classes.auth__buttonContainer}>
+                            <Button content={t('AUTH.registration')} />
+                        </div>
                     </div>
                 </form>
             </div>

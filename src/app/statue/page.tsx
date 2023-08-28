@@ -1,7 +1,5 @@
-'use client';
-
 // CORE
-import { FC, useEffect } from 'react';
+'use client';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
@@ -12,9 +10,7 @@ import  * as DownloadIcon from '@/assets/svg/download.svg';
 //COMPONENTS
 import { PageHeader } from '@/components/reusable/page-title/page-title';
 
-interface pageProps {}
-
-const page: FC<pageProps> =({}) => {
+const page =() => {
     const { t } = useTranslation();
 
     return (
