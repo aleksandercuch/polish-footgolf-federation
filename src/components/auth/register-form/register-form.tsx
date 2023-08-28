@@ -207,7 +207,6 @@ export const Register = () => {
                             onChange={(event) => {
                                 handleChange(event);
                               }}
-
                             onBlur={formik.handleBlur}
                          />
                     </div>
