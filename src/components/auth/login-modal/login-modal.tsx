@@ -1,7 +1,6 @@
 // CORE
 import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';
-import cn from "classnames";
 import ReactDOM from 'react-dom';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -16,11 +15,15 @@ import { Button } from '@/components/reusable/button/button';
 // CONTEXT
 import { UserAuth } from '@/context/auth-context';
 
+// API
+import { sendPasswordResetEmail } from 'firebase/auth';
+import auth from '../../../../firebase/config/clientApp';
+
 export const LoginModal = () => {
     const { t } = useTranslation();
     const { modal, handleModal, signIn } = UserAuth();
-    const [isError, setIsError] = useState(false)
-    const [changePassword, setIsChangePassword] = useState(false)
+    const [isError, setIsError] = useState(false);
+    const [changePassword, setIsChangePassword] = useState(false);
 
     const formik = useFormik({
         initialValues: {
@@ -29,17 +32,35 @@ export const LoginModal = () => {
             emailToChangePassword: ''
         },
         onSubmit: values => {
-            signIn(values.email, values.password)
-                .then(() => {
-                    handleModal("This is component modal content");
-                })
-                .catch((error: any) => {
-                    console.log()
-                    !isError && setIsError(true);
-                });
+            if (changePassword) {
+                sendResetPasswordEmail(values.emailToChangePassword);
+            } else {
+                signInWithEmail(values.email, values.password);
+            }
         },
     });
 
+    const signInWithEmail = (email: string, password: string) => {
+        signIn(email, password)
+        .then(() => {
+            handleModal("This is component modal content");
+        })
+        .catch((error: any) => {
+            console.log("Login error!");
+            !isError && setIsError(true);
+        });
+    }
+    const sendResetPasswordEmail = (email: string) => {
+        sendPasswordResetEmail(auth, email)
+            .then(() => {
+                setIsChangePassword(false);
+                isError && setIsError(false);
+                alert(t("AUTH.resetEmailSent"));
+            })
+            .catch((error) => {
+                !isError && setIsError(true);
+            });
+    }
     if (modal) {
         return ReactDOM.createPortal(
             <>

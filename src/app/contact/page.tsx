@@ -1,7 +1,5 @@
-'use client';
-
 // CORE
-import { FC } from 'react';
+'use client';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
@@ -15,9 +13,7 @@ import  * as MarkerIcon from '@/assets/svg/map-marker.svg';
 import  * as EmailIcon from '@/assets/svg/email.svg';
 import classes from './page.module.scss'
 
-interface pageProps {}
-
-const page: FC<pageProps> =({}) => {
+const page = () => {
     const { t } = useTranslation();
 
     return (
@@ -32,7 +28,7 @@ const page: FC<pageProps> =({}) => {
                         <img src="https://www.google.com/maps/d/thumbnail?mid=1vTtsqIyk7kbIPi8pffHUUAIV7ok&hl=pl" alt="temporary map" />
                     </div>
                     <div className={classes.gridContainer__gridItem}>
-                            <h2>Jak nas znaleźć?</h2>
+                            <h2>{t("CONTACT.howToFindUs")}</h2>
                             <p className={classes.gridContainer__gridItem__row}>
                                 <Image priority src={MarkerIcon} alt="test" />
                                 Aleja Zwycięstwa 51 80-213 Gdańsk
@@ -47,10 +43,10 @@ const page: FC<pageProps> =({}) => {
                             </p>
                     </div>
                     <div className={classes.gridContainer__gridItem}>
-                            <h2>Social Media</h2>
-                            <p>Masz pytanie?</p>
-                            <p>Zaczep nas na Facebooku!</p>
-                            <Button content={"napisz"} />
+                            <h2>{t("CONTACT.socialMedia")}</h2>
+                            <p>{t("CONTACT.haveQuestion")}</p>
+                            <p>{t("CONTACT.contactUs")}</p>
+                            <Button content={t("CONTACT.write")} />
                     </div>
                 </div>
             </div>

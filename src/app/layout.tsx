@@ -6,7 +6,7 @@ import './i18n'
 
 // COMPONENTS
 import { MainNavigation } from '@/components/layout/main-navigation/main-navigation'
-import { AuthButtons } from '@/components/auth/AuthButtons/auth-buttons';
+import { AuthButtons } from '@/components/auth/auth-buttons/auth-buttons';
 
 // ASSETS
 import './globals.scss'

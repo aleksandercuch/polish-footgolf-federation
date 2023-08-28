@@ -9,7 +9,7 @@ import auth from "../../firebase/config/clientApp";
 import useModal from "@/hooks/useModal/useModal";
 
 // COMPONENTS
-import { LoginModal } from "@/components/auth/LoginModal/login-modal";
+import { LoginModal } from "@/components/auth/login-modal/login-modal";
 
 interface CreateContextProps {
     createUser: (email: string, password: string) => Promise<UserCredential>;

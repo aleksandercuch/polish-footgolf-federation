@@ -52,7 +52,6 @@ export const Register = () => {
             avatar: ""
         },
         onSubmit: values => {
-            console.log('AAAAAA values', values);
             createUser(values.email, values.password)
                 .then(() => {
                     if(file) {
@@ -103,8 +102,8 @@ export const Register = () => {
     })
 
     useEffect(() => {
-       if (user) router.push('/');
-    }, []);
+       if (user.email) router.push('/');
+    }, [user]);
     
     return (
         <>

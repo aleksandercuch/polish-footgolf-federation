@@ -24,7 +24,9 @@ export const AuthButtons = () => {
         });
         
     }
+
     console.log(user);
+
     return (
         <>
             <ul className={classes.authButtons}>
