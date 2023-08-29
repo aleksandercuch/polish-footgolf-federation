@@ -1,5 +1,23 @@
 @import "@/styles/abstracts/variables";
 
+@mixin greenButton {
+    width: 60%;
+    height: 40px;
+    justify-content: center;
+    display: block;
+    color: $primary-white;
+    background: $gradient-light-dark-green;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+
+    &:hover {
+        background: $logo-light-green;
+    }
+}
+
 @mixin navItem {
     background-image: $gradient-light-dark-green;
     border: 2px solid $logo-blue;

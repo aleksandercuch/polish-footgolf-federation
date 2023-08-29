@@ -1,0 +1,25 @@
+@import "@/styles/abstracts/variables";
+
+.wrapper {
+    color: $primary-white;
+
+    h1 {
+        margin-bottom: 1rem;
+        font-size: 3rem;
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        margin: 1rem 0;
+        font-size: 2.25rem;
+    }
+
+    p {
+        margin: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+}

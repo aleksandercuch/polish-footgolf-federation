@@ -1,23 +1,9 @@
 @import "@/styles/abstracts/variables";
 @import "@/styles/abstracts/animations";
+@import "@/styles/abstracts/mixins";
 
 .button {
-    width: 60%;
-    height: 40px;
-    justify-content: center;
-    display: block;
-    color: $primary-white;
-    background: $gradient-light-dark-green;
-    font-size: 1em;
-    font-weight: bold;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-
-    &:hover {
-        background: $logo-light-green;
-    }
-
+    @include greenButton;
     &:focus {
         outline: none;
         animation: pulsate 1s;
