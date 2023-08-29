@@ -13,15 +13,19 @@
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "classnames": "^2.3.2",
+    "draft-convert": "^2.1.13",
+    "draft-js": "^0.11.7",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "firebase": "^9.23.0",
     "formik": "^2.4.3",
+    "html-react-parser": "^4.2.1",
     "i18next": "^23.2.11",
     "i18next-browser-languagedetector": "^7.1.0",
     "next": "13.4.10",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-draft-wysiwyg": "^1.15.0",
     "react-firebase-hooks": "^5.1.1",
     "react-firebaseui": "^6.0.0",
     "react-i18next": "^13.0.2",
@@ -29,5 +33,9 @@
     "sass": "^1.63.6",
     "typescript": "5.1.6",
     "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/draft-convert": "^2.1.4",
+    "@types/react-draft-wysiwyg": "^1.13.4"
   }
 }

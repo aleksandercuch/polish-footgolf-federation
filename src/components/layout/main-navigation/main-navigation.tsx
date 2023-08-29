@@ -109,10 +109,10 @@ export const MainNavigation = () => {
                             <Link href="#">{t("NAV.recordsFifa")}</Link>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href="#">{t("NAV.regulationsLeauge")}</Link>
+                            <Link href="/leauge-statue">{t("NAV.regulationsLeauge")}</Link>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href="#">{t("NAV.regulationsPolishOpen")}</Link>
+                            <Link href="/polish-open-state">{t("NAV.regulationsPolishOpen")}</Link>
                         </div>
                     </div>
                 </div>

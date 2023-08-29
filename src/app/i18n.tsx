@@ -76,6 +76,7 @@ i18next
                         legalForm: "Forma prawna",
                         registrationDate: "Data rejestracji",
                         organizationSize: "Wielkość organizacji",
+                        edit: "Edytuj",
                     },
                     ERRORS: {
                         invalidEmail: "Niepoprawny email",
