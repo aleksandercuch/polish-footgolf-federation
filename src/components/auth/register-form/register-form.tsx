@@ -13,7 +13,7 @@ import { countryListData } from "./country-list";
 
 // ASSETS
 import classes from './register.module.scss';
-import { ERROR_TYPES } from '@/utils/constants/errorEnums';
+import { AUTH_ERRORS } from '@/utils/constants/errorEnums';
 
 // API
 import { db, storage } from '../../../../firebase/config/clientApp';
@@ -79,7 +79,7 @@ export const Register = () => {
                     }
                 })
                 .catch((error: any) => {
-                    if (error.code == ERROR_TYPES.EmailInUse) {
+                    if (error.code == AUTH_ERRORS.EmailInUse) {
                         formik.setFieldError('email', t("ERRORS.emailInUse"));
                     }
                 });

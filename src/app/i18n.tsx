@@ -92,6 +92,9 @@ i18next
                         contactUs: "Zaczep nas na Facebooku!",
                         write: "napisz"
                     },
+                    HEADERS: {
+                        leagueStatue: "Klasyfikacja Ligii Footgolfa 2023",
+                    }
                 }
             },
             en: {

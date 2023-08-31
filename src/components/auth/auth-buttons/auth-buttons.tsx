@@ -11,7 +11,7 @@ import classes from './auth-buttons.module.scss';
 import { UserAuth } from '@/context/auth-context';
 
 // UTLIS
-import { ROUTING_ENUM } from '@/utils/constants/routing-enums';
+import { ROUTING } from '@/utils/constants/routing-enums';
 
 export const AuthButtons = () => {
     const { t } = useTranslation();
@@ -53,7 +53,7 @@ export const AuthButtons = () => {
                         </li>
                         <li>
                             <button className={classes.authButtons__button} >
-                                <Link href={ROUTING_ENUM.auth} className={classes.authButtons__button__text}>{t("AUTH.registration")}</Link>
+                                <Link href={ROUTING.auth} className={classes.authButtons__button__text}>{t("AUTH.registration")}</Link>
                             </button>
                         </li>
                     </>
