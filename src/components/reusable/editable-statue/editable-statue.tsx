@@ -23,7 +23,6 @@ export interface EditableStatueProps {
 }
 
 const EditableStatue: FC<EditableStatueProps> = (props) => {
-    const { t } = useTranslation();
     const docRef = doc(db, props.collection, props.statueId);
     const [htmlStatue, setHtmlStatue] = useState<DocumentData| undefined>({});
 
