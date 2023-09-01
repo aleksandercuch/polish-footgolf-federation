@@ -1,12 +1,7 @@
-interface gameTableScoreType {
-    competitorId: number,
-    score: number
-}
-
 interface gameTableWholeType {
     id: number,
-    par?: number,
-    scores?: gameTableScoreType[]
+    par: number,
+    score?: number
 }
 
 export interface gameTableRoundType  {
@@ -27,7 +22,8 @@ export interface gameTablePropsType {
             name: string,
             paid: boolean,
             avatar: string
-            rounds: gameTableRoundType[],
+            mp: number,
+            roundsScores: gameTableRoundType[],
         }
     ]
 }

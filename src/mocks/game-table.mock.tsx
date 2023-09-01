@@ -7,19 +7,15 @@ export const TournamentMock: gameTablePropsType = {
             name: "Tomasz Karolak",
             paid: true,
             avatar: "https://a.allegroimg.com/original/1196f4/c13377a34b4d93aaacceb63317c9/NAKLEJKA-NA-OKNO-LUSTRO-SZYBE-POKEMONY-PIKACHU",
-            rounds: [
+            mp: 5,
+            roundsScores: [
                 {
                     id: 1,
                     wholes: [
                         {
                             id: 1,
                             par: 5,
-                            scores: [
-                                {
-                                    competitorId: 1,
-                                    score: 6
-                                },
-                            ]
+                            score: 6
                         }
                     ]
                 }
