@@ -2,9 +2,13 @@
 import { ContentState, EditorState, Modifier, convertFromHTML } from "draft-js";
 import { FC, useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
+import dynamic from "next/dynamic";
 
 // UTILS
-import { Editor } from "react-draft-wysiwyg";
+const Editor = dynamic(
+    () => import('react-draft-wysiwyg').then((mod) => mod.Editor),
+    { ssr: false }
+  )
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { convertToHTML } from 'draft-convert';
 
