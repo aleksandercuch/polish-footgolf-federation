@@ -123,7 +123,6 @@ const dummyData = () => {
         final: 50
     },
  ];
- 
  return items;
 }
     
@@ -199,8 +198,6 @@ const dummyData = () => {
        );
 
     useEffect(() => {
-           
-            
             setTableRows([
                 1,
                 "Tomasz Karolak",
