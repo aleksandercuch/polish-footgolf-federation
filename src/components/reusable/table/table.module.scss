@@ -1,0 +1,17 @@
+@import "@/styles/abstracts/variables";
+@import "@/styles/abstracts/mixins";
+
+.table {
+    width: 100%;
+    td, th {
+        border: 1px solid $strong-silver;
+        text-align: left;
+        padding: 8px;
+        text-align: center;
+        color: $primary-white;
+      }
+      
+      tr:nth-child(even) {
+        background: $gradient-light-dark-green;
+      }
+}

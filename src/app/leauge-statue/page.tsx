@@ -1,21 +1,27 @@
 // CORE
-'use client';
-import { useTranslation } from 'react-i18next';
+import { use } from "react";
 
 // COMPONENTS
-import { PageHeader } from '@/components/reusable/page-title/page-title';
 import EditableStatue from '@/components/reusable/editable-statue/editable-statue';
+import { doc } from 'firebase/firestore';
+import { db } from '../../../firebase/config/clientApp';
+
+// FUNCTIONS
+import { getData } from "@/functions/get-data";
 
 const page = () => {
-    const { t } = useTranslation();
     const collection = "statues";
     const statueId = "leauge";
+    const docRef = doc(db, collection, statueId);
+    const data = use(getData(docRef));
+  
     return (
         <>
-            <PageHeader header={t("NAV.regulationsLeauge")} />
-            <EditableStatue collection={collection} statueId={statueId} />
+            <EditableStatue data={data} collection={collection} statueId={statueId}/>
         </>  
     )
 }
+
+
 
 export default page;

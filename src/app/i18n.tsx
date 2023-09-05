@@ -92,6 +92,16 @@ i18next
                         contactUs: "Zaczep nas na Facebooku!",
                         write: "napisz"
                     },
+                    HEADERS: {
+                        leagueStatue: "Klasyfikacja Ligii Footgolfa 2023",
+                    },
+                    TABLES: {
+                        place: 'Miejsce',
+                        round: "Runda",
+                        mp: "MP",
+                        sum: "SUM",
+                        final: "PUNKTACJA KOŃCOWA LIGI (6RUND + MP)"
+                    }
                 }
             },
             en: {

@@ -1,11 +1,13 @@
 // API
-import firebase, { initializeApp } from "firebase/app";
+import firebase from "firebase/compat/app";
+import { initializeApp } from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
-import { getAnalytics } from "firebase/analytics";
 import { getStorage } from "firebase/storage";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,10 +23,10 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT
 };
 
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-const analytics = getAnalytics(app);
 const storage = getStorage();
 
 export {

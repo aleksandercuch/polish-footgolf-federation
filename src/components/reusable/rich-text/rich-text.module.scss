@@ -8,6 +8,9 @@
   margin: 1rem 0 2rem;
 } 
 
+&__editButton:disabled {
+  background: $primary-silver;
+}
   &__toolbar {
     border: 1px solid $primary-silver;
   }

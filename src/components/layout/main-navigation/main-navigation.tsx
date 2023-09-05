@@ -8,7 +8,7 @@ import logo from '@/assets/logo.jpg';
 
 // UTILS
 
-import { ROUTING_ENUM } from '@/utils/constants/routing-enums';
+import { ROUTING} from '@/utils/constants/routing-enums';
 
 export const MainNavigation = () => {
     const { t } = useTranslation();
@@ -55,18 +55,18 @@ export const MainNavigation = () => {
                             <a>{t("NAV.history")}</a>
                             <div className={classes.navigation__menu__horizontalDropdown}>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href={ROUTING_ENUM.trophies}>{t('NAV.trophies')}</Link>
+                                    <Link href={ROUTING.trophies}>{t('NAV.trophies')}</Link>
                                 </div>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href={ROUTING_ENUM.pastChampions}>{t('NAV.pastChampions')}</Link>
+                                    <Link href={ROUTING.pastChampions}>{t('NAV.pastChampions')}</Link>
                                 </div>
                             </div>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href={ROUTING_ENUM.management}>{t('NAV.management')}</Link>
+                            <Link href={ROUTING.management}>{t('NAV.management')}</Link>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href={ROUTING_ENUM.statue}>{t("NAV.statue")}</Link>
+                            <Link href={ROUTING.statue}>{t("NAV.statue")}</Link>
                         </div>
                     </div>
                 </div>
@@ -77,21 +77,21 @@ export const MainNavigation = () => {
                             <a>{t("NAV.postolowoLeauge")}</a>
                             <div className={classes.navigation__menu__horizontalDropdown}>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href={ROUTING_ENUM.createGame}>{t("NAV.createGame")}</Link>
+                                    <Link href={ROUTING.createGame}>{t("NAV.createGame")}</Link>
                                 </div>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href={ROUTING_ENUM.gameTables}>{t("NAV.presentTables")}</Link>
+                                    <Link href={ROUTING.gameTables}>{t("NAV.presentTables")}</Link>
                                 </div>
                                 <div className={classes.navigation__menu__horizontalDropdown__item}>
-                                    <Link href={ROUTING_ENUM.roundsChampions}>{t("NAV.roundsChampions")}</Link>
+                                    <Link href={ROUTING.roundsChampions}>{t("NAV.roundsChampions")}</Link>
                                 </div>
                             </div>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href={ROUTING_ENUM.polishOpen}>{t("NAV.polishOpen")}</Link>
+                            <Link href={ROUTING.polishOpen}>{t("NAV.polishOpen")}</Link>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href={ROUTING_ENUM.fifaWorldCup}>{t("NAV.fifaWorldCup")}</Link>
+                            <Link href={ROUTING.fifaWorldCup}>{t("NAV.fifaWorldCup")}</Link>
                         </div>
                     </div>
                 </div>
@@ -99,10 +99,10 @@ export const MainNavigation = () => {
                     <a>{t("NAV.cadre")}</a>
                     <div className={classes.navigation__menu__dropdown}>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href={ROUTING_ENUM.playerProfiles}>{t("NAV.playerProfiles")}</Link>
+                            <Link href={ROUTING.playerProfiles}>{t("NAV.playerProfiles")}</Link>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href={ROUTING_ENUM.list}>{t("NAV.list")}</Link>
+                            <Link href={ROUTING.list}>{t("NAV.list")}</Link>
                         </div>
                     </div>
                 </div>
@@ -110,24 +110,24 @@ export const MainNavigation = () => {
                     <a>{t("NAV.recordsAndRegulations")}</a>
                     <div className={classes.navigation__menu__dropdown}>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href={ROUTING_ENUM.recordsFifa}>{t("NAV.recordsFifa")}</Link>
+                            <Link href={ROUTING.recordsFifa}>{t("NAV.recordsFifa")}</Link>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href={ROUTING_ENUM.leaugeStatue}>{t("NAV.regulationsLeauge")}</Link>
+                            <Link href={ROUTING.leaugeStatue}>{t("NAV.regulationsLeauge")}</Link>
                         </div>
                         <div className={classes.navigation__menu__dropdown__item}>
-                            <Link href={ROUTING_ENUM.polishOpenStatue}>{t("NAV.regulationsPolishOpen")}</Link>
+                            <Link href={ROUTING.polishOpenStatue}>{t("NAV.regulationsPolishOpen")}</Link>
                         </div>
                     </div>
                 </div>
                 <div className={classes.navigation__menu__item}>
-                    <Link href={ROUTING_ENUM.gallery}>{t("NAV.gallery")}</Link>
+                    <Link href={ROUTING.gallery}>{t("NAV.gallery")}</Link>
                 </div>
                 <div className={classes.navigation__menu__item}>
-                    <Link href={ROUTING_ENUM.contact}>{t("NAV.contact")}</Link>
+                    <Link href={ROUTING.contact}>{t("NAV.contact")}</Link>
                 </div>
                 <div className={classes.navigation__menu__item}>
-                    <Link href={ROUTING_ENUM.polishFields}>{t("NAV.polishFields")}</Link>
+                    <Link href={ROUTING.polishFields}>{t("NAV.polishFields")}</Link>
                 </div>
             </div>
         </div>
