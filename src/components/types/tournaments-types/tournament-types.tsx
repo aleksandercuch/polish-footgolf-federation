@@ -27,3 +27,16 @@ export interface gameTablePropsType {
         }
     ]
 }
+
+export interface Itournaments {
+    name: string,
+    creatorEmail: string,
+    place: string,
+    status: string,
+    maxPlayers: number,
+    start: Date,
+    end: Date,
+    registrationFrom: Date,
+    registrationTill: Date,
+    details: string,
+}

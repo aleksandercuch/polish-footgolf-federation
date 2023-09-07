@@ -1,5 +1,5 @@
 // CORE
-'use client';
+"use client"
 import { FC, useEffect, useMemo, useState } from 'react';
 import classes from './page.module.scss'
 import { useTranslation } from 'react-i18next';
@@ -14,6 +14,10 @@ import { TournamentMock } from '@/mocks/game-table.mock';
 
 // TYPES
 import { gameTablePropsType, gameTableRoundType } from "@/components/types/tournaments-types/tournament-types";
+
+// API
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../../firebase/config/clientApp';
 
 
 interface pageProps {}
@@ -209,13 +213,18 @@ const dummyData = () => {
     }, []);
 
     useEffect(() => {
-    console.log(tableHeaders);
-
-}, [tableHeaders]);
+      getDocs(collection(db, "tournaments"))
+     .then((result) => {
+         result.forEach((element) => {
+          console.log(element.data());
+         })
+     });
+     
+ }, [])
 
     return (
         <>
-            <PageHeader header={t("HEADERS.leagueStatue")} />
+            <PageHeader header={"HEADERS.leagueStatue"} />
             <div className={classes.wrapper}>
                 <Table data={dummyData()} columns={cols}/>
             </div>

@@ -34,8 +34,10 @@
     padding: 3rem 2rem 1.5rem;
 }
 
-@mixin auth {
-    @include window;
+@mixin form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 
     &__avatar {
         margin-top: 2.5rem;
@@ -74,27 +76,21 @@
         }
     }
 
-    &__form {
+    &__table {
         display: grid;
-        grid-template-columns: 1fr;
         gap: 2rem;
+        grid-template-columns: 12rem 1.5fr;
+        color: $primary-white;
+        font-size: 1.3rem;
+        margin-top: 2.5rem;
+        align-items: center;
 
-        &__table {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: rem 1.5fr;
-            color: $primary-white;
-            font-size: 1.3rem;
-            margin-top: 2.5rem;
-            align-items: center;
-
-            label {
-                display: flex;
-                gap: 0.5rem;
-            }
+        label {
+            display: flex;
+            gap: 0.5rem;
         }
     }
-
+    
     &__radiogroup {
         width: 60%;
         display: flex;
@@ -133,12 +129,10 @@
     }
 
     @media (min-width: 1000px) { 
-        &__form {
-            grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
 
-            &__table {
-                grid-template-columns: 12rem 1.5fr;
-            }
+        &__table {
+            grid-template-columns: 12rem 1.5fr;
         }
 
         &__radiogroup {

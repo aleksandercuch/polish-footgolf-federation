@@ -1,0 +1,24 @@
+@import "@/styles/abstracts/variables";
+
+.wrapper {
+    .tabs {
+        position: relative;
+        height: 14.75rem;
+        background: $gradient-light-dark-blue;
+        border-radius: 10px;
+	    box-shadow: 5px 20px 50px $primary-black;
+        display: flex
+      }
+      .tabs::before,
+      .tabs::after {
+        content: "";
+        display: table;
+      }
+      .tabs::after {
+        clear: both;
+      }
+      .tab {
+        width: 100%;
+      }
+      
+}

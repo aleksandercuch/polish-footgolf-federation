@@ -1,0 +1,45 @@
+@import "@/styles/abstracts/variables";
+  .tabSwitch {
+    display: none;
+  }
+  .tabLabel {
+    text-align: center;
+    position: relative;
+    display: block;
+    line-height: 2.75em;
+    height: 3em;
+    padding: 0 1.618em;
+    background: $gradient-light-dark-green;
+    color: $primary-white;
+    cursor: pointer;
+    top: 0;
+    transition: all 0.25s;
+  }
+  .tabLabel:hover {
+    top: -0.25rem;
+    transition: top 0.25s;
+  }
+  .tabContent {
+    height: 12rem;
+    position: absolute;
+    top: 2.75em;
+    left: 0;
+    padding: 1.618rem;
+    background: $gradient-light-dark-blue;
+    color: $primary-white;
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    transition: all 0.35s;
+  }
+  .tabSwitch:checked + .tabLabel {
+    background: $logo-blue;
+    border-bottom: 0;
+    transition: all 0.35s;
+    z-index: 1;
+    top: -0.0625rem;
+  }
+  .tabSwitch:checked + label + .tabContent{
+    z-index: 1; // 2 before
+    opacity: 1;
+    transition: all 0.35s;
+  }

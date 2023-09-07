@@ -1,6 +1,10 @@
 @import "@/styles/abstracts/variables";
 @import "@/styles/abstracts/mixins";
 
-.auth {
-    @include auth;
+.wrapper {
+    @include window;
+
+    .form {
+        @include form;
+    }
 }

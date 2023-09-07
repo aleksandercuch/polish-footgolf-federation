@@ -3,7 +3,7 @@ export enum ROUTING {
     pastChampions =  "/past-champions",
     management =  "/management",
     statue =  "/statue",
-    createGame =  "/create-game",
+    createGame =  "/game",
     gameTables =  "/game-tables",
     roundsChampions =  "/rounds-champions",
     polishOpen =  "/polish-open",

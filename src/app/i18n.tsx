@@ -94,6 +94,14 @@ i18next
                     },
                     HEADERS: {
                         leagueStatue: "Klasyfikacja Ligii Footgolfa 2023",
+                        createGame: "Utwórz Rozgrywkę",
+                        tournamentDetails: "Szczegóły Zawodów",
+                        information: "Informacje",
+                        categories: "Kategorie",
+                        payments: "Opłaty",
+                        details: "Szczegóły",
+                        registration: "Rejestracja",
+                        teams: "Drużyny"
                     },
                     TABLES: {
                         place: 'Miejsce',
@@ -101,6 +109,25 @@ i18next
                         mp: "MP",
                         sum: "SUM",
                         final: "PUNKTACJA KOŃCOWA LIGI (6RUND + MP)"
+                    },
+                    INPUTS: {
+                        choose: "wybierz",
+                        tournamentName: "Nazwa zawodów",
+                        tournamentPlace: "Miejsce",
+                        status: "Status",
+                        maxPlayers: "Maks. liczba uczestników",
+                        start: "Początek",
+                        end: "Zakończenie",
+                        registrationFrom: "Otwarcie rejestracji",
+                        registrationTill: "Zamknięcie rejestracji",
+                        details: "Szczegóły Wydarzenia",
+                        inPreparation: "nowe zawody",
+                        registration: "otwarta rejestracja",
+                        prepareGames: "przygotowywanie rozgrywek",
+                        play: "w trakcie",
+                        finished: "zakończone",
+                        cancelled: "anulowane",
+                        organisation: "Organizacja"
                     }
                 }
             },

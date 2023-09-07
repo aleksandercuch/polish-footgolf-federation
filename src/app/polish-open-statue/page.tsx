@@ -1,20 +1,30 @@
 // CORE
-'use client';
-import { useTranslation } from 'react-i18next';
+import { use } from 'react';
 
 // COMPONENTS
-import { PageHeader } from '@/components/reusable/page-title/page-title';
 import EditableStatue from '@/components/reusable/editable-statue/editable-statue';
+import { PageHeader } from '@/components/reusable/page-title/page-title';
+
+// API
+import { getData } from "@/functions/get-data";
+import { db } from '../../../firebase/config/clientApp';
+
+// FUNCTIONS
+import { doc } from 'firebase/firestore';
+
+// CONSTANTS
+import { COLLECTIONS } from '@/utils/constants/collections-enums';
 
 const page = () => {
-    const { t } = useTranslation();
-    const collection = "statues";
+    const collection = COLLECTIONS.statuses;
     const statueId = "polishOpen";
+    const docRef = doc(db, collection, statueId);
+    const data = use(getData(docRef));
 
     return (
         <>
-            <PageHeader header={t("NAV.regulationsLeauge")} />
-            <EditableStatue collection={collection} statueId={statueId} />
+            <PageHeader header={"NAV.regulationsLeauge"} />
+            <EditableStatue data={data} collection={collection} statueId={statueId} />
         </>  
     )
 }

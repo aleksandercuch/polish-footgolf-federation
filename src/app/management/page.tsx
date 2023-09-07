@@ -1,8 +1,5 @@
-'use client';
-
 // CORE
 import { FC } from 'react';
-import { useTranslation } from 'react-i18next';
 
 // ASSETS
 import classes from './page.module.scss'
@@ -13,11 +10,10 @@ import { PageHeader } from '@/components/reusable/page-title/page-title';
 interface pageProps {}
 
 const page: FC<pageProps> =({}) => {
-    const { t } = useTranslation();
 
     return (
         <>
-            <PageHeader header={t("NAV.management")} />
+            <PageHeader header={"NAV.management"} />
             <div>
                 <div className={classes.member}>
                     <div className={classes.member__shape}>

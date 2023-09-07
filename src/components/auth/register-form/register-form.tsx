@@ -1,6 +1,6 @@
 // CORE
 'use client';
-import { ChangeEvent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'
 
 // COMPONTENTS
 import { Button } from '../../reusable/button/button';
-import { countryListData } from "./country-list";
+import { countryListData } from "../../../utils/constants/country-list";
 
 // ASSETS
 import classes from './register.module.scss';
@@ -22,6 +22,9 @@ import { ref, uploadBytes } from 'firebase/storage';
 
 // CONTEXT
 import { UserAuth } from '@/context/auth-context';
+
+// CONSTATNS
+import { COLLECTIONS } from '@/utils/constants/collections-enums';
 
 export const Register = () => {
     const { t } = useTranslation();
@@ -60,7 +63,7 @@ export const Register = () => {
                         uploadBytes(storageRef, file).then((snapshot) => {
                             const link = `gs://${snapshot.metadata.bucket}/${snapshot.metadata.fullPath}`;
 
-                            addDoc(collection(db, 'users'),
+                            addDoc(collection(db, COLLECTIONS.users),
                             {
                                 email: values.email,
                                 gender: values.gender,
@@ -107,43 +110,43 @@ export const Register = () => {
     
     return (
         <>
-            <div className={classes.auth}>  	
-                <form className={classes.auth__form} onSubmit={formik.handleSubmit}>
+            <div className={classes.wrapper}>  	
+                <form className={classes.form} onSubmit={formik.handleSubmit}>
                     <div>
-                        <h2 aria-hidden="true" className={classes.auth__header} >{t('AUTH.basicInfo')}</h2>
+                        <h2 aria-hidden="true" className={classes.form__header} >{t('AUTH.basicInfo')}</h2>
                         <hr />
-                        <div className={classes.auth__form__table}>
+                        <div className={classes.form__table}>
                             <label>
-                                {formik.touched.email && formik.errors.email && (<div className={classes.auth__errorSign}>*</div>)}
+                                {formik.touched.email && formik.errors.email && (<div className={classes.form__errorSign}>*</div>)}
                                 {t('AUTH.email')}
                             </label>
                             <input 
                                 type="email" 
                                 name="email" 
-                                className={ cn(classes.auth__input, formik.touched.email && formik.errors.email && classes["auth__input--error"])} 
+                                className={ cn(classes.form__input, formik.touched.email && formik.errors.email && classes["form__input--error"])} 
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.email} 
                             />
 
                             <label>
-                                {formik.touched.password && formik.errors.password && (<div className={classes.auth__errorSign}>*</div>)}
+                                {formik.touched.password && formik.errors.password && (<div className={classes.form__errorSign}>*</div>)}
                                 {t('AUTH.password')}
                             </label>
                             <input 
                                 type="password" 
                                 name="password" 
-                                className={ cn(classes.auth__input, formik.touched.password && formik.errors.password && classes["auth__input--error"])}
+                                className={ cn(classes.form__input, formik.touched.password && formik.errors.password && classes["form__input--error"])}
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.password}  
                             />
 
                             <label>
-                                {formik.touched.gender && formik.errors.gender && (<div className={classes.auth__errorSign}>*</div>)}
+                                {formik.touched.gender && formik.errors.gender && (<div className={classes.form__errorSign}>*</div>)}
                                 {t('AUTH.gender')}
                             </label>
-                            <div className={classes.auth__radiogroup}>
+                            <div className={classes.form__radiogroup}>
                                 <div>
                                     <input 
                                         type="radio" 
@@ -169,26 +172,26 @@ export const Register = () => {
                             </div>
 
                             <label>
-                                {formik.touched.firstName && formik.errors.firstName && (<div className={classes.auth__errorSign}>*</div>)}
+                                {formik.touched.firstName && formik.errors.firstName && (<div className={classes.form__errorSign}>*</div>)}
                                 {t('AUTH.firstName')}  
                             </label>
                             <input 
                                 type="text" 
                                 name="firstName" 
-                                className={ cn(classes.auth__input, formik.touched.firstName && formik.errors.firstName && classes["auth__input--error"])}
+                                className={ cn(classes.form__input, formik.touched.firstName && formik.errors.firstName && classes["form__input--error"])}
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.firstName}  
                             />
 
                             <label>
-                                {formik.touched.lastName && formik.errors.lastName && (<div className={classes.auth__errorSign}>*</div>)}
+                                {formik.touched.lastName && formik.errors.lastName && (<div className={classes.form__errorSign}>*</div>)}
                                 {t('AUTH.lastName')}
                             </label>
                             <input 
                                 type="text" 
                                 name="lastName" 
-                                className={ cn(classes.auth__input, formik.touched.lastName && formik.errors.lastName && classes["auth__input--error"])} 
+                                className={ cn(classes.form__input, formik.touched.lastName && formik.errors.lastName && classes["form__input--error"])} 
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.lastName} 
@@ -196,13 +199,13 @@ export const Register = () => {
                         </div>
                     </div>
                     <div>
-                        <h2 aria-hidden="true" className={classes.auth__header} >{t('AUTH.photo')}</h2>
+                        <h2 aria-hidden="true" className={classes.form__header} >{t('AUTH.photo')}</h2>
                         <hr />
                         <input 
                             type="file" 
                             accept="image/*" 
                             name="avatar"
-                            className={classes.auth__avatar}
+                            className={classes.form__avatar}
                             value={formik.values.avatar}
                             onChange={(event) => {
                                 handleChange(event);
@@ -211,55 +214,55 @@ export const Register = () => {
                          />
                     </div>
                     <div>
-                        <h2 aria-hidden="true" className={classes.auth__header} >{t('AUTH.contactInfo')}</h2>
+                        <h2 aria-hidden="true" className={classes.form__header} >{t('AUTH.contactInfo')}</h2>
                         <hr />
-                        <div className={classes.auth__form__table}>
+                        <div className={classes.form__table}>
                             <label>
-                                {formik.touched.street && formik.errors.street && (<div className={classes.auth__errorSign}>*</div>)}
+                                {formik.touched.street && formik.errors.street && (<div className={classes.form__errorSign}>*</div>)}
                                 {t('AUTH.streetAndNumber')} 
                             </label>
                             <input 
                                 type="text" 
                                 name="street" 
-                                className={cn(classes.auth__input, formik.touched.street && formik.errors.street && classes["auth__input--error"])}
+                                className={cn(classes.form__input, formik.touched.street && formik.errors.street && classes["form__input--error"])}
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.street}  
                             />
 
                             <label>
-                                {formik.touched.city && formik.errors.city && (<div className={classes.auth__errorSign}>*</div>)}
+                                {formik.touched.city && formik.errors.city && (<div className={classes.form__errorSign}>*</div>)}
                                 {t('AUTH.city')}
                             </label>
                             <input 
                                 type="text" 
                                 name="city" 
-                                className={cn(classes.auth__input, formik.touched.city && formik.errors.city && classes["auth__input--error"])} 
+                                className={cn(classes.form__input, formik.touched.city && formik.errors.city && classes["form__input--error"])} 
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.city}  
                             />
                             
                             <label>
-                                {formik.touched.zip && formik.errors.zip && (<div className={classes.auth__errorSign}>*</div>)}
+                                {formik.touched.zip && formik.errors.zip && (<div className={classes.form__errorSign}>*</div>)}
                                 {t('AUTH.zip')}
                             </label>
                             <input 
                                 type="text" 
                                 name="zip" 
-                                className={cn(classes.auth__input, formik.touched.zip && formik.errors.zip && classes["auth__input--error"])} 
+                                className={cn(classes.form__input, formik.touched.zip && formik.errors.zip && classes["form__input--error"])} 
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.zip}  
                             />
 
                             <label>
-                                {formik.touched.state && formik.errors.state && (<div className={classes.auth__errorSign}>*</div>)}
+                                {formik.touched.state && formik.errors.state && (<div className={classes.form__errorSign}>*</div>)}
                                 {t('AUTH.state')}
                             </label>
                             <select 
                                 name="state" 
-                                className={cn(classes.auth__input, formik.touched.state && formik.errors.state && classes["auth__input--error"])}
+                                className={cn(classes.form__input, formik.touched.state && formik.errors.state && classes["form__input--error"])}
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.state} >
@@ -270,13 +273,13 @@ export const Register = () => {
                             </select>
 
                             <label>
-                                {formik.touched.phone && formik.errors.phone && (<div className={classes.auth__errorSign}>*</div>)}
+                                {formik.touched.phone && formik.errors.phone && (<div className={classes.form__errorSign}>*</div>)}
                                 {t('AUTH.phone')}    
                             </label>
                             <input 
                                 type="text" 
                                 name="phone" 
-                                className={cn(classes.auth__input, formik.touched.phone && formik.errors.phone && classes["auth__input--error"])} 
+                                className={cn(classes.form__input, formik.touched.phone && formik.errors.phone && classes["form__input--error"])} 
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.phone}  
@@ -284,17 +287,17 @@ export const Register = () => {
                         </div>
                     </div>
                     <div>
-                        <h2 aria-hidden="true" className={classes.auth__header} >{t('AUTH.description')}</h2>
+                        <h2 aria-hidden="true" className={classes.form__header} >{t('AUTH.description')}</h2>
                         <hr />
-                        <div className={classes.auth__rowInfo}>
+                        <div className={classes.form__rowInfo}>
                             <textarea name="description" cols={40} rows={10} onChange={formik.handleChange} value={formik.values.description} ></textarea>
                         </div>
                     </div>
-                    <div className={classes.auth__rowInfo}>
-                        <h2 aria-hidden="true" className={classes.auth__header} >{t('AUTH.approvals')}</h2>
+                    <div className={classes.form__rowInfo}>
+                        <h2 aria-hidden="true" className={classes.form__header} >{t('AUTH.approvals')}</h2>
                         <hr />
-                        <div className={classes.auth__form__table}>
-                            <div className={cn(classes.auth__checkboxContainer, formik.touched.checkbox1 && formik.errors.checkbox1 && classes["auth__checkboxContainer--error"])}>
+                        <div className={classes.form__table}>
+                            <div className={cn(classes.form__checkboxContainer, formik.touched.checkbox1 && formik.errors.checkbox1 && classes["form__checkboxContainer--error"])}>
                                 <input 
                                     type="checkbox" 
                                     name="checkbox1" 
@@ -306,8 +309,8 @@ export const Register = () => {
                             Wyrażam zgodę xYZ Wyrażam zgodę xYZ Wyrażam zgodę xYZ Wyrażam zgodę xYZ Wyrażam zgodę xYZ Wyrażam zgodę xYZ Wyrażam zgodę xYZ Wyrażam zgodę xYZ 
                             </p>
                         </div>
-                        <div className={classes.auth__form__table}>
-                            <div className={cn(classes.auth__checkboxContainer, formik.touched.checkbox2 && formik.errors.checkbox2 && classes["auth__checkboxContainer--error"])}>
+                        <div className={classes.form__table}>
+                            <div className={cn(classes.form__checkboxContainer, formik.touched.checkbox2 && formik.errors.checkbox2 && classes["form__checkboxContainer--error"])}>
                                 <input 
                                     type="checkbox"
                                     name="checkbox2"
@@ -325,22 +328,22 @@ export const Register = () => {
                             {Object.keys(formik.errors).length !== 0  && (
                                 <>
                                     {formik.errors.email?.includes(t("ERRORS.emailInUse")) && (
-                                        <div className={classes.auth__errorMessage}>
+                                        <div className={classes.form__errorMessage}>
                                             <p>{t("ERRORS.emailInUse")}</p>
                                         </div>
                                     )}
                                     {formik.errors.password?.includes(t("ERRORS.weakPassword")) && (
-                                        <div className={classes.auth__errorMessage}>
+                                        <div className={classes.form__errorMessage}>
                                             <p>{t("ERRORS.weakPassword")}</p>
                                         </div>
                                     )}
-                                    <div className={classes.auth__errorMessage}>
+                                    <div className={classes.form__errorMessage}>
                                         <p>{t("AUTH.errorMessage")}</p>
                                     </div>
                                 </>
                             )} 
                         </>
-                        <div className={classes.auth__buttonContainer}>
+                        <div className={classes.form__buttonContainer}>
                             <Button content={t('AUTH.registration')} />
                         </div>
                     </div>

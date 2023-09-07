@@ -65,15 +65,15 @@ export const LoginModal = () => {
         return ReactDOM.createPortal(
             <>
             <div className={classes.modalContainer} onClick={() => handleModal("This is component modal content")}></div>
-                <div className={classes.auth}>  	
-                    <form className={classes.auth__form} onSubmit={formik.handleSubmit}>
+                <div className={classes.form}>  	
+                    <form className={classes.form__form} onSubmit={formik.handleSubmit}>
                     <div>
-                        <div className={classes.auth__closePanel}>
-                            <h2 aria-hidden="true" className={classes.auth__header} >{changePassword ? t('AUTH.changePassword') : t('AUTH.login')}</h2>
+                        <div className={classes.form__closePanel}>
+                            <h2 aria-hidden="true" className={classes.form__header} >{changePassword ? t('AUTH.changePassword') : t('AUTH.login')}</h2>
                             <Image priority src={CrossIcon} alt="test" onClick={() => handleModal("This is component modal content")} />
                         </div>
                         <hr />
-                        <div className={classes.auth__form__table}>
+                        <div className={classes.form__table}>
                             {changePassword ? (
                                 <>
                                     <label>
@@ -82,7 +82,7 @@ export const LoginModal = () => {
                                     <input 
                                         type="email" 
                                         name="emailToChangePassword" 
-                                        className={classes.auth__input} 
+                                        className={classes.form__input} 
                                         onChange={formik.handleChange} 
                                         onBlur={formik.handleBlur}
                                         value={formik.values.emailToChangePassword} 
@@ -96,7 +96,7 @@ export const LoginModal = () => {
                                     <input 
                                         type="email" 
                                         name="email" 
-                                        className={classes.auth__input} 
+                                        className={classes.form__input} 
                                         onChange={formik.handleChange} 
                                         onBlur={formik.handleBlur}
                                         value={formik.values.email} 
@@ -108,7 +108,7 @@ export const LoginModal = () => {
                                     <input 
                                         type="password" 
                                         name="password" 
-                                        className={classes.auth__input}
+                                        className={classes.form__input}
                                         onChange={formik.handleChange} 
                                         onBlur={formik.handleBlur}
                                         value={formik.values.password}  
@@ -118,21 +118,21 @@ export const LoginModal = () => {
                         </div>
                         <>
                             {isError && (
-                                <div className={classes.auth__errorMessage}>
+                                <div className={classes.form__errorMessage}>
                                     <p>{t("ERRORS.wrongLoginData")}</p>
                                 </div>
                             )}
                         </>
-                        <div className={classes.auth__buttonContainer}>
+                        <div className={classes.form__buttonContainer}>
                         {changePassword ? (
                             <>
                                 <Button content={t('AUTH.send')} />
-                                <p className={classes.auth__buttonContainer__forgotPassword} onClick={() => setIsChangePassword(false)}>{t("AUTH.returnToLogin")}</p>
+                                <p className={classes.form__buttonContainer__forgotPassword} onClick={() => setIsChangePassword(false)}>{t("AUTH.returnToLogin")}</p>
                             </>
                         ) :(
                             <>
                                 <Button content={t('AUTH.logIN')} />
-                                <p className={classes.auth__buttonContainer__forgotPassword} onClick={() => setIsChangePassword(true)}>{t("AUTH.forgotPassword")}</p>
+                                <p className={classes.form__buttonContainer__forgotPassword} onClick={() => setIsChangePassword(true)}>{t("AUTH.forgotPassword")}</p>
                             </>
                         )}
                             
