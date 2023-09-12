@@ -35,7 +35,7 @@
         gap: 2rem;
         grid-template-columns: 1fr 1fr;
         color: $primary-white;
-        font-size: 1.3rem;
+        font-size: $label-font;
     }
     
     &__checkbox {

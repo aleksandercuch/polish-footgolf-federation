@@ -1,0 +1,19 @@
+@import "@/styles/abstracts/mixins";
+
+.wrapper {
+    @include lineHeader;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr ;
+    gap: 2rem;
+
+    &__row {
+        font-size: $label-font;
+        padding: 1rem 0;
+        display: flex;
+        gap: 2rem;
+
+        :first-child {
+            min-width: 8rem;
+        }
+    }
+}

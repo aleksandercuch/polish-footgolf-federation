@@ -27,6 +27,21 @@
     min-height: 5rem;
 }
 
+@mixin lineHeader {
+    &__header {
+        color: $primary-white;
+        font-size: 1.7em;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+}
+
+@mixin row {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 12rem 1.5fr;
+}
+
 @mixin window {
     background: $gradient-light-dark-blue;
 	border-radius: 10px;
@@ -35,6 +50,8 @@
 }
 
 @mixin form {
+    @include lineHeader;
+
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -52,13 +69,6 @@
 
     &__errorSign {
         color: $primary-red;
-    }
-
-    &__header {
-        color: $primary-white;
-        font-size: 1.7em;
-        margin-bottom: 1rem;
-        font-weight: bold;
     }
         
     &__input {
@@ -81,7 +91,7 @@
         gap: 2rem;
         grid-template-columns: 12rem 1.5fr;
         color: $primary-white;
-        font-size: 1.3rem;
+        font-size: $label-font;
         margin-top: 2.5rem;
         align-items: center;
 

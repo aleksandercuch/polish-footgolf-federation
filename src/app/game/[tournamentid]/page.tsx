@@ -14,6 +14,7 @@ import { COLLECTIONS } from "@/utils/constants/collections-enums";
 // COMPONENTS
 import { PageHeader } from "@/components/reusable/page-title/page-title";
 import { Itournaments } from "@/components/types/tournaments-types/tournament-types";
+import { InfoPanel } from "@/components/tournaments/info-panel/info-panel";
 
 
 // ASSETS
@@ -38,23 +39,29 @@ const page: FC<pageParams> =({ params }: pageParams) => {
             <div className={classes.wrapper}>
                 <div className={classes.tabs}>
                     <div className={classes.tab}>
-                        <NavigationTab id={"tab-1"} title={"HEADERS.information"} defaultChecked />
+                        <NavigationTab id={"tab-1"} title={"HEADERS.information"} defaultChecked>
+                            <InfoPanel tournaments={data} />
+                        </NavigationTab>
                     </div>
                     <div className={classes.tab}>
-                        <NavigationTab id={"tab-2"} title={"HEADERS.categories"} />
+                        <NavigationTab id={"tab-2"} title={"HEADERS.categories"} defaultChecked>
+                            <InfoPanel tournaments={data} />
+                        </NavigationTab>
                     </div>
                     <div className={classes.tab}>
-                       <NavigationTab id={"tab-3"} title={"HEADERS.payments"} />
-                        
+                        <NavigationTab id={"tab-3"} title={"HEADERS.registration"} defaultChecked>
+                            <InfoPanel tournaments={data} />
+                        </NavigationTab>
                     </div>
                     <div className={classes.tab}>
-                        <NavigationTab id={"tab-4"} title={"HEADERS.details"} />
+                        <NavigationTab id={"tab-4"} title={"HEADERS.payments"} defaultChecked>
+                            <InfoPanel tournaments={data} />
+                        </NavigationTab>
                     </div>
                     <div className={classes.tab}>
-                        <NavigationTab id={"tab-5"} title={"HEADERS.registration"} />
-                    </div>
-                    <div className={classes.tab}>
-                        <NavigationTab id={"tab-6"} title={"HEADERS.teams"} />
+                        <NavigationTab id={"tab-5"} title={"HEADERS.teams"} defaultChecked>
+                            <InfoPanel tournaments={data} />
+                        </NavigationTab>
                     </div>
                 </div>
             </div>

@@ -101,7 +101,9 @@ i18next
                         payments: "Opłaty",
                         details: "Szczegóły",
                         registration: "Rejestracja",
-                        teams: "Drużyny"
+                        teams: "Drużyny",
+                        default: "Ogólne",
+                        organiser: "Organizator"
                     },
                     TABLES: {
                         place: 'Miejsce',
@@ -120,14 +122,25 @@ i18next
                         end: "Zakończenie",
                         registrationFrom: "Otwarcie rejestracji",
                         registrationTill: "Zamknięcie rejestracji",
-                        details: "Szczegóły Wydarzenia",
+                        details: "Szczegóły wydarzenia",
                         inPreparation: "nowe zawody",
                         registration: "otwarta rejestracja",
                         prepareGames: "przygotowywanie rozgrywek",
                         play: "w trakcie",
                         finished: "zakończone",
                         cancelled: "anulowane",
-                        organisation: "Organizacja"
+                        organisation: "Przebieg"
+                    },
+                    LABELS: {
+                        name: "Nazwa",
+                        wholes: "Dołki",
+                        par: "Par",
+                        statistics: "Statystyki",
+                        countCategories: "Ilość kategorii",
+                        registered: "Zarejestrowanych",
+                        paid: "Opłaconych",
+                        confirmed: "Potwierdzeni",
+                        resigned: "Zrezygnowani"
                     }
                 }
             },

@@ -3,8 +3,9 @@
 import { FC, useEffect, useState } from 'react';
 
 // COMPONENTS
-import { RichText } from '@/components/reusable/rich-text/rich-text';
-import { Statue } from '@/components/reusable/statue/polish-fields/statue';
+import { RichText } from '@/components/reusable/rich-text-editor/rich-text';
+import { RichTextContent } from '../rich-text-content/rich-text-content';
+
 
 // ASSETS
 import classes from './editable-statue.module.scss'
@@ -25,7 +26,7 @@ export interface EditableStatueProps {
 const EditableStatue: FC<EditableStatueProps> = (props) => {
     const [htmlStatue, setHtmlStatue] = useState<DocumentData>(props.data!);
     const docRef = doc(db, props.collection, props.statueId);
-
+    console.log(props);
     const updateStatue = (updateObject: statueProps): void => {
         updateDoc(docRef, {content: updateObject.content}).then(() => {
             console.log("succssefully updated!");
@@ -42,7 +43,7 @@ const EditableStatue: FC<EditableStatueProps> = (props) => {
     return (
         <div className={classes.wrapper}>
             <RichText content={htmlStatue.content} updateState={handleUpdateState}/>
-            <Statue content={htmlStatue.content} />
+            <RichTextContent content={htmlStatue.content} />
         </div>
     )
 }

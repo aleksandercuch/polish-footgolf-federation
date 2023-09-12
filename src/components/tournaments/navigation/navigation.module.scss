@@ -1,4 +1,6 @@
 @import "@/styles/abstracts/variables";
+@import "@/styles/abstracts/mixins";
+
   .tabSwitch {
     display: none;
   }
@@ -7,7 +9,7 @@
     position: relative;
     display: block;
     line-height: 2.75em;
-    height: 3em;
+    min-height: 3em;
     padding: 0 1.618em;
     background: $gradient-light-dark-green;
     color: $primary-white;
@@ -20,12 +22,14 @@
     transition: top 0.25s;
   }
   .tabContent {
-    height: 12rem;
+    @include window;
+    width: 100%;
+    min-height: 12rem;
     position: absolute;
+    background: $gradient-light-dark-blue;
     top: 2.75em;
     left: 0;
     padding: 1.618rem;
-    background: $gradient-light-dark-blue;
     color: $primary-white;
     border-radius: 0 0 10px 10px;
     opacity: 0;

@@ -10,16 +10,17 @@ interface pageProps {
     id: string;
     title: string;
     defaultChecked?: boolean;
+    children: any;
 }
 
-export const NavigationTab: FC<pageProps> = ({id, title, defaultChecked}) => {
+export const NavigationTab: FC<pageProps> = ({id, title, defaultChecked, children}) => {
     const { t } = useTranslation();
 
     return (
         <>
             <input type="radio" name="css-tabs" id={id} defaultChecked={defaultChecked} className={classes.tabSwitch} />
             <label htmlFor={id} className={classes.tabLabel}>{t(title)}</label>
-            <div className={classes.tabContent}>My father had a small estate in Nottinghamshire: I was the third of five sons. He sent me to Emanuel College in Cambridge at fourteen years old, where I resided three years, and applied myself close to my studies; but the charge of maintaining me, although I had a very scanty allowance, being too great for a narrow fortune, I was bound apprentice to Mr. James Bates, an eminent surgeon in London, with whom I continued four years. </div>
+            <div className={classes.tabContent}>{children}</div>
         </>
     )
 }
