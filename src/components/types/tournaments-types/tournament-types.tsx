@@ -40,3 +40,9 @@ export interface Itournaments {
     registrationTill: Date,
     details: string,
 }
+
+export interface IEditTournaments {
+    tournaments?: any;
+    onClickFunc?: () => void;
+    tournamentId?: string;
+}

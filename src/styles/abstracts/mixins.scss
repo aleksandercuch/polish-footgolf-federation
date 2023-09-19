@@ -124,6 +124,8 @@
 
     &__buttonContainer {
         width: 25rem;
+        display: flex;
+        gap: 1rem;
     }
 
     &__checkboxContainer {

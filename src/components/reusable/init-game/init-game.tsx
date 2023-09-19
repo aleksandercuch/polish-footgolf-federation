@@ -1,6 +1,6 @@
 // CORE
 "use client"
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import { useTranslation } from 'react-i18next';
@@ -17,75 +17,100 @@ import { Button } from '@/components/reusable/button/button';
 import { gameStatuses } from '@/utils/constants/game-statuses';
 
 // UTILS
-import { EditorState } from 'draft-js';
+import { EditorState, convertFromHTML, ContentState } from 'draft-js';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { convertToHTML } from 'draft-convert';
+
+// TYPES
+import { IEditTournaments } from '@/components/types/tournaments-types/tournament-types';
+
 const Editor = dynamic(
     () => import('react-draft-wysiwyg').then((mod) => mod.Editor),
     { ssr: false }
   )
 
 // API
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, doc, updateDoc } from 'firebase/firestore';
 import auth, { db } from '../../../../firebase/config/clientApp';
 
+// CONTEXT
+import { UserAuth } from '@/context/auth-context';
 
-interface pageProps {}
+// FUNCTIONS
+import { formatDate } from '@/functions/format-date';
 
-export const InitGame: FC<pageProps> =({}) => {
+export const InitGame: FC<IEditTournaments> =({tournaments, onClickFunc, tournamentId}) => {
     const { t } = useTranslation();
     const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
-
+    const { handleModal } = UserAuth();
+    
     const tournamentPlace = [
         {id: 1, name: "Binowo Park Golf Club"},
         {id: 2, name: "Postołowo"}
     ];
 
-    const padTo2Digits = (num: number) => {
-        return num.toString().padStart(2, '0');
-    }
-      
-    const formatDate = (date: Date) => {
-        return [
-          date.getFullYear(),
-          padTo2Digits(date.getMonth() + 1),
-          padTo2Digits(date.getDate()),
-        ].join('-');
-    }
+    const types = [
+        {id: 1, name: "private"},
+        {id: 2, name: "public"}
+    ]
 
     const formik = useFormik({
         initialValues: {
-            tournamentName: "",
-            tournamentPlace: "",
-            status: "",
-            maxPlayers: "",
-            start: formatDate(new Date()),
-            end: formatDate(new Date()),
-            registrationFrom: formatDate(new Date()),
-            registrationTill: formatDate(new Date()),
+            tournamentName: tournaments ? tournaments.name : "",
+            tournamentPlace: tournaments ? tournaments.place : "",
+            type: tournaments ? tournaments.type : "",
+            status: tournaments ? tournaments.status : "",
+            maxPlayers: tournaments ? tournaments.maxPlayers : "",
+            start: tournaments ? tournaments.start : formatDate(new Date()),
+            end: tournaments ? tournaments.end : formatDate(new Date()),
+            registrationFrom: tournaments ? tournaments.registrationFrom : formatDate(new Date()),
+            registrationTill: tournaments ? tournaments.registrationTill : formatDate(new Date()),
         },
         onSubmit: values => { 
-            const test = convertToHTML(editorState.getCurrentContent());
-            console.log(test);
-            addDoc(collection(db, 'tournaments'),
-            {
-                name: values.tournamentName,
-                creatorEmail: auth.currentUser?.email,
-                place: values.tournamentPlace,
-                status: values.status,
-                maxPlayers: values.maxPlayers,
-                start: values.start,
-                end: values.end,
-                registrationFrom: values.registrationFrom,
-                registrationTill: values.registrationTill,
-                details: test,
-            }).catch((error: any) => {
-                console.log(error.code);
-            });;
+            const detais = convertToHTML(editorState.getCurrentContent());
+            if (editorState) {
+                const editRef = doc(db, "tournaments", tournamentId!);
+                updateDoc(editRef,
+                {
+                    name: values.tournamentName,
+                    creatorEmail: auth.currentUser?.email,
+                    type: values.type,
+                    place: values.tournamentPlace,
+                    status: values.status,
+                    maxPlayers: values.maxPlayers,
+                    start: values.start,
+                    end: values.end,
+                    registrationFrom: values.registrationFrom,
+                    registrationTill: values.registrationTill,
+                    details: detais,
+                }).then((response) => {
+                    console.log(response);
+                }).catch((error: any) => {
+                    console.log(error.code);
+                });;
+            } else {
+                addDoc(collection(db, 'tournaments'),
+                {
+                    name: values.tournamentName,
+                    creatorEmail: auth.currentUser?.email,
+                    type: values.type,
+                    place: values.tournamentPlace,
+                    status: values.status,
+                    maxPlayers: values.maxPlayers,
+                    start: values.start,
+                    end: values.end,
+                    registrationFrom: values.registrationFrom,
+                    registrationTill: values.registrationTill,
+                    details: detais,
+                }).catch((error: any) => {
+                    console.log(error.code);
+                });;
+            }
         },
         validationSchema: Yup.object({
             tournamentName: Yup.string().required(t('ERRORS.required')),
             tournamentPlace: Yup.string().required(t('ERRORS.required')),
+            type: Yup.string().required(t('ERRORS.required')),
             status: Yup.string().required(t('ERRORS.required')),
             maxPlayers: Yup.string().required(t('ERRORS.required')),
             start: Yup.string().required(t('ERRORS.required')),
@@ -95,12 +120,24 @@ export const InitGame: FC<pageProps> =({}) => {
         }),
     });
 
+    useEffect(() => {
+        if (tournaments) {
+            const blocksFromHTML = convertFromHTML(tournaments.details);
+            const state = ContentState.createFromBlockArray(
+                blocksFromHTML.contentBlocks,
+                blocksFromHTML.entityMap,
+            );
+            const newEditorState = EditorState.createWithContent(state);
+            setEditorState(newEditorState);
+        }
+     }, [tournaments]);
+
     return (
         <>
-            <div className={classes.wrapper}>
+            <div className={cn(classes.wrapper, tournaments && classes.modalWrapper)}>
                 <form className={classes.form} onSubmit={formik.handleSubmit}>
                     <div>
-                        <h2 aria-hidden="true" className={classes.form__header} >{t('HEADERS.tournamentDetails')}</h2>
+                        <h2 aria-hidden="true" className={classes.form__header} >{t('HEADERS.default')}</h2>
                         <hr />
                         <div className={classes.form__table}>
                             <label>
@@ -117,11 +154,26 @@ export const InitGame: FC<pageProps> =({}) => {
                             />
                             <label>
                                 {formik.touched.tournamentPlace && formik.errors.tournamentPlace && (<div className={classes.form__errorSign}>*</div>)}
+                                {t('LABELS.type')}
+                            </label>
+                            <select 
+                                name="type" 
+                                className={cn(classes.form__input, formik.touched.type && formik.errors.type && classes["form__input--error"])}
+                                onChange={formik.handleChange} 
+                                onBlur={formik.handleBlur}
+                                value={formik.values.type} >
+                                <option>{`--${t("INPUTS.choose")}--`}</option>
+                                {types.map((type) => {
+                                    return (<option key={type.id} value={type.name}>{t("INPUTS." + type.name)}</option>)
+                                })}
+                            </select>
+                            <label>
+                                {formik.touched.tournamentPlace && formik.errors.tournamentPlace && (<div className={classes.form__errorSign}>*</div>)}
                                 {t('INPUTS.tournamentPlace')}
                             </label>
                             <select 
                                 name="tournamentPlace" 
-                                className={cn(classes.form__input, formik.touched.status && formik.errors.tournamentPlace && classes["form__input--error"])}
+                                className={cn(classes.form__input, formik.touched.tournamentPlace && formik.errors.tournamentPlace && classes["form__input--error"])}
                                 onChange={formik.handleChange} 
                                 onBlur={formik.handleBlur}
                                 value={formik.values.tournamentPlace} >
@@ -229,7 +281,14 @@ export const InitGame: FC<pageProps> =({}) => {
                         />
                         </div>
                         <div className={classes.form__buttonContainer}>
-                            <Button content={t('HEADERS.createGame')} />
+                            {tournaments ? (
+                                <>
+                                    <Button content={t("STATUE.edit")} />
+                                    <button className={classes.cancel} type="button"  onClick={() => handleModal("This is component modal content")}>{t('INPUTS.cancel')}</button>
+                                </>
+                            ) : (
+                                <Button content={t('HEADERS.createGame')} />
+                            )}
                         </div>
                     </div>
                 </form>

@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import cn from "classnames";
 import { useRouter } from 'next/navigation'
 
 // COMPONTENTS
@@ -14,6 +13,7 @@ import { countryListData } from "../../../utils/constants/country-list";
 // ASSETS
 import classes from './register.module.scss';
 import { AUTH_ERRORS } from '@/utils/constants/errorEnums';
+import cn from "classnames";
 
 // API
 import { db, storage } from '../../../../firebase/config/clientApp';

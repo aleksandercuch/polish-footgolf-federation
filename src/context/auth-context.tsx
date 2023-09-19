@@ -9,7 +9,7 @@ import auth from "../../firebase/config/clientApp";
 import useModal from "@/hooks/useModal/useModal";
 
 // COMPONENTS
-import { LoginModal } from "@/components/auth/login-modal/login-modal";
+import { Modal } from "@/components/auth/modal/modal";
 
 interface CreateContextProps {
     createUser: (email: string, password: string) => Promise<UserCredential>;
@@ -51,7 +51,7 @@ export const AuthContextProvider = ({children}: any) => {
 
     return (
         <UserContext.Provider value={{ createUser, modal, handleModal, modalContent, signIn, user, logout }}>
-            <LoginModal />
+            <Modal />
             {children}
         </UserContext.Provider>
     )

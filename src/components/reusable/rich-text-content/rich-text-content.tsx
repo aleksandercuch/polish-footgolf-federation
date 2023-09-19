@@ -9,7 +9,6 @@ import classes from './rich-text-content.module.scss'
 import { statueProps } from '@/components/types/statue-types/statue-types';
 
 
-
 export const RichTextContent: FC<statueProps> = (props) => {
     console.log(props);
     return (

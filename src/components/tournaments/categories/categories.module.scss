@@ -1,0 +1,38 @@
+@import "@/styles/abstracts/mixins";
+@import "@/styles/abstracts/variables";
+
+.addButtonWrapper {
+    width: 15rem;
+    padding: 2rem 0;
+}
+
+.editButtonWrapper button {
+    width: 100%;
+}
+
+.modalWrapper {
+    @include window;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+
+    img {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        cursor: pointer;
+    }
+}
+
+.form {
+    @include form;
+}   
+
+.wrapper {
+    tr {
+        background: none !important;
+    }
+}

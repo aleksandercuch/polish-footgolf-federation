@@ -16,10 +16,13 @@
 
         &__toolbar {
             border: 1px solid $primary-silver;
+            color: $primary-black;
           }
         
         &__editor {
             background-color:$primary-white;
+            color: $primary-black;
+
             border: 1px solid $primary-silver;
             height: 100%;
             min-height: 20rem;
@@ -31,4 +34,19 @@
             padding: 3rem 0;
         }
     }   
+}
+
+.modalWrapper {
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.cancel {
+   @include greenButton;
+
+    background: $primary-silver;
 }

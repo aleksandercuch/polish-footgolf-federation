@@ -101,16 +101,30 @@ i18next
                         payments: "Opłaty",
                         details: "Szczegóły",
                         registration: "Rejestracja",
-                        teams: "Drużyny",
                         default: "Ogólne",
-                        organiser: "Organizator"
+                        organiser: "Organizator",
+                        createCategory: "Tworzenie kategorii"
                     },
                     TABLES: {
                         place: 'Miejsce',
                         round: "Runda",
                         mp: "MP",
                         sum: "SUM",
-                        final: "PUNKTACJA KOŃCOWA LIGI (6RUND + MP)"
+                        final: "PUNKTACJA KOŃCOWA LIGI (6RUND + MP)",
+                        registered: "Zarejestrowany",
+                        nameAndSurname: "Imię i nazwisko zawodnika",
+                        gender: "Płeć",
+                        yearOfBirth: "Rok urodzenia",
+                        state: "Narodowość",
+                        category: "Kategoria",
+                        paid: "Płatność",
+                        presenceConfirmation: "Potwierdzenie obecności",
+                        name: "Nazwa",
+                        registeredPlayers: "Zarejestrowani",
+                        confirmedPlayers: "Potwierdzeni",
+                        rounds: "Rundy",
+                        teams: "Drużyny",
+                        registerLimit: "Limit rejestracji"
                     },
                     INPUTS: {
                         choose: "wybierz",
@@ -129,7 +143,11 @@ i18next
                         play: "w trakcie",
                         finished: "zakończone",
                         cancelled: "anulowane",
-                        organisation: "Przebieg"
+                        organisation: "Przebieg",
+                        cancel: "Anuluj",
+                        private: "Prywatne",
+                        public: "Publiczne",
+                        addCategory: "Dodaj kategorię",
                     },
                     LABELS: {
                         name: "Nazwa",
@@ -140,7 +158,10 @@ i18next
                         registered: "Zarejestrowanych",
                         paid: "Opłaconych",
                         confirmed: "Potwierdzeni",
-                        resigned: "Zrezygnowani"
+                        resigned: "Zrezygnowani",
+                        type: "Typ",
+                        roudsCount: "Ilość rund",
+                        createCategory: "Utwórz kategorię"
                     }
                 }
             },

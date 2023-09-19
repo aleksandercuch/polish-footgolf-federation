@@ -13,6 +13,9 @@ import { UserAuth } from '@/context/auth-context';
 // UTLIS
 import { ROUTING } from '@/utils/constants/routing-enums';
 
+// COMPONENTS
+import { Login } from '../login/login';
+
 export const AuthButtons = () => {
     const { t } = useTranslation();
     const { handleModal, user, logout } = UserAuth();
@@ -47,7 +50,7 @@ export const AuthButtons = () => {
                 ) : (
                     <>
                         <li>
-                            <button className={classes.authButtons__button} onClick={() => handleModal("This is component modal content")}>
+                            <button className={classes.authButtons__button} onClick={() => handleModal(<Login />)}>
                                 <span className={classes.authButtons__button__text}>{t("AUTH.login")}</span>
                             </button>
                         </li>
