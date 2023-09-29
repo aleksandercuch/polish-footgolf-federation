@@ -103,7 +103,8 @@ i18next
                         registration: "Rejestracja",
                         default: "Ogólne",
                         organiser: "Organizator",
-                        createCategory: "Tworzenie kategorii"
+                        createCategory: "Tworzenie kategorii",
+                        playerData: "Dane zawodnika"
                     },
                     TABLES: {
                         place: 'Miejsce',
@@ -148,6 +149,9 @@ i18next
                         private: "Prywatne",
                         public: "Publiczne",
                         addCategory: "Dodaj kategorię",
+                        birthday: "Rok urodzenia",
+                        fee: "Opłata",
+                        currency: "Waluta"
                     },
                     LABELS: {
                         name: "Nazwa",
@@ -161,7 +165,17 @@ i18next
                         resigned: "Zrezygnowani",
                         type: "Typ",
                         roudsCount: "Ilość rund",
-                        createCategory: "Utwórz kategorię"
+                        createCategory: "Utwórz kategorię",
+                    },
+                    BUTTONS: {
+                        signUp: "Zapisz się",
+                        signedUp: "Zapisany",
+                        addPlayerShort: "Dodaj zaw.",
+                        addPlayerLong: "Dodaj zawodnika"
+                    },
+                    MODAL: {
+                        assignedUser: "Zapisałeś się do wybranej kategorii!",
+                        confirm: "Kontynuuj"
                     }
                 }
             },

@@ -25,6 +25,9 @@ import { addDoc, collection, doc, updateDoc } from 'firebase/firestore';
 import { firebase, db } from "../../../../firebase/config/clientApp";
 import { COLLECTIONS } from "@/utils/constants/collections-enums";
 
+// CONSTANTS
+import { currenciesList } from "@/utils/constants/currencies-list";
+
 interface componentProps {
     tournament: any;
     tournamentId: string;
@@ -40,6 +43,8 @@ export const CategoriesModal: FC<componentProps> =({tournament, tournamentId, ca
             name: category ? category.name : '',
             maxPlayers: category ? category.maxPlayers : '',
             roudsCount: category ? category.roudsCount : '',
+            fee: category ? category.fee : '',
+            currency: category ? category.currency : 'zł',
             start: category ? category.start : formatDate(new Date()),
             end: category ? category.end : formatDate(new Date()),
         },
@@ -54,6 +59,8 @@ export const CategoriesModal: FC<componentProps> =({tournament, tournamentId, ca
                     maxPlayers: values.maxPlayers,
                     start: values.start,
                     end: values.end,
+                    fee: values.fee,
+                    currency: values.currency
                 };
                 updateDoc(
                     docRef, 
@@ -71,11 +78,13 @@ export const CategoriesModal: FC<componentProps> =({tournament, tournamentId, ca
                         categories: [
                             ...tournament.categories,
                             {
-                                id: tournament.categories.length + 1,
+                                id: tournament.categories.length || 0,
                                 name: values.name,
                                 maxPlayers: values.maxPlayers,
                                 start: values.start,
                                 end: values.end,
+                                fee: values.fee,
+                                currency: values.currency,
                                 players: []
                             }
                         ]
@@ -120,6 +129,33 @@ export const CategoriesModal: FC<componentProps> =({tournament, tournamentId, ca
                             onBlur={formik.handleBlur}
                             value={formik.values.maxPlayers} 
                         />
+                        <label>
+                            {formik.touched.maxPlayers && formik.errors.maxPlayers && (<div className={classes.form__errorSign}>*</div>)}
+                            {t('INPUTS.fee')}
+                        </label>
+                        <input 
+                            type="number" 
+                            name="fee" 
+                            className={cn(classes.form__input, formik.touched.fee && formik.errors.fee && classes["form__input--error"])} 
+                            onChange={formik.handleChange} 
+                            onBlur={formik.handleBlur}
+                            value={formik.values.fee} 
+                        />
+
+                        <label>
+                            {formik.touched.maxPlayers && formik.errors.maxPlayers && (<div className={classes.form__errorSign}>*</div>)}
+                            {t('INPUTS.currency')}
+                        </label>
+                         <select 
+                                name="currency" 
+                                className={cn(classes.form__input, formik.touched.currency && formik.errors.currency && classes["form__input--error"])}
+                                onChange={formik.handleChange} 
+                                onBlur={formik.handleBlur}
+                                value={formik.values.currency} >
+                                {currenciesList.map((currency) => {
+                                    return (<option key={currency.id} value={currency.value}>{currency.value}</option>)
+                                })}
+                            </select>
                     </div>
                 </div>
                 <div>

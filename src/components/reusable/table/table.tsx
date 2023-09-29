@@ -3,6 +3,7 @@ import classes from './table.module.scss';
 
 import { getCoreRowModel, useReactTable, flexRender } from '@tanstack/react-table';
 import type { ColumnDef } from '@tanstack/react-table';
+import { useEffect } from 'react';
 
 interface ReactTableProps<T extends object> {
  data: T[];
@@ -15,6 +16,10 @@ export const Table = <T extends object>({ data, columns }: ReactTableProps<T>) =
     columns,
     getCoreRowModel: getCoreRowModel(),
     });
+
+    useEffect(() => {
+      console.log("DATA", data);
+    }, [data])
     return (
         <table className={classes.table}>
                <thead className="border-b bg-gray-50">

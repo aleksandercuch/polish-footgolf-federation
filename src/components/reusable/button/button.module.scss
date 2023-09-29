@@ -10,3 +10,13 @@
         background: $logo-light-green;
     }
 }
+
+.buttonDisabled {
+    @include greenButton;
+    color: $primary-black;
+    background: $primary-silver;
+
+    &:hover {
+        background: $primary-silver;
+    }
+}

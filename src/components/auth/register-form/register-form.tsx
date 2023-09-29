@@ -17,7 +17,7 @@ import cn from "classnames";
 
 // API
 import { db, storage } from '../../../../firebase/config/clientApp';
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
 import { ref, uploadBytes } from 'firebase/storage';
 
 // CONTEXT
@@ -47,6 +47,7 @@ export const Register = () => {
             street: '',
             city: '',
             zip: '',
+            birthday: '',
             state: '',
             phone: '',
             description: '',
@@ -55,15 +56,15 @@ export const Register = () => {
             avatar: ""
         },
         onSubmit: values => {
+            // TODO add image as a first operation
             createUser(values.email, values.password)
-                .then(() => {
-                    if(file) {
-                        const storageRef = ref(storage, `UsersAvatars/${file.name}`);
-                        
-                        uploadBytes(storageRef, file).then((snapshot) => {
-                            const link = `gs://${snapshot.metadata.bucket}/${snapshot.metadata.fullPath}`;
-
-                            addDoc(collection(db, COLLECTIONS.users),
+                .then((userData: any) => {
+                    // if(file) {
+                    //     const storageRef = ref(storage, `UsersAvatars/${file.name}`);
+                        // uploadBytes(storageRef, file).then((snapshot) => {
+                        //     const link = `gs://${snapshot.metadata.bucket}/${snapshot.metadata.fullPath}`;
+                            const docRef = doc(db, COLLECTIONS.users, userData.user.uid)
+                            setDoc(docRef,
                             {
                                 email: values.email,
                                 gender: values.gender,
@@ -72,14 +73,15 @@ export const Register = () => {
                                 street:values.street,
                                 city: values.city,
                                 zip: values.zip,
+                                birthday: values.birthday,
                                 state: values.state,
                                 phone: values.phone,
                                 description: values.description,
-                                avatar: link
-                            });
+                              //  avatar: link
+                            }, { merge: false});
                             router.push('/');
-                          });
-                    }
+                        //   });
+                   // }
                 })
                 .catch((error: any) => {
                     if (error.code == AUTH_ERRORS.EmailInUse) {
@@ -98,6 +100,7 @@ export const Register = () => {
             zip: Yup.string().required(t('ERRORS.required')),
             state: Yup.string().required(t('ERRORS.required')),
             phone: Yup.string().required(t('ERRORS.required')),
+            birthday: Yup.string().required(t('ERRORS.required')),
           //  avatar: Yup.string().required(t('ERRORS.required')),
             checkbox1: Yup.bool().oneOf([true], t('ERRORS.required')),
             checkbox2: Yup.bool().oneOf([true], t('ERRORS.required')),
@@ -196,6 +199,19 @@ export const Register = () => {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.lastName} 
                              />
+
+                        <label>
+                            {formik.touched.birthday && formik.errors.birthday && (<div className={classes.form__errorSign}>*</div>)}
+                            {t('INPUTS.birthday')}
+                        </label>
+                        <input 
+                            type="date" 
+                            name="birthday" 
+                            className={cn(classes.form__input, formik.touched.birthday && formik.errors.birthday && classes["form__input--error"])} 
+                            onChange={formik.handleChange} 
+                            onBlur={formik.handleBlur}
+                            value={formik.values.birthday} 
+                        />
                         </div>
                     </div>
                     <div>

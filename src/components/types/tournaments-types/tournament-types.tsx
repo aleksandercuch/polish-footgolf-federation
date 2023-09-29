@@ -28,6 +28,23 @@ export interface gameTablePropsType {
     ]
 }
 
+export interface Iplayers {
+    id: string,
+    firstName: string,
+    lastName: string,
+    birthday: string,
+    paid: boolean,
+    confirmed: boolean
+}
+
+export interface Icategories {
+    start: Date,
+    end: Date,
+    maxPlayers: number,
+    id: number
+    players: Iplayers[];
+}
+
 export interface Itournaments {
     name: string,
     creatorEmail: string,
@@ -39,6 +56,10 @@ export interface Itournaments {
     registrationFrom: Date,
     registrationTill: Date,
     details: string,
+    par: number,
+    wholes: number,
+    categories: Icategories[],
+
 }
 
 export interface IEditTournaments {

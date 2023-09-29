@@ -1,28 +1,15 @@
 @import "@/styles/abstracts/mixins";
 @import "@/styles/abstracts/variables";
 
-.addButtonWrapper {
-    width: 15rem;
-    padding: 2rem 0;
-}
-
-.editButtonWrapper {
-    gap: 0.25rem;
-    display: grid;
-
-    button {
-        width: 100%;
-    }
-}
-
 .modalWrapper {
     @include window;
-    width: calc(100% - 30vh);
+    width: 100%;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
+    max-width: 30rem;
 
     img {
         position: absolute;
@@ -30,26 +17,28 @@
         top: 1rem;
         cursor: pointer;
     }
-}
 
-.addPlayerWrapper {
-    width: 60vh;
+    .gridWrapper {
+        margin: 2rem 1rem 0.5rem;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
 
-    .form {
-        grid-template-columns: none;
+        p {
+            font-size: $label-font;
+            color: $primary-white;
+        }
 
-        &__input {
+        :nth-child(n) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
         }
+        
     }
 }
 
 .form {
     @include form;
 }   
-
-.wrapper {
-    tr {
-        background: none !important;
-    }
-}
