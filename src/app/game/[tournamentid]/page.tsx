@@ -17,7 +17,7 @@ import { Itournaments } from "@/components/types/tournaments-types/tournament-ty
 import { InfoPanel } from "@/components/tournaments/info-panel/info-panel";
 import { Categories } from "@/components/tournaments/categories/categories";
 import { Registration } from "@/components/tournaments/registration/registration";
-
+import { Payments } from "@/components/tournaments/payments/paymets";
 
 // ASSETS
 import classes from './page.module.scss'
@@ -57,7 +57,7 @@ const page: FC<pageParams> =({ params }: pageParams) => {
                     </div>
                     <div className={classes.tab}>
                         <NavigationTab id={"tab-4"} title={"HEADERS.payments"}>
-                        <InfoPanel tournamentId={params.tournamentid} tournaments={data} />
+                            <Payments tournamentId={params.tournamentid} tournament={data} />
                         </NavigationTab>
                     </div>
                     <div className={classes.tab}>
