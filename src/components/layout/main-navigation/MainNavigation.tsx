@@ -34,7 +34,8 @@ export const MainNavigation = () => {
       </Grid>
       <Grid
         item
-        xs={8}
+        xs={12}
+        sm={8}
         sx={{
           position: "absolute",
           textAlign: "center",

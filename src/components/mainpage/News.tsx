@@ -1,7 +1,7 @@
 "use client";
 
 // CORE
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 // ASSETS
@@ -9,6 +9,8 @@ import { Grid, Paper, Typography } from "@mui/material";
 
 //COMPONENTS
 import { Posts } from "../models/posts";
+import { Audio } from "react-loader-spinner";
+import { FootballLoader } from "../layout/loader/loader";
 
 export const News = () => {
   const news: Posts[] = [
@@ -70,6 +72,8 @@ export const News = () => {
     },
   ];
 
+  const [posts, setPosts] = useState<Posts[] | []>(news);
+
   return (
     <>
       <Grid
@@ -88,58 +92,118 @@ export const News = () => {
           <Grid
             container
             direction="row"
-            alignItems="center"
+            alignItems="stretch"
             justifyContent="center"
+            sx={{ rowGap: { xs: 1, sm: 0 } }}
           >
-            <Grid item xs={8}>
-              <Paper>
+            {posts ? (
+              <>
                 <Grid
-                  container
-                  direction="row"
-                  alignItems="flex-start"
-                  justifyContent="center"
+                  item
+                  xs={12}
+                  sm={3}
+                  sx={{ paddingRight: { xs: "0", sm: "10px" } }}
                 >
-                  <Grid item xs={4}>
-                    <img
-                      src={news[0].image}
-                      alt="post image"
-                      style={{ height: "auto", width: "100%" }}
-                    />
-                  </Grid>
-                  <Grid item xs={8}>
+                  <Paper>
                     <Grid
                       container
                       direction="column"
-                      alignItems="fles-start"
-                      justifyContent="flex-start"
-                      mt={5}
-                      gap={3}
+                      alignItems="flex-start"
+                      justifyContent="center"
                     >
-                      <Grid item>
-                        <Grid container direction="column" gap={2}>
+                      <Grid item xs={4}>
+                        <img
+                          src={posts[0].image}
+                          alt="post image"
+                          style={{ height: "auto", width: "100%" }}
+                        />
+                      </Grid>
+                      <Grid item xs={8} sx={{ padding: "10px" }}>
+                        <Grid
+                          container
+                          direction="column"
+                          alignItems="fles-start"
+                          justifyContent="flex-start"
+                          mt={5}
+                          gap={3}
+                        >
                           <Grid item>
-                            <Typography variant="h4" component="h3">
-                              {news[0].title}
-                            </Typography>
+                            <Grid container direction="column" gap={2}>
+                              <Grid item>
+                                <Typography variant="h4" component="h3">
+                                  {posts[0].title}
+                                </Typography>
+                              </Grid>
+                              <Grid item>
+                                <Typography variant="caption">
+                                  22.10.2991{/* {posts[0].date} */}
+                                </Typography>
+                              </Grid>
+                            </Grid>
                           </Grid>
                           <Grid item>
-                            <Typography variant="caption">
-                              22.10.2991{/* {news[0].date} */}
+                            <Typography variant="subtitle1">
+                              {posts[0].text.substring(0, 100) + "..."}
                             </Typography>
                           </Grid>
                         </Grid>
                       </Grid>
-                      <Grid item>
-                        <Typography variant="subtitle1">
-                          {news[0].text}
-                        </Typography>
-                      </Grid>
                     </Grid>
+                  </Paper>
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  sm={5}
+                  sx={{ display: "flex", flexDirection: "column" }}
+                >
+                  <Grid
+                    container
+                    direction="row"
+                    alignItems="flex-start"
+                    justifyContent="space-between"
+                    sx={{ margin: "-10px 0" }}
+                    xs={12}
+                  >
+                    {posts.slice(1).map((post) => (
+                      <Grid item xs={6} sm={4} key={post.id}>
+                        <Paper>
+                          <Grid
+                            container
+                            direction="column"
+                            alignItems="flex-start"
+                            justifyContent="center"
+                            sx={{ padding: "10px" }}
+                          >
+                            <Grid item xs={12}>
+                              <img
+                                src={post.image}
+                                alt="post image"
+                                style={{ height: "auto", width: "100%" }}
+                              />
+                            </Grid>
+                            <Grid item xs={12}>
+                              <Typography variant="h6" component="h4">
+                                {post.title}
+                              </Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                              <Typography variant="caption">
+                                22.10.2991{/* {news[0].date} */}
+                              </Typography>
+                            </Grid>
+                          </Grid>
+                        </Paper>
+                      </Grid>
+                    ))}
                   </Grid>
                 </Grid>
-              </Paper>
-            </Grid>
-            <Grid item>Reszta</Grid>
+              </>
+            ) : (
+              <Grid item>
+                <FootballLoader />
+              </Grid>
+            )}
           </Grid>
         </Grid>
       </Grid>
