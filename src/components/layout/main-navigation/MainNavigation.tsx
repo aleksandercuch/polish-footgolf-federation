@@ -70,14 +70,7 @@ export const MainNavigation = () => {
           padding: "50px 0",
         }}
       >
-        <Image
-          src={
-            "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/images%2Flogo.png?alt=media&token=da908c5d-622a-46ee-8832-5b7cdc083280"
-          }
-          alt="logo"
-          height={300}
-          width={220}
-        />
+        <Image src={"/logo.png"} alt="logo" height={300} width={220} />
       </Grid>
     </Grid>
   );

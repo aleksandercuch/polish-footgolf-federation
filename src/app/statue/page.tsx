@@ -102,7 +102,7 @@ const page = () => {
                     <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
-                        src="https://bi.im-g.pl/im/97/81/1c/z29892503Q,Cristiano-Ronaldo.jpg"
+                        src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
                         sx={{ width: 150, height: 150 }}
                       />
                     </Grid>
@@ -122,7 +122,7 @@ const page = () => {
                     <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
-                        src="https://bi.im-g.pl/im/97/81/1c/z29892503Q,Cristiano-Ronaldo.jpg"
+                        src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
                         sx={{ width: 150, height: 150 }}
                       />
                     </Grid>
@@ -142,7 +142,7 @@ const page = () => {
                     <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
-                        src="https://bi.im-g.pl/im/97/81/1c/z29892503Q,Cristiano-Ronaldo.jpg"
+                        src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
                         sx={{ width: 150, height: 150 }}
                       />
                     </Grid>
