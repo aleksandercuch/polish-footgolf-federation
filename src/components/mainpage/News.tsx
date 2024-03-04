@@ -81,18 +81,27 @@ export const News = () => {
         direction="row"
         alignItems="center"
         justifyContent="center"
-        mt={10}
       >
-        <Grid item>
-          <Typography variant="h3" component="h2">
+        <Grid
+          item
+          sx={{
+            textAlign: "center",
+            background:
+              "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
+            color: "#FFFFFF",
+          }}
+          xs={8}
+          mt={6}
+        >
+          <Typography variant="h3" component="h2" mt={3} mb={3}>
             Aktualności
           </Typography>
         </Grid>
-        <Grid item xs={12} mt={3}>
+        <Grid item xs={12}>
           <Grid
             container
             direction="row"
-            alignItems="stretch"
+            alignItems="flex-start"
             justifyContent="center"
             sx={{ rowGap: { xs: 1, sm: 0 } }}
           >
@@ -102,7 +111,7 @@ export const News = () => {
                   item
                   xs={12}
                   sm={3}
-                  sx={{ paddingRight: { xs: "0", sm: "10px" } }}
+                  sx={{ padding: { xs: "0", sm: "10px 10px 10px 0" } }}
                 >
                   <Paper>
                     <Grid
@@ -162,11 +171,16 @@ export const News = () => {
                     direction="row"
                     alignItems="flex-start"
                     justifyContent="space-between"
-                    sx={{ margin: "-10px 0" }}
                     xs={12}
                   >
                     {posts.slice(1).map((post) => (
-                      <Grid item xs={6} sm={4} key={post.id}>
+                      <Grid
+                        item
+                        xs={6}
+                        sm={4}
+                        key={post.id}
+                        sx={{ padding: { xs: "0", sm: "10px" } }}
+                      >
                         <Paper>
                           <Grid
                             container

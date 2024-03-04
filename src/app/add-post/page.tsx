@@ -1,15 +1,24 @@
-// CORE
 "use client";
-import React from "react";
-import { useTranslation } from "react-i18next";
-
-// COMPONENTS
-import { PageHeader } from "@/components/reusable/page-title/page-title";
+// CORE
+import { FC } from "react";
 
 // ASSETS
-import { Avatar, Divider, Grid, Paper, Typography } from "@mui/material";
+import {
+  Avatar,
+  Divider,
+  FormControl,
+  Grid,
+  Paper,
+  TextField,
+  Typography,
+} from "@mui/material";
 
-const page = () => {
+// COMPONENTS
+import { AddPost } from "@/components/posts/AddPost";
+
+interface pageProps {}
+
+const page: FC<pageProps> = ({}) => {
   return (
     <>
       <Grid
@@ -31,11 +40,13 @@ const page = () => {
           mb={6}
         >
           <Typography variant="h3" component="h2" mt={3} mb={2}>
-            Kontakt z PFFG
+            Dodaj post
           </Typography>
         </Grid>
 
-        <Grid item xs={8}></Grid>
+        <Grid item xs={8}>
+          <AddPost />
+        </Grid>
       </Grid>
     </>
   );

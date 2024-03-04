@@ -24,15 +24,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ThemeProvider theme={theme}>
-      <AuthContextProvider>
-        <div id="modal-root"></div>
-        <div>
-          {/* <AuthButtons /> */}
-          <MainNavigation />
-          {children}
-        </div>
-      </AuthContextProvider>
-    </ThemeProvider>
+    <html lang="en">
+      <body>
+        <ThemeProvider theme={theme}>
+          <AuthContextProvider>
+            <div id="modal-root"></div>
+            <div>
+              {/* <AuthButtons /> */}
+              <MainNavigation />
+              {children}
+            </div>
+          </AuthContextProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

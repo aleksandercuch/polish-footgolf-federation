@@ -1,15 +1,14 @@
 // CORE
 "use client";
 import React from "react";
-import { useTranslation } from "react-i18next";
-
-// COMPONENTS
-import { PageHeader } from "@/components/reusable/page-title/page-title";
+import { FC } from "react";
 
 // ASSETS
 import { Avatar, Divider, Grid, Paper, Typography } from "@mui/material";
 
-const page = () => {
+interface pageProps {}
+
+const page: FC<pageProps> = ({}) => {
   return (
     <>
       <Grid
@@ -31,7 +30,7 @@ const page = () => {
           mb={6}
         >
           <Typography variant="h3" component="h2" mt={3} mb={2}>
-            Kontakt z PFFG
+            Polska Federacja Footgolfa
           </Typography>
         </Grid>
 

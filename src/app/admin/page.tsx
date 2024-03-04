@@ -1,15 +1,14 @@
 // CORE
 "use client";
-import React from "react";
-import { useTranslation } from "react-i18next";
+import { FC } from "react";
 
 // COMPONENTS
-import { PageHeader } from "@/components/reusable/page-title/page-title";
+import { Login } from "@/components/login/Login";
+import { Grid, Typography } from "@mui/material";
 
-// ASSETS
-import { Avatar, Divider, Grid, Paper, Typography } from "@mui/material";
+interface pageProps {}
 
-const page = () => {
+const page: FC<pageProps> = ({}) => {
   return (
     <>
       <Grid
@@ -31,11 +30,13 @@ const page = () => {
           mb={6}
         >
           <Typography variant="h3" component="h2" mt={3} mb={2}>
-            Kontakt z PFFG
+            Logowanie do Admina
           </Typography>
         </Grid>
 
-        <Grid item xs={8}></Grid>
+        <Grid item container justifyContent={"center"} xs={12}>
+          <Login />
+        </Grid>
       </Grid>
     </>
   );

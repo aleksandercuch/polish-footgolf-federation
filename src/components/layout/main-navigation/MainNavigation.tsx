@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 // ASSETS
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
 import { Button, ButtonGroup, Grid } from "@mui/material";
 import video from "../../../assets/img/video.mp4";
 
