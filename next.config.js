@@ -6,7 +6,10 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
-
+  images: {
+    formats: ["image/avif", "image/webp"],
+    domains: ["firebasestorage.googleapis.com"],
+  },
   webpack: (config, { isServer }) => {
     // Add a rule for video files
     config.module.rules.push({

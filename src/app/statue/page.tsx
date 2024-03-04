@@ -581,7 +581,7 @@ const page = () => {
                     Obowiązuje stój zgodny z regułami gry do footgolfa.
                   </Grid>
                   <Grid item component="li">
-                    Gracze przed startem wymieniają się Score Card'ami. Każdy
+                    Gracze przed startem wymieniają się Score Cardami. Każdy
                     gracz notuje wyniki partnera w rubryce PLAYER oraz swoje
                     własne w rubryce MARKER. Gracze powinni oznaczyć swoje
                     piłki.

@@ -30,7 +30,7 @@ interface LoginParams {
 }
 
 export const Login = () => {
-  const { signIn, user, logout } = UserAuth();
+  const currentUser = UserAuth();
 
   const form = useForm<LoginParams>({
     defaultValues: {
@@ -47,13 +47,13 @@ export const Login = () => {
   } = form;
 
   const submitForm = async (data: LoginParams) => {
-    signIn(data.email, data.password).catch((error: any) => {
+    currentUser?.signIn(data.email, data.password).catch((error: any) => {
       console.log(error);
     });
   };
 
   const handleLogout = async () => {
-    logout().catch((error: any) => {
+    currentUser!.logout().catch((error: any) => {
       console.log(error);
     });
   };
@@ -61,7 +61,7 @@ export const Login = () => {
   return (
     <Grid item xs={2}>
       <Paper sx={{ padding: "20px" }}>
-        {user.email ? (
+        {currentUser?.user?.email ? (
           <>
             <Button
               type="submit"

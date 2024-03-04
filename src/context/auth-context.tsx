@@ -9,30 +9,24 @@ import {
   signOut,
   onAuthStateChanged,
   UserCredential,
+  User,
 } from "firebase/auth";
 import auth from "../../firebase/config/clientApp";
 
 // CUSTOM HOOKS
 import useModal from "@/hooks/useModal/useModal";
 
-// COMPONENTS
-import { LoginModal } from "@/components/auth/login-modal/login-modal";
-
 interface CreateContextProps {
   createUser: (email: string, password: string) => Promise<UserCredential>;
-  modal: boolean;
-  handleModal: (content: any) => void;
-  modalContent: string;
   signIn: (email: string, password: string) => Promise<UserCredential>;
-  user: {};
-  logout: () => void;
+  user: User | null;
+  logout: () => Promise<void>;
 }
 
 const UserContext = createContext<CreateContextProps | null>(null);
 
 export const AuthContextProvider = ({ children }: any) => {
-  const [user, setUser] = useState({});
-  let { modal, handleModal, modalContent } = useModal();
+  const [user, setUser] = useState<User | null>(null);
 
   const createUser = (email: string, password: string) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -43,7 +37,7 @@ export const AuthContextProvider = ({ children }: any) => {
   };
 
   const logout = () => {
-    setUser({});
+    setUser(null);
     return signOut(auth);
   };
 
@@ -60,9 +54,6 @@ export const AuthContextProvider = ({ children }: any) => {
     <UserContext.Provider
       value={{
         createUser,
-        modal,
-        handleModal,
-        modalContent,
         signIn,
         user,
         logout,
