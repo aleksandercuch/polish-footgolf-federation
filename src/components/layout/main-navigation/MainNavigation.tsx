@@ -1,11 +1,9 @@
 "use client";
 // CORE
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 // ASSETS
-import logo from "@/assets/logo.png";
 import { Button, ButtonGroup, Grid } from "@mui/material";
 import video from "../../../assets/img/video.mp4";
 
@@ -13,8 +11,6 @@ import video from "../../../assets/img/video.mp4";
 import { NavLink } from "./NavLink";
 
 export const MainNavigation = () => {
-  const { t } = useTranslation();
-
   return (
     <Grid
       container
@@ -26,7 +22,7 @@ export const MainNavigation = () => {
       <Grid item sx={{ width: "100%" }}>
         <video
           style={{ maxHeight: "600px", minWidth: "100%", objectFit: "fill" }}
-          src={video}
+          src={""}
           autoPlay
           loop
           muted
@@ -74,7 +70,14 @@ export const MainNavigation = () => {
           padding: "50px 0",
         }}
       >
-        <Image src={logo.src} alt="logo" height={300} width={220} />
+        <Image
+          src={
+            "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/images%2Flogo.png?alt=media&token=da908c5d-622a-46ee-8832-5b7cdc083280"
+          }
+          alt="logo"
+          height={300}
+          width={220}
+        />
       </Grid>
     </Grid>
   );

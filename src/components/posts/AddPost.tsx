@@ -1,12 +1,12 @@
 // CORE
 "use client";
-import { FC, useEffect, useState } from "react";
+import { ComponentType, FC, useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { Editor } from "react-draft-wysiwyg";
 import { EditorState } from "draft-js";
 import { UserAuth } from "@/context/auth-context";
 import { redirect } from "next/navigation";
-
+import dynamic from "next/dynamic";
+import { EditorProps } from "react-draft-wysiwyg";
 // ASSETES
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { MuiFileInput } from "mui-file-input";
@@ -32,8 +32,14 @@ interface postParams {
 
 export const AddPost = () => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
-  const { user } = UserAuth();
-
+  const currentUser = UserAuth();
+  const Editor = dynamic<EditorProps>(
+    async () => {
+      const mod = await import("react-draft-wysiwyg");
+      return { default: mod.Editor as unknown as ComponentType<EditorProps> };
+    },
+    { ssr: false }
+  );
   const form = useForm<postParams>({
     defaultValues: {
       title: "",
@@ -81,8 +87,8 @@ export const AddPost = () => {
   };
 
   useEffect(() => {
-    !user && redirect("/path/to/push");
-  }, [user]);
+    // !currentUser?.user && redirect("/");
+  }, [currentUser?.user]);
 
   return (
     <Grid item xs={12}>
