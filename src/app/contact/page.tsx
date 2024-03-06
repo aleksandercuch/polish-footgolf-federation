@@ -1,7 +1,6 @@
 // CORE
 "use client";
 import React from "react";
-import { useTranslation } from "react-i18next";
 
 // COMPONENTS
 import { PageHeader } from "@/components/reusable/page-title/page-title";
@@ -35,7 +34,20 @@ const page = () => {
           </Typography>
         </Grid>
 
-        <Grid item xs={8}></Grid>
+        <Grid item xs={8} sx={{ textAlign: "center" }}>
+          <Typography variant="subtitle1">
+            Strona w budowie - zapraszany wkrótce.
+          </Typography>
+          <Typography variant="subtitle1">
+            <strong>POLSKA FEDERACJA FOOTGOLFA</strong>
+          </Typography>
+          <Typography variant="subtitle1">
+            <strong>Al. Zwycięstwa 51, 80-213 Gdańsk</strong>
+          </Typography>
+          <Typography variant="subtitle1">
+            <strong>KRS 0000632232, REGON 365181272, NIP 9571088145</strong>
+          </Typography>
+        </Grid>
       </Grid>
     </>
   );

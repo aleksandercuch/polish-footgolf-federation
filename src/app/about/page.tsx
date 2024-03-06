@@ -34,7 +34,11 @@ const page: FC<pageProps> = ({}) => {
           </Typography>
         </Grid>
 
-        <Grid item xs={8}></Grid>
+        <Grid item xs={8} sx={{ textAlign: "center" }}>
+          <Typography variant="subtitle1">
+            Strona w budowie - zapraszany wkrótce.
+          </Typography>
+        </Grid>
       </Grid>
     </>
   );

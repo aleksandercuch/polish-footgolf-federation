@@ -2,15 +2,23 @@
 // CORE
 import Link from "next/link";
 import Image from "next/image";
-
+import { useEffect, useState } from "react";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { useSearchParams } from "next/navigation";
 // ASSETS
 import { Button, ButtonGroup, Grid } from "@mui/material";
 import video from "../../../assets/img/video.mp4";
 
-//COMPONENTS
+// COMPONENTS
 import { NavLink } from "./NavLink";
 
+// FIREBASE
+import { ref, getDownloadURL } from "firebase/storage";
+import { storage } from "../../../../firebase/config/clientApp";
+
 export const MainNavigation = () => {
+  const searchParams = useSearchParams();
+  console.log(searchParams);
   return (
     <Grid
       container
@@ -22,7 +30,7 @@ export const MainNavigation = () => {
       <Grid item sx={{ width: "100%" }}>
         <video
           style={{ maxHeight: "600px", minWidth: "100%", objectFit: "fill" }}
-          src={""}
+          src={video}
           autoPlay
           loop
           muted
@@ -70,7 +78,11 @@ export const MainNavigation = () => {
           padding: "50px 0",
         }}
       >
-        <Image src={"/logo.png"} alt="logo" height={300} width={220} />
+        <img
+          src={"/logo.png"}
+          alt="logo"
+          style={{ height: "300px", width: "220px" }}
+        ></img>
       </Grid>
     </Grid>
   );

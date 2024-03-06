@@ -6,7 +6,7 @@ import { EditorState } from "draft-js";
 import { UserAuth } from "@/context/auth-context";
 import { redirect } from "next/navigation";
 import dynamic from "next/dynamic";
-import { EditorProps } from "react-draft-wysiwyg";
+import { Editor, EditorProps } from "react-draft-wysiwyg";
 // ASSETES
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { MuiFileInput } from "mui-file-input";
@@ -15,7 +15,7 @@ import { convertToRaw } from "draft-js";
 import { FootballLoader } from "../layout/loader/loader";
 
 //FIREBASE
-import { ref, uploadBytes } from "firebase/storage";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { db, storage } from "../../../firebase/config/clientApp";
 import { collection, addDoc } from "firebase/firestore";
 
@@ -33,13 +33,7 @@ interface postParams {
 export const AddPost = () => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const currentUser = UserAuth();
-  const Editor = dynamic<EditorProps>(
-    async () => {
-      const mod = await import("react-draft-wysiwyg");
-      return { default: mod.Editor as unknown as ComponentType<EditorProps> };
-    },
-    { ssr: false }
-  );
+
   const form = useForm<postParams>({
     defaultValues: {
       title: "",
@@ -60,11 +54,13 @@ export const AddPost = () => {
     const storageRef = ref(storage, `postsImages/${data.file.name}`);
 
     uploadBytes(storageRef, data.file)
-      .then((snapshot) => {
+      .then(async (snapshot) => {
+        const downloadURL = await getDownloadURL(snapshot.ref);
+        console.log(downloadURL);
         addDoc(collection(db, "posts"), {
           title: data.title,
           description: data.description,
-          file: `gs://${snapshot.metadata.bucket}/postsImages/${data.file.name}`,
+          file: downloadURL,
           date: data.date,
         }).then(() => {
           alert("Dodałeś post!");
@@ -76,7 +72,7 @@ export const AddPost = () => {
       });
   };
 
-  const onEditorStateChange = function (editorState: EditorState) {
+  const onEditorStateChange = (editorState: EditorState) => {
     setEditorState(editorState);
     const { blocks } = convertToRaw(editorState.getCurrentContent());
     /*let text = blocks.reduce((acc, item) => {
