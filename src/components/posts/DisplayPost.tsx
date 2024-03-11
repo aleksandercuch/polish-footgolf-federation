@@ -2,11 +2,17 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import dayjs from "dayjs";
+import { UserAuth } from "@/context/auth-context";
 
 // ASSETS
-import { Grid, Paper, Typography } from "@mui/material";
+import { Button, Grid, Paper, Typography } from "@mui/material";
 import { convertFirebaseTimestamp } from "@/functions/convert-firebase-timestamp";
 import draftToHtml from "draftjs-to-html";
+
+// COMPONENTS
+import EditButtons from "./EditButtons";
+import { AddPost, getParams } from "./AddPost";
+
 // FIREBASE
 import {
   collection,
@@ -22,7 +28,9 @@ import { db } from "../../../firebase/config/clientApp";
 import { postParams, pageProps } from "@/app/posts/(post)/[id]/page";
 
 const DisplayPost = ({ params }: pageProps) => {
-  const [post, setPost] = useState<postParams | null>();
+  const [post, setPost] = useState<getParams | null>();
+  const [editionActive, setEditionActive] = useState(false);
+  const currentUser = UserAuth();
 
   const fetchPost = async () => {
     const postsCollection = collection(db, "posts");
@@ -42,7 +50,7 @@ const DisplayPost = ({ params }: pageProps) => {
             date: convertFirebaseTimestamp(postData.date),
           });
         } else {
-          alert("Post not found");
+          alert("Nie ma posta o takim id.");
         }
       })
       .catch((error) => {
@@ -57,67 +65,99 @@ const DisplayPost = ({ params }: pageProps) => {
   return (
     <>
       {post && (
-        <Grid
-          container
-          direction="row"
-          alignItems="center"
-          justifyContent="center"
-        >
+        <>
           <Grid
-            item
-            sx={{
-              textAlign: "center",
-              background:
-                "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
-              color: "#FFFFFF",
-            }}
-            xs={8}
-            mt={6}
+            container
+            direction="row"
+            alignItems="center"
+            justifyContent="center"
           >
-            <Typography variant="h3" component="h2" mt={3} mb={3}>
-              {post.title}
-            </Typography>
-          </Grid>
+            <Grid
+              item
+              sx={{
+                textAlign: "center",
+                background:
+                  "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
+                color: "#FFFFFF",
+              }}
+              xs={8}
+              mt={6}
+            >
+              <Typography variant="h3" component="h2" mt={3} mb={3}>
+                {post.title}
+              </Typography>
+            </Grid>
 
-          <Grid item xs={8}>
-            <Paper>
-              <Grid
-                container
-                direction="row"
-                justifyContent="flex-start"
-                alignItems="flex-start"
-              >
-                <Grid item xs={12}>
-                  <img
-                    src={post.file}
-                    alt="post image"
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "10px",
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={12} sx={{ padding: "0 15px 15px" }}>
-                  <Typography
-                    variant="h4"
-                    component="h3"
-                    sx={{ textAlign: "center" }}
+            <Grid item xs={8}>
+              {editionActive ? (
+                <>
+                  <Grid item xs={12}>
+                    <Paper sx={{ padding: "20px" }}>
+                      <AddPost
+                        id={post.id}
+                        title={post.title}
+                        description={post.description}
+                        file={post.file}
+                        date={post.date}
+                      />
+                      <Button
+                        variant="contained"
+                        fullWidth
+                        color="error"
+                        onClick={() => setEditionActive(false)}
+                      >
+                        Anuluj Edytowanie{" "}
+                      </Button>
+                    </Paper>
+                  </Grid>
+                </>
+              ) : (
+                <Paper>
+                  <Grid
+                    container
+                    direction="row"
+                    justifyContent="center"
+                    alignItems="flex-start"
                   >
-                    {dayjs(post.date).format("DD/MM/YYYY")}
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sx={{ padding: "0 15px 15px" }}>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: draftToHtml(post.description),
-                    }}
-                  />
-                </Grid>
-              </Grid>
-            </Paper>
+                    <Grid item xs={3} mt={3} mb={3}>
+                      <img
+                        src={post.file}
+                        alt="post image"
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                          borderRadius: "10px",
+                        }}
+                      />
+                    </Grid>
+                    <Grid item xs={12} sx={{ padding: "0 15px 15px" }}>
+                      <Typography
+                        variant="h4"
+                        component="h3"
+                        sx={{ textAlign: "center" }}
+                      >
+                        {dayjs(post.date).format("DD/MM/YYYY")}
+                      </Typography>
+                      {currentUser?.user?.email && (
+                        <EditButtons
+                          id={params.id}
+                          setEditionActive={setEditionActive}
+                        />
+                      )}
+                    </Grid>
+                    <Grid item xs={12} sx={{ padding: "0 15px 15px" }}>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: draftToHtml(post.description),
+                        }}
+                      />
+                    </Grid>
+                  </Grid>
+                </Paper>
+              )}
+            </Grid>
           </Grid>
-        </Grid>
+        </>
       )}
     </>
   );

@@ -11,6 +11,7 @@ import { Avatar, Divider, Grid, Paper, Typography } from "@mui/material";
 
 // FIREBASE
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import { EditorState } from "draft-js";
 
 export interface pageProps {
   params: {
@@ -21,7 +22,7 @@ export interface pageProps {
 export interface postParams {
   id: string;
   title: string;
-  description: any;
+  description: EditorState;
   file: string;
   date: Date;
 }
