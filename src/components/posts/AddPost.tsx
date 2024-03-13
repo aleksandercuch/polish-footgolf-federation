@@ -2,16 +2,11 @@
 "use client";
 import { ComponentType, FC, useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import {
-  ContentState,
-  EditorState,
-  RawDraftContentBlock,
-  convertFromRaw,
-} from "draft-js";
+import { EditorState, convertFromRaw } from "draft-js";
 import { UserAuth } from "@/context/auth-context";
-import { redirect } from "next/navigation";
-import dynamic from "next/dynamic";
-import { Editor, EditorProps } from "react-draft-wysiwyg";
+import { Editor } from "react-draft-wysiwyg";
+import { useRouter } from "next/navigation";
+
 // ASSETES
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { MuiFileInput } from "mui-file-input";
@@ -19,7 +14,6 @@ import {
   Button,
   FormControl,
   Grid,
-  Paper,
   TextField,
   Typography,
 } from "@mui/material";
@@ -43,7 +37,7 @@ interface IProps {
 interface postParams {
   title: string;
   description: any;
-  file: File;
+  file: any;
   date: Date;
 }
 export interface getParams {
@@ -60,6 +54,7 @@ export const AddPost = ({ id, title, description, file, date }: IProps) => {
       : EditorState.createEmpty()
   );
   const currentUser = UserAuth();
+  const router = useRouter();
 
   const form = useForm<postParams>({
     defaultValues: {
@@ -74,30 +69,54 @@ export const AddPost = ({ id, title, description, file, date }: IProps) => {
     control,
     handleSubmit,
     reset,
-    formState: { isSubmitting, errors, isValid, isSubmitted },
+    formState: { isSubmitting, errors },
   } = form;
 
   const submitForm = (data: postParams) => {
-    const storageRef = ref(storage, `postsImages/${data.file.name}`);
-
     if (id) {
-      uploadBytes(storageRef, data.file)
-        .then(async (snapshot) => {
-          const downloadURL = await getDownloadURL(snapshot.ref);
-          updateDoc(doc(db, "posts", id), {
-            title: data.title,
-            description: data.description,
-            file: downloadURL,
-            date: data.date,
-          }).then(() => {
-            alert("Edytowałeś post!");
-            reset();
+      if (data.file) {
+        const storageRef = ref(storage, `postsImages/${data.file.name}`);
+        console.log(1);
+        uploadBytes(storageRef, data.file)
+          .then(async (snapshot) => {
+            const downloadURL = data.file
+              ? await getDownloadURL(snapshot.ref)
+              : file;
+            updateDoc(doc(db, "posts", id), {
+              title: data.title,
+              description: data.description,
+              file: downloadURL,
+              date: data.date,
+            }).then(() => {
+              alert("Edytowałeś post!");
+              router.replace("/");
+              router.refresh();
+              reset();
+            });
+          })
+          .catch((error) => {
+            alert(error);
           });
+      } else {
+        updateDoc(doc(db, "posts", id), {
+          title: data.title,
+          description: data.description,
+          file: file,
+          date: data.date,
         })
-        .catch((error) => {
-          alert(error);
-        });
+          .then(() => {
+            alert("Edytowałeś post!");
+            router.replace("/");
+            router.refresh();
+            reset();
+          })
+          .catch((error) => {
+            alert(error);
+          });
+      }
     } else {
+      const storageRef = ref(storage, `postsImages/${data.file.name}`);
+
       uploadBytes(storageRef, data.file)
         .then(async (snapshot) => {
           const downloadURL = await getDownloadURL(snapshot.ref);
@@ -108,6 +127,8 @@ export const AddPost = ({ id, title, description, file, date }: IProps) => {
             date: data.date,
           }).then(() => {
             alert("Dodałeś post!");
+            router.replace("/");
+            router.refresh();
             reset();
           });
         })
@@ -194,9 +215,6 @@ export const AddPost = ({ id, title, description, file, date }: IProps) => {
       <Controller
         name={"file"}
         control={control}
-        rules={{
-          required: "Wybierz plik!",
-        }}
         render={({ field }) => (
           <MuiFileInput inputProps={{ accept: ".png, .jpeg" }} {...field} />
         )}

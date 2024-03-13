@@ -30,7 +30,7 @@ export const MainNavigation = () => {
       <Grid item sx={{ width: "100%" }}>
         <video
           style={{ maxHeight: "600px", minWidth: "100%", objectFit: "fill" }}
-          src={video}
+          src={""}
           autoPlay
           loop
           muted

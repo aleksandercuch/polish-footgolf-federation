@@ -119,14 +119,20 @@ const DisplayPost = ({ params }: pageProps) => {
                     justifyContent="center"
                     alignItems="flex-start"
                   >
-                    <Grid item xs={3} mt={3} mb={3}>
+                    <Grid
+                      item
+                      xs={12}
+                      mb={3}
+                      container
+                      justifyContent={"center"}
+                    >
                       <img
                         src={post.file}
                         alt="post image"
                         style={{
-                          width: "100%",
                           height: "auto",
                           borderRadius: "10px",
+                          maxHeight: "400px",
                         }}
                       />
                     </Grid>

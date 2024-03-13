@@ -126,15 +126,15 @@ export const News = () => {
             Aktualności
           </Typography>
         </Grid>
-        <Grid item xs={12}>
-          <Grid
-            container
-            direction="row"
-            alignItems="flex-start"
-            justifyContent="center"
-            sx={{ rowGap: { xs: 1, sm: 0 } }}
-          >
-            {posts ? (
+        {posts.length !== 0 ? (
+          <Grid item xs={12}>
+            <Grid
+              container
+              direction="row"
+              alignItems="flex-start"
+              justifyContent="center"
+              sx={{ rowGap: { xs: 1, sm: 0 } }}
+            >
               <>
                 <Grid
                   item
@@ -159,7 +159,8 @@ export const News = () => {
                               src={posts[0].file}
                               alt="post image"
                               style={{
-                                height: "auto",
+                                objectFit: "cover",
+                                height: "450px",
                                 width: "100%",
                                 minHeight: "300px",
                               }}
@@ -210,7 +211,6 @@ export const News = () => {
                     item
                     direction="row"
                     alignItems="flex-start"
-                    justifyContent="space-between"
                     xs={12}
                   >
                     {posts.slice(1).map((post) => (
@@ -233,14 +233,21 @@ export const News = () => {
                               justifyContent="center"
                               sx={{ padding: "10px" }}
                             >
-                              <Grid item xs={12}>
+                              <Grid
+                                item
+                                xs={12}
+                                container
+                                justifyContent={"center"}
+                              >
                                 <img
                                   src={post.file}
                                   alt="post image"
                                   style={{
-                                    height: "auto",
+                                    height: "200px",
+                                    objectFit: "cover",
                                     width: "100%",
-                                    maxHeight: "150px",
+
+                                    maxHeight: "200px",
                                   }}
                                 />
                               </Grid>
@@ -266,13 +273,13 @@ export const News = () => {
                   </Grid>
                 </Grid>
               </>
-            ) : (
-              <Grid item>
-                <FootballLoader />
-              </Grid>
-            )}
+            </Grid>
           </Grid>
-        </Grid>
+        ) : (
+          <Grid item xs={12}>
+            <FootballLoader fixed={false} />
+          </Grid>
+        )}
       </Grid>
     </>
   );
