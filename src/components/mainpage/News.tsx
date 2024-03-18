@@ -1,78 +1,107 @@
 "use client";
 
 // CORE
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import dayjs from "dayjs";
+import Link from "next/link";
 
 // ASSETS
 import { Grid, Paper, Typography } from "@mui/material";
+import { convertFirebaseTimestamp } from "@/functions/convert-firebase-timestamp";
 
 //COMPONENTS
 import { Posts } from "../models/posts";
 import { Audio } from "react-loader-spinner";
 import { FootballLoader } from "../layout/loader/loader";
 
-export const News = () => {
-  const news: Posts[] = [
-    {
-      id: "1",
-      title: "Tomasz lub jeść placki i jest fajny",
-      text: "Tomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajny",
-      image:
-        "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
-      date: new Date(),
-    },
-    {
-      id: "2",
-      title: "Tomasz lub jeść placki i jest fajny",
-      text: "Tomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajny",
-      image:
-        "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
-      date: new Date(),
-    },
-    {
-      id: "3",
-      title: "Tomasz lub jeść placki i jest fajny",
-      text: "Tomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajny",
-      image:
-        "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
-      date: new Date(),
-    },
-    {
-      id: "4",
-      title: "Tomasz lub jeść placki i jest fajny",
-      text: "Tomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajny",
-      image:
-        "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
-      date: new Date(),
-    },
-    {
-      id: "5",
-      title: "Tomasz lub jeść placki i jest fajny",
-      text: "Tomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajny",
-      image:
-        "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
-      date: new Date(),
-    },
-    {
-      id: "6",
-      title: "Tomasz lub jeść placki i jest fajny",
-      text: "Tomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajny",
-      image:
-        "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
-      date: new Date(),
-    },
-    {
-      id: "7",
-      title: "Tomasz lub jeść placki i jest fajny",
-      text: "Tomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajnyTomasz lub jeść placki i jest fajny",
-      image:
-        "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
-      date: new Date(),
-    },
-  ];
+// FIREBASE
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import { db } from "../../../firebase/config/clientApp";
 
-  const [posts, setPosts] = useState<Posts[] | []>(news);
+// TYPES
+import { postParams } from "@/app/posts/(post)/[id]/page";
+
+const news: Posts[] = [
+  {
+    id: "1",
+    title: "Tytuł przykładowego posta",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    image:
+      "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
+    date: new Date(),
+  },
+  {
+    id: "2",
+    title: "Tytuł przykładowego posta",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    image:
+      "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
+    date: new Date(),
+  },
+  {
+    id: "3",
+    title: "Tytuł przykładowego posta",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    image:
+      "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
+    date: new Date(),
+  },
+  {
+    id: "4",
+    title: "Tytuł przykładowego posta",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    image:
+      "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
+    date: new Date(),
+  },
+  {
+    id: "5",
+    title: "Tytuł przykładowego posta",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    image:
+      "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
+    date: new Date(),
+  },
+  {
+    id: "6",
+    title: "Tytuł przykładowego posta",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    image:
+      "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
+    date: new Date(),
+  },
+  {
+    id: "7",
+    title: "Tytuł przykładowego posta",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    image:
+      "https://contents.mediadecathlon.com/p2525046/k$b65f339767c3bae59d59e4768a2dace3/sq/pilki-nozne-do-gry-11-osobowej.jpg?format=auto&f=800x0",
+    date: new Date(),
+  },
+];
+
+export const News = () => {
+  const [posts, setPosts] = useState<postParams[] | []>([]);
+
+  const fetchNews = async () => {
+    const postsCollection = collection(db, "posts");
+
+    const sortedQuery = query(postsCollection, orderBy("date", "asc"));
+
+    const querySnapshot = await getDocs(sortedQuery);
+
+    const data: any[] = [];
+    querySnapshot.forEach((doc) => {
+      data.push({ id: doc.id, ...doc.data() });
+    });
+
+    setPosts(data.reverse().slice(0, 7));
+  };
+
+  useEffect(() => {
+    fetchNews();
+  }, []);
 
   return (
     <>
@@ -97,15 +126,15 @@ export const News = () => {
             Aktualności
           </Typography>
         </Grid>
-        <Grid item xs={12}>
-          <Grid
-            container
-            direction="row"
-            alignItems="flex-start"
-            justifyContent="center"
-            sx={{ rowGap: { xs: 1, sm: 0 } }}
-          >
-            {posts ? (
+        {posts.length !== 0 ? (
+          <Grid item xs={12}>
+            <Grid
+              container
+              direction="row"
+              alignItems="flex-start"
+              justifyContent="center"
+              sx={{ rowGap: { xs: 1, sm: 0 } }}
+            >
               <>
                 <Grid
                   item
@@ -113,52 +142,63 @@ export const News = () => {
                   sm={3}
                   sx={{ padding: { xs: "0", sm: "10px 10px 10px 0" } }}
                 >
-                  <Paper>
-                    <Grid
-                      container
-                      direction="column"
-                      alignItems="flex-start"
-                      justifyContent="center"
-                    >
-                      <Grid item xs={4}>
-                        <img
-                          src={posts[0].image}
-                          alt="post image"
-                          style={{ height: "auto", width: "100%" }}
-                        />
-                      </Grid>
-                      <Grid item xs={8} sx={{ padding: "10px" }}>
-                        <Grid
-                          container
-                          direction="column"
-                          alignItems="fles-start"
-                          justifyContent="flex-start"
-                          mt={5}
-                          gap={3}
-                        >
-                          <Grid item>
-                            <Grid container direction="column" gap={2}>
-                              <Grid item>
-                                <Typography variant="h4" component="h3">
-                                  {posts[0].title}
-                                </Typography>
-                              </Grid>
-                              <Grid item>
-                                <Typography variant="caption">
-                                  22.10.2991{/* {posts[0].date} */}
-                                </Typography>
+                  <Link
+                    href={`posts/${posts[0]?.id}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Paper>
+                      <Grid
+                        container
+                        direction="column"
+                        alignItems="flex-start"
+                        justifyContent="center"
+                      >
+                        <Grid item xs={4}>
+                          {posts[0]?.file && (
+                            <img
+                              src={posts[0].file}
+                              alt="post image"
+                              style={{
+                                objectFit: "cover",
+                                height: "450px",
+                                width: "100%",
+                                minHeight: "300px",
+                              }}
+                            />
+                          )}
+                        </Grid>
+                        <Grid item xs={8} sx={{ padding: "10px" }}>
+                          <Grid
+                            container
+                            direction="column"
+                            alignItems="fles-start"
+                            justifyContent="flex-start"
+                            mt={5}
+                            gap={3}
+                          >
+                            <Grid item>
+                              <Grid container direction="column" gap={2}>
+                                <Grid item>
+                                  <Typography variant="h4" component="h3">
+                                    {posts[0]?.title}
+                                  </Typography>
+                                </Grid>
+                                <Grid item>
+                                  {posts[0]?.date && (
+                                    <Typography variant="caption">
+                                      {dayjs(
+                                        convertFirebaseTimestamp(posts[0]?.date)
+                                      ).format("DD/MM/YYYY")}
+                                    </Typography>
+                                  )}
+                                </Grid>
                               </Grid>
                             </Grid>
                           </Grid>
-                          <Grid item>
-                            <Typography variant="subtitle1">
-                              {posts[0].text.substring(0, 100) + "..."}
-                            </Typography>
-                          </Grid>
                         </Grid>
                       </Grid>
-                    </Grid>
-                  </Paper>
+                    </Paper>
+                  </Link>
                 </Grid>
                 <Grid
                   item
@@ -168,9 +208,9 @@ export const News = () => {
                 >
                   <Grid
                     container
+                    item
                     direction="row"
                     alignItems="flex-start"
-                    justifyContent="space-between"
                     xs={12}
                   >
                     {posts.slice(1).map((post) => (
@@ -181,45 +221,65 @@ export const News = () => {
                         key={post.id}
                         sx={{ padding: { xs: "0", sm: "10px" } }}
                       >
-                        <Paper>
-                          <Grid
-                            container
-                            direction="column"
-                            alignItems="flex-start"
-                            justifyContent="center"
-                            sx={{ padding: "10px" }}
-                          >
-                            <Grid item xs={12}>
-                              <img
-                                src={post.image}
-                                alt="post image"
-                                style={{ height: "auto", width: "100%" }}
-                              />
+                        <Link
+                          href={`posts/${post.id}`}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Paper>
+                            <Grid
+                              container
+                              direction="column"
+                              alignItems="flex-start"
+                              justifyContent="center"
+                              sx={{ padding: "10px" }}
+                            >
+                              <Grid
+                                item
+                                xs={12}
+                                container
+                                justifyContent={"center"}
+                              >
+                                <img
+                                  src={post.file}
+                                  alt="post image"
+                                  style={{
+                                    height: "200px",
+                                    objectFit: "cover",
+                                    width: "100%",
+
+                                    maxHeight: "200px",
+                                  }}
+                                />
+                              </Grid>
+                              <Grid item xs={12}>
+                                <Typography variant="h6" component="h4">
+                                  {post.title}
+                                </Typography>
+                              </Grid>
+                              <Grid item xs={12}>
+                                {post?.date && (
+                                  <Typography variant="caption">
+                                    {dayjs(
+                                      convertFirebaseTimestamp(post?.date)
+                                    ).format("DD/MM/YYYY")}
+                                  </Typography>
+                                )}
+                              </Grid>
                             </Grid>
-                            <Grid item xs={12}>
-                              <Typography variant="h6" component="h4">
-                                {post.title}
-                              </Typography>
-                            </Grid>
-                            <Grid item xs={12}>
-                              <Typography variant="caption">
-                                22.10.2991{/* {news[0].date} */}
-                              </Typography>
-                            </Grid>
-                          </Grid>
-                        </Paper>
+                          </Paper>
+                        </Link>
                       </Grid>
                     ))}
                   </Grid>
                 </Grid>
               </>
-            ) : (
-              <Grid item>
-                <FootballLoader />
-              </Grid>
-            )}
+            </Grid>
           </Grid>
-        </Grid>
+        ) : (
+          <Grid item xs={12}>
+            <FootballLoader fixed={false} />
+          </Grid>
+        )}
       </Grid>
     </>
   );

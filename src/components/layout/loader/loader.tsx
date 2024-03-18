@@ -1,8 +1,12 @@
 import "./loader.scss";
 
-export const FootballLoader = () => {
+interface IProps {
+  fixed: boolean;
+}
+
+export const FootballLoader = ({ fixed }: IProps) => {
   return (
-    <div className="main-fader">
+    <div className={fixed ? "fixed-fader" : "static-fader"}>
       <div className="loader">
         <svg viewBox="0 0 866 866" xmlns="http://www.w3.org/2000/svg">
           <svg

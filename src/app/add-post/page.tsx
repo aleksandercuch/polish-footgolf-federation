@@ -45,7 +45,11 @@ const page: FC<pageProps> = ({}) => {
         </Grid>
 
         <Grid item xs={8}>
-          <AddPost />
+          <Grid item xs={12}>
+            <Paper sx={{ padding: "20px" }}>
+              <AddPost />
+            </Paper>
+          </Grid>
         </Grid>
       </Grid>
     </>
