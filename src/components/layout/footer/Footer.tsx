@@ -1,25 +1,22 @@
 "use client";
 // CORE
-import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import { useSearchParams } from "next/navigation";
+
 // ASSETS
-import { Button, ButtonGroup, Divider, Grid } from "@mui/material";
-import video from "../../../assets/img/video.mp4";
-import theme from "@/theme";
+import { Divider, Grid } from "@mui/material";
 
 // COMPONENTS
-import { NavLink } from "../main-navigation/NavLink";
-
-// FIREBASE
-import { ref, getDownloadURL } from "firebase/storage";
-import { storage } from "../../../../firebase/config/clientApp";
+import { FooterLink } from "./FooterLink";
 
 export const Footer = () => {
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="center">
+    <Grid
+      container
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+      sx={{ marginTop: "150px" }}
+    >
       <Grid
         item
         xs={12}
@@ -37,79 +34,31 @@ export const Footer = () => {
             height: "6px",
           }}
         />
-        <img
+        <Image
           src={"/logo.png"}
           alt="logo"
+          height={170}
+          width={120}
           style={{
-            height: "170px",
-            width: "120px",
             position: "absolute",
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
           }}
-        ></img>
+        />
       </Grid>
       <Grid item container xs={4} justifyContent="space-between">
-        <Grid item>
-          <Link
-            href={"/"}
-            style={{
-              textDecoration: "none",
-              height: "60px",
-              display: "inline-grid",
-              alignContent: "center",
-              width: "100%",
-              color: "#005A9C",
-            }}
-          >
-            Start
-          </Link>
+        <Grid item xs={12} sm={3}>
+          <FooterLink url={"/"} name={"Start"} />
         </Grid>
-        <Grid item>
-          <Link
-            href={"/about"}
-            style={{
-              textDecoration: "none",
-              height: "60px",
-              display: "inline-grid",
-              alignContent: "center",
-              width: "100%",
-              color: "#005A9C",
-            }}
-          >
-            O nas
-          </Link>
+        <Grid item xs={12} sm={3}>
+          <FooterLink url={"/about"} name={"O nas"} />
         </Grid>
-        <Grid item>
-          <Link
-            href={"/statue"}
-            style={{
-              textDecoration: "none",
-              height: "60px",
-              display: "inline-grid",
-              alignContent: "center",
-              width: "100%",
-              color: "#005A9C",
-            }}
-          >
-            Regulamin
-          </Link>
+        <Grid item xs={12} sm={3}>
+          <FooterLink url={"/statue"} name={"Regulamin"} />
         </Grid>
-        <Grid item>
-          <Link
-            href={"/contact"}
-            style={{
-              textDecoration: "none",
-              height: "60px",
-              display: "inline-grid",
-              alignContent: "center",
-              width: "100%",
-              color: "#005A9C",
-            }}
-          >
-            Kontakt
-          </Link>
+        <Grid item xs={12} sm={3}>
+          <FooterLink url={"/contact"} name={"Kontakt"} />
         </Grid>
       </Grid>
     </Grid>

@@ -1,27 +1,15 @@
-// CORE
 "use client";
-import { FC, useState } from "react";
+
+// CORE
 import { Controller, useForm } from "react-hook-form";
-import { Editor } from "react-draft-wysiwyg";
-import { EditorState } from "draft-js";
 import { UserAuth } from "@/context/auth-context";
+import Link from "next/link";
 
 // ASSETES
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import { MuiFileInput } from "mui-file-input";
-import {
-  Box,
-  Button,
-  FormControl,
-  Grid,
-  Paper,
-  TextField,
-} from "@mui/material";
-import { convertToRaw } from "draft-js";
+import { Button, FormControl, Grid, Paper, TextField } from "@mui/material";
 
 //FIREBASE
-import { ref, uploadBytes } from "firebase/storage";
-import { storage } from "../../../firebase/config/clientApp";
 import { EMAIL_PATTERN } from "@/utils/constants/constants";
 
 interface LoginParams {
@@ -43,7 +31,7 @@ export const Login = () => {
     control,
     handleSubmit,
     reset,
-    formState: { isSubmitting, errors, isValid, isSubmitted },
+    formState: { errors },
   } = form;
 
   const submitForm = async (data: LoginParams) => {
@@ -62,16 +50,30 @@ export const Login = () => {
     <Grid item xs={2}>
       <Paper sx={{ padding: "20px" }}>
         {currentUser?.user?.email ? (
-          <>
-            <Button
-              type="submit"
-              variant="outlined"
-              onClick={handleLogout}
-              fullWidth
-            >
-              Wyloguj
-            </Button>
-          </>
+          <Grid container>
+            <Grid item xs={12} mb={2}>
+              <Link href={"/add-post"}>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="success"
+                  fullWidth
+                >
+                  Dodaj post
+                </Button>
+              </Link>
+            </Grid>
+            <Grid item xs={12}>
+              <Button
+                type="submit"
+                variant="outlined"
+                onClick={handleLogout}
+                fullWidth
+              >
+                Wyloguj
+              </Button>
+            </Grid>
+          </Grid>
         ) : (
           <FormControl component={"form"} onSubmit={handleSubmit(submitForm)}>
             <Controller

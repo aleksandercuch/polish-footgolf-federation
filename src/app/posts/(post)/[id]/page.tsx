@@ -1,5 +1,6 @@
-// CORE
 "use client";
+
+// CORE
 import React, { useEffect, useState } from "react";
 import { FC } from "react";
 

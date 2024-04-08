@@ -1,5 +1,6 @@
-// CORE
 "use client";
+
+// CORE
 import React from "react";
 
 // COMPONENTS
@@ -25,7 +26,8 @@ const page = () => {
               "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
             color: "#FFFFFF",
           }}
-          xs={8}
+          sm={8}
+          xs={12}
           mt={6}
           mb={6}
         >
@@ -34,7 +36,7 @@ const page = () => {
           </Typography>
         </Grid>
 
-        <Grid item xs={8} sx={{ textAlign: "center" }}>
+        <Grid item sm={8} xs={12} sx={{ textAlign: "center" }}>
           <Typography variant="subtitle1">
             Strona w budowie - zapraszany wkrótce.
           </Typography>

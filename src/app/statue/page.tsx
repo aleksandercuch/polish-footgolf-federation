@@ -1,5 +1,6 @@
-// CORE
 "use client";
+
+// CORE
 import React from "react";
 
 // ASSETS
@@ -27,7 +28,8 @@ const page = () => {
               "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
             color: "#FFFFFF",
           }}
-          xs={8}
+          sm={8}
+          xs={12}
           mt={6}
           mb={6}
         >
@@ -44,14 +46,13 @@ const page = () => {
           </Typography>
         </Grid>
 
-        <Grid item xs={8}>
+        <Grid item sm={8} xs={12}>
           <Paper sx={{ padding: "0 15px 15px" }}>
             <Grid
               container
               direction="row"
               alignItems="flex-start"
               justifyContent="flex-start"
-              component="ol"
               typography={"subtitle1"}
               sx={{ textAlign: "left" }}
               gap={10}
@@ -65,9 +66,7 @@ const page = () => {
                   mt={5}
                   mb={5}
                 >
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                   <Grid item>
                     <Typography
                       variant="h5"
@@ -77,9 +76,7 @@ const page = () => {
                       <strong>KOMITET TURNIEJU</strong>
                     </Typography>
                   </Grid>
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                 </Grid>
                 <Grid item mt={5} mb={5}>
                   <Divider />
@@ -89,6 +86,7 @@ const page = () => {
                   direction="row"
                   justifyContent={"space-evenly"}
                   sx={{ textAlign: "center" }}
+                  gap={10}
                 >
                   <Grid
                     item
@@ -96,7 +94,8 @@ const page = () => {
                     justifyItems={"center"}
                     alignContent={"center"}
                     direction="column"
-                    xs={4}
+                    sm={3}
+                    xs={12}
                     gap={3}
                   >
                     <Grid item sx={{ margin: "auto" }}>
@@ -116,7 +115,8 @@ const page = () => {
                     justifyItems={"center"}
                     alignContent={"center"}
                     direction="column"
-                    xs={4}
+                    sm={3}
+                    xs={12}
                     gap={3}
                   >
                     <Grid item sx={{ margin: "auto" }}>
@@ -136,7 +136,8 @@ const page = () => {
                     justifyItems={"center"}
                     alignContent={"center"}
                     direction="column"
-                    xs={4}
+                    sm={3}
+                    xs={12}
                     gap={3}
                   >
                     <Grid item sx={{ margin: "auto" }}>
@@ -161,9 +162,7 @@ const page = () => {
                   mt={5}
                   mb={5}
                 >
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                   <Grid item>
                     <Typography
                       variant="h5"
@@ -173,9 +172,7 @@ const page = () => {
                       <strong>FORMUŁA</strong>
                     </Typography>
                   </Grid>
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                 </Grid>
                 <Grid item mt={5} mb={5}>
                   <Divider />
@@ -220,9 +217,7 @@ const page = () => {
                   mt={5}
                   mb={5}
                 >
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                   <Grid item>
                     <Typography
                       variant="h5"
@@ -232,9 +227,7 @@ const page = () => {
                       <strong>ROZPOCZĘCIE</strong>
                     </Typography>
                   </Grid>
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                 </Grid>
                 <Grid item mt={5} mb={5}>
                   <Divider />
@@ -277,9 +270,7 @@ const page = () => {
                   mt={5}
                   mb={5}
                 >
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                   <Grid item>
                     <Typography
                       variant="h5"
@@ -289,9 +280,7 @@ const page = () => {
                       <strong>ZGŁOSZENIA</strong>
                     </Typography>
                   </Grid>
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                 </Grid>
                 <Grid item mt={5} mb={5}>
                   <Divider />
@@ -313,9 +302,7 @@ const page = () => {
                   mt={5}
                   mb={5}
                 >
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                   <Grid item>
                     <Typography
                       variant="h5"
@@ -325,9 +312,7 @@ const page = () => {
                       <strong>FORMAT: Stroke Play Brutto</strong>
                     </Typography>
                   </Grid>
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                 </Grid>
                 <Grid item mt={5} mb={5}>
                   <Divider />
@@ -381,9 +366,7 @@ const page = () => {
                   mt={5}
                   mb={5}
                 >
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                   <Grid item>
                     <Typography
                       variant="h5"
@@ -393,9 +376,7 @@ const page = () => {
                       <strong>KATEGORIE</strong>
                     </Typography>
                   </Grid>
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                 </Grid>
                 <Grid item mt={5} mb={5}>
                   <Divider />
@@ -486,9 +467,7 @@ const page = () => {
                   mt={5}
                   mb={5}
                 >
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                   <Grid item>
                     <Typography
                       variant="h5"
@@ -498,9 +477,7 @@ const page = () => {
                       <strong>NAGRODY</strong>
                     </Typography>
                   </Grid>
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                 </Grid>
                 <Grid item mt={5} mb={5}>
                   <Divider />
@@ -542,9 +519,7 @@ const page = () => {
                   mt={5}
                   mb={5}
                 >
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                   <Grid item>
                     <Typography
                       variant="h5"
@@ -554,9 +529,7 @@ const page = () => {
                       <strong>WARUNKI</strong>
                     </Typography>
                   </Grid>
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                 </Grid>
                 <Grid item mt={5} mb={5}>
                   <Divider />
@@ -610,9 +583,7 @@ const page = () => {
                   mt={5}
                   mb={5}
                 >
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                   <Grid item>
                     <Typography
                       variant="h5"
@@ -622,9 +593,7 @@ const page = () => {
                       <strong>ROZSTRZYGNIĘCIA W PRZYPADKU REMISU</strong>
                     </Typography>
                   </Grid>
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                 </Grid>
                 <Grid item mt={5} mb={5}>
                   <Divider />
@@ -723,9 +692,7 @@ const page = () => {
                   mt={5}
                   mb={5}
                 >
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                   <Grid item>
                     <Typography
                       variant="h5"
@@ -735,9 +702,7 @@ const page = () => {
                       <strong>POSTANOWIENIA KOŃCOWE</strong>
                     </Typography>
                   </Grid>
-                  <Grid item>
-                    <SportsSoccerIcon />
-                  </Grid>
+                  <SportsSoccerIcon />
                 </Grid>
                 <Grid item mt={5} mb={5}>
                   <Divider />

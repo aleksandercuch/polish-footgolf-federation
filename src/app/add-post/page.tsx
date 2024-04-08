@@ -3,15 +3,7 @@
 import { FC } from "react";
 
 // ASSETS
-import {
-  Avatar,
-  Divider,
-  FormControl,
-  Grid,
-  Paper,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Grid, Paper, Typography } from "@mui/material";
 
 // COMPONENTS
 import { AddPost } from "@/components/posts/AddPost";
