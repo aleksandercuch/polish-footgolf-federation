@@ -7,6 +7,7 @@ import theme from "@/theme";
 
 // COMPONENTS
 import { MainNavigation } from "@/components/layout/main-navigation/MainNavigation";
+import { Footer } from "@/components/layout/footer/Footer";
 
 // CONTEXT
 import { AuthContextProvider } from "@/context/auth-context";
@@ -33,6 +34,7 @@ export default function RootLayout({
               {/* <AuthButtons /> */}
               <MainNavigation />
               {children}
+              <Footer />
             </div>
           </AuthContextProvider>
         </ThemeProvider>

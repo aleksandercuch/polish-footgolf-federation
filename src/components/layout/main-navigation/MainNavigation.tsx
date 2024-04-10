@@ -1,20 +1,15 @@
 "use client";
 // CORE
-import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { useSearchParams } from "next/navigation";
 // ASSETS
 import { Button, ButtonGroup, Grid } from "@mui/material";
-import video from "../../../assets/img/video.mp4";
+import video from "../../../assets/img/footgolf.mp4";
 
 // COMPONENTS
 import { NavLink } from "./NavLink";
 
 // FIREBASE
-import { ref, getDownloadURL } from "firebase/storage";
-import { storage } from "../../../../firebase/config/clientApp";
 
 export const MainNavigation = () => {
   const searchParams = useSearchParams();
@@ -27,10 +22,10 @@ export const MainNavigation = () => {
       alignItems="center"
       sx={{ position: "relative" }}
     >
-      <Grid item sx={{ width: "100%" }}>
+      <Grid item xs={12}>
         <video
-          style={{ maxHeight: "600px", minWidth: "100%", objectFit: "fill" }}
-          src={""}
+          style={{ maxHeight: "600px", width: "100%", objectFit: "cover" }}
+          src={video}
           autoPlay
           loop
           muted
@@ -41,6 +36,7 @@ export const MainNavigation = () => {
         xs={12}
         sm={8}
         sx={{
+          zIndex: "1",
           position: "absolute",
           textAlign: "center",
           top: 0,
@@ -73,16 +69,25 @@ export const MainNavigation = () => {
           backgroundColor: "rgba(255, 255, 255, 0.7)",
           width: "100%",
           heigth: "100%",
-          top: "20%",
+          top: { xs: "30%", sm: "20%" },
           textAlign: "center",
-          padding: "50px 0",
+          padding: { xs: "25px 0", sm: "50px 0" },
         }}
       >
-        <img
-          src={"/logo.png"}
-          alt="logo"
-          style={{ height: "300px", width: "220px" }}
-        ></img>
+        <Grid
+          item
+          sx={{
+            margin: "auto",
+            height: { xs: "100px", sm: "180px", md: "300px" },
+          }}
+        >
+          <Image
+            src={"/logo.png"}
+            fill
+            alt="logo"
+            style={{ objectFit: "contain" }}
+          />
+        </Grid>
       </Grid>
     </Grid>
   );

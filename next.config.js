@@ -8,7 +8,7 @@ module.exports = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: ["firebasestorage.googleapis.com"],
+    domains: ["firebasestorage.googleapis.com", "www.gscore.eu"],
   },
   webpack: (config, { isServer }) => {
     // Add a rule for video files

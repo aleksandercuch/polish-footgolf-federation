@@ -1,12 +1,16 @@
-// CORE
 "use client";
-import { ComponentType, FC, useEffect, useState } from "react";
+
+// CORE
+import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { EditorState, convertFromRaw } from "draft-js";
 import { UserAuth } from "@/context/auth-context";
-import { Editor } from "react-draft-wysiwyg";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
-
+const DynamicEditor = dynamic(
+  () => import("react-draft-wysiwyg").then((module) => module.Editor),
+  { ssr: false }
+);
 // ASSETES
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { MuiFileInput } from "mui-file-input";
@@ -18,7 +22,6 @@ import {
   Typography,
 } from "@mui/material";
 import { convertToRaw } from "draft-js";
-import { FootballLoader } from "../layout/loader/loader";
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 
 //FIREBASE
@@ -216,7 +219,10 @@ export const AddPost = ({ id, title, description, file, date }: IProps) => {
         name={"file"}
         control={control}
         render={({ field }) => (
-          <MuiFileInput inputProps={{ accept: ".png, .jpeg" }} {...field} />
+          <MuiFileInput
+            inputProps={{ accept: ".png, .jpeg, .jpg" }}
+            {...field}
+          />
         )}
       />
 
@@ -227,7 +233,7 @@ export const AddPost = ({ id, title, description, file, date }: IProps) => {
           required: "Podaj tytuł!",
         }}
         render={({ field }) => (
-          <Editor
+          <DynamicEditor
             editorState={editorState}
             toolbarClassName="toolbarClassName"
             wrapperClassName="wrapperClassName"

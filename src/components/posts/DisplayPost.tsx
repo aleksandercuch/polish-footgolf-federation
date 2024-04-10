@@ -1,5 +1,6 @@
-// CORE
 "use client";
+
+// CORE
 import React, { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import { UserAuth } from "@/context/auth-context";
@@ -14,18 +15,11 @@ import EditButtons from "./EditButtons";
 import { AddPost, getParams } from "./AddPost";
 
 // FIREBASE
-import {
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  orderBy,
-  query,
-} from "firebase/firestore";
+import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../../firebase/config/clientApp";
 
 // TYPES
-import { postParams, pageProps } from "@/app/posts/(post)/[id]/page";
+import { pageProps } from "@/app/posts/(post)/[id]/page";
 
 const DisplayPost = ({ params }: pageProps) => {
   const [post, setPost] = useState<getParams | null>();

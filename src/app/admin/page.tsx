@@ -1,5 +1,6 @@
-// CORE
 "use client";
+
+// CORE
 import { FC } from "react";
 
 // COMPONENTS

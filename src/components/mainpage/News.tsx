@@ -12,7 +12,6 @@ import { convertFirebaseTimestamp } from "@/functions/convert-firebase-timestamp
 
 //COMPONENTS
 import { Posts } from "../models/posts";
-import { Audio } from "react-loader-spinner";
 import { FootballLoader } from "../layout/loader/loader";
 
 // FIREBASE
@@ -119,7 +118,8 @@ export const News = () => {
               "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
             color: "#FFFFFF",
           }}
-          xs={8}
+          xs={12}
+          sm={8}
           mt={6}
         >
           <Typography variant="h3" component="h2" mt={3} mb={3}>
@@ -153,17 +153,20 @@ export const News = () => {
                         alignItems="flex-start"
                         justifyContent="center"
                       >
-                        <Grid item xs={4}>
+                        <Grid
+                          item
+                          sx={{
+                            position: "relative",
+                            width: "100%",
+                            height: { xs: "100px", sm: "180px", md: "300px" },
+                          }}
+                        >
                           {posts[0]?.file && (
-                            <img
+                            <Image
                               src={posts[0].file}
                               alt="post image"
-                              style={{
-                                objectFit: "cover",
-                                height: "450px",
-                                width: "100%",
-                                minHeight: "300px",
-                              }}
+                              fill
+                              style={{ objectFit: "cover" }}
                             />
                           )}
                         </Grid>
@@ -235,20 +238,22 @@ export const News = () => {
                             >
                               <Grid
                                 item
-                                xs={12}
-                                container
                                 justifyContent={"center"}
+                                sx={{
+                                  position: "relative",
+                                  width: "100%",
+                                  height: {
+                                    xs: "100px",
+                                    sm: "180px",
+                                    md: "120px",
+                                  },
+                                }}
                               >
-                                <img
+                                <Image
                                   src={post.file}
                                   alt="post image"
-                                  style={{
-                                    height: "200px",
-                                    objectFit: "cover",
-                                    width: "100%",
-
-                                    maxHeight: "200px",
-                                  }}
+                                  fill
+                                  style={{ objectFit: "cover" }}
                                 />
                               </Grid>
                               <Grid item xs={12}>
