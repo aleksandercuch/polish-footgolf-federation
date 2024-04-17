@@ -1,19 +1,31 @@
 "use client";
 // CORE
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+
 // ASSETS
 import { Button, ButtonGroup, Grid } from "@mui/material";
-import video from "../../../assets/img/footgolf.mp4";
 
 // COMPONENTS
 import { NavLink } from "./NavLink";
+import { getDownloadURL, ref } from "firebase/storage";
 
 // FIREBASE
+import { storage } from "../../../../firebase/config/clientApp";
 
 export const MainNavigation = () => {
-  const searchParams = useSearchParams();
-  console.log(searchParams);
+  const [video, setVideo] = useState("");
+
+  useEffect(() => {
+    getDownloadURL(ref(storage, "video/footgolf.mp4"))
+      .then((url) => {
+        setVideo(url);
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.log(error);
+      });
+  }, []);
   return (
     <Grid
       container
@@ -25,7 +37,7 @@ export const MainNavigation = () => {
       <Grid item xs={12}>
         <video
           style={{ maxHeight: "600px", width: "100%", objectFit: "cover" }}
-          src={video}
+          src={video && video}
           autoPlay
           loop
           muted
