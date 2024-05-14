@@ -1,4 +1,4 @@
-// File: C:\Users\Acer\Documents\Archiwum\IT\polish-footgolf-federation\src\app\contact\page.tsx
+// File: C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\src\app\contact\page.tsx
 import * as entry from '../../../../src/app/contact/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

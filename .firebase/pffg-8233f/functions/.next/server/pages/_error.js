@@ -5,7 +5,7 @@ exports.id = 820;
 exports.ids = [820,888,660];
 exports.modules = {
 
-/***/ 65916:
+/***/ 46051:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -25,56 +25,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var next_dist_server_future_route_modules_pages_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(23185);
 /* harmony import */ var next_dist_server_future_route_modules_pages_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_dist_server_future_route_modules_pages_module__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(57182);
-/* harmony import */ var next_dist_pages_document__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(29259);
-/* harmony import */ var next_dist_pages_document__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_pages_document__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_dist_pages_app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(52624);
-/* harmony import */ var next_dist_pages_app__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_dist_pages_app__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(55130);
-/* harmony import */ var next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_dist_server_future_route_kind__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(35244);
+/* harmony import */ var next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(57182);
+/* harmony import */ var next_dist_pages_document__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(29259);
+/* harmony import */ var next_dist_pages_document__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_dist_pages_document__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_dist_pages_app__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(52624);
+/* harmony import */ var next_dist_pages_app__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_dist_pages_app__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(55130);
+/* harmony import */ var next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__);
+// @ts-ignore this need to be imported from next/dist to be external
 
-        // Next.js Route Loader
-        
-        
 
-        // Import the app and document modules.
-        
-        
 
-        // Import the userland code.
-        
+// Import the app and document modules.
+// @ts-expect-error - replaced by webpack/turbopack loader
 
-        // Re-export the component (should be the default export).
-        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__, "default"));
+// @ts-expect-error - replaced by webpack/turbopack loader
 
-        // Re-export methods.
-        const getStaticProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__, "getStaticProps")
-        const getStaticPaths = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__, "getStaticPaths")
-        const getServerSideProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__, "getServerSideProps")
-        const config = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__, "config")
-        const reportWebVitals = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__, "reportWebVitals")
-        
+// Import the userland code.
+// @ts-expect-error - replaced by webpack/turbopack loader
 
-        // Re-export legacy methods.
-        const unstable_getStaticProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__, "unstable_getStaticProps")
-        const unstable_getStaticPaths = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__, "unstable_getStaticPaths")
-        const unstable_getStaticParams = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__, "unstable_getStaticParams")
-        const unstable_getServerProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__, "unstable_getServerProps")
-        const unstable_getServerSideProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__, "unstable_getServerSideProps")
+const PagesRouteModule = next_dist_server_future_route_modules_pages_module__WEBPACK_IMPORTED_MODULE_0__.PagesRouteModule;
+// Re-export the component (should be the default export).
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_2__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__, "default"));
+// Re-export methods.
+const getStaticProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_2__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__, "getStaticProps");
+const getStaticPaths = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_2__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__, "getStaticPaths");
+const getServerSideProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_2__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__, "getServerSideProps");
+const config = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_2__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__, "config");
+const reportWebVitals = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_2__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__, "reportWebVitals");
+// Re-export legacy methods.
+const unstable_getStaticProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_2__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__, "unstable_getStaticProps");
+const unstable_getStaticPaths = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_2__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__, "unstable_getStaticPaths");
+const unstable_getStaticParams = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_2__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__, "unstable_getStaticParams");
+const unstable_getServerProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_2__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__, "unstable_getServerProps");
+const unstable_getServerSideProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_2__/* .hoist */ .l)(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__, "unstable_getServerSideProps");
+// Create and export the route module that will be consumed.
+const routeModule = new PagesRouteModule({
+    definition: {
+        kind: next_dist_server_future_route_kind__WEBPACK_IMPORTED_MODULE_1__/* .RouteKind */ .x.PAGES,
+        page: "/_error",
+        pathname: "/_error",
+        // The following aren't used in production.
+        bundlePath: "",
+        filename: ""
+    },
+    components: {
+        App: (next_dist_pages_app__WEBPACK_IMPORTED_MODULE_4___default()),
+        Document: (next_dist_pages_document__WEBPACK_IMPORTED_MODULE_3___default())
+    },
+    userland: next_dist_pages_error__WEBPACK_IMPORTED_MODULE_5__
+});
 
-        // Create and export the route module that will be consumed.
-        const options = {"definition":{"kind":"PAGES","page":"/_error","pathname":"/_error","bundlePath":"","filename":""}}
-        const routeModule = new (next_dist_server_future_route_modules_pages_module__WEBPACK_IMPORTED_MODULE_0___default())({
-          ...options,
-          components: {
-            App: (next_dist_pages_app__WEBPACK_IMPORTED_MODULE_3___default()),
-            Document: (next_dist_pages_document__WEBPACK_IMPORTED_MODULE_2___default()),
-          },
-          userland: next_dist_pages_error__WEBPACK_IMPORTED_MODULE_4__,
-        })
-        
-        
-    
+//# sourceMappingURL=pages.js.map
 
 /***/ }),
 
@@ -190,7 +193,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [259,624,169], () => (__webpack_exec__(65916)));
+var __webpack_exports__ = __webpack_require__.X(0, [259,624,523], () => (__webpack_exec__(46051)));
 module.exports = __webpack_exports__;
 
 })();
