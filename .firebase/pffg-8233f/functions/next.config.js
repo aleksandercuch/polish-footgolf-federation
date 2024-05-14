@@ -2,13 +2,12 @@
 const path = require("path");
 
 module.exports = {
-  /** @type {import('next').NextConfig} */
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: ["firebasestorage.googleapis.com"],
+    domains: ["firebasestorage.googleapis.com", "www.gscore.eu"],
   },
   webpack: (config, { isServer }) => {
     // Add a rule for video files

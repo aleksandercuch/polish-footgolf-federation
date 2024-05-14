@@ -1,6 +1,4 @@
 "use client";
-// CORE
-import Image from "next/image";
 
 // ASSETS
 import { Divider, Grid } from "@mui/material";
@@ -34,12 +32,12 @@ export const Footer = () => {
             height: "6px",
           }}
         />
-        <Image
+        <img
           src={"/logo.png"}
           alt="logo"
-          height={170}
-          width={120}
           style={{
+            width: "120px",
+            height: "170px",
             position: "absolute",
             top: "50%",
             left: "50%",

@@ -98,6 +98,13 @@ export const News = () => {
     setPosts(data.reverse().slice(0, 7));
   };
 
+  const truncateString = (string: string, limit: number) => {
+    if (string.length > 25) {
+      return string.substring(0, limit) + "...";
+    }
+    return string;
+  };
+
   useEffect(() => {
     fetchNews();
   }, []);
@@ -131,73 +138,46 @@ export const News = () => {
             <Grid
               container
               direction="row"
-              alignItems="flex-start"
+              alignItems="stretch"
               justifyContent="center"
               sx={{ rowGap: { xs: 1, sm: 0 } }}
             >
               <>
-                <Grid
-                  item
-                  xs={12}
-                  sm={3}
-                  sx={{ padding: { xs: "0", sm: "10px 10px 10px 0" } }}
-                >
+                <Grid item xs={12} md={3} sx={{ margin: "10px 0" }}>
                   <Link
                     href={`posts/${posts[0]?.id}`}
                     style={{ textDecoration: "none" }}
                   >
-                    <Paper>
+                    <Paper sx={{ height: "100%", padding: "10px" }}>
                       <Grid
                         container
                         direction="column"
                         alignItems="flex-start"
-                        justifyContent="center"
+                        justifyContent="space-between"
+                        sx={{ height: "inherit" }}
                       >
-                        <Grid
-                          item
-                          sx={{
-                            position: "relative",
-                            width: "100%",
-                            height: { xs: "100px", sm: "180px", md: "300px" },
-                          }}
-                        >
-                          {posts[0]?.file && (
-                            <Image
-                              src={posts[0].file}
+                        <Grid item container direction="row">
+                          <Grid item xs={12}>
+                            <img
+                              src={posts[0].file && posts[0].file}
                               alt="post image"
-                              fill
-                              style={{ objectFit: "cover" }}
+                              style={{ width: "100%" }}
                             />
-                          )}
-                        </Grid>
-                        <Grid item xs={8} sx={{ padding: "10px" }}>
-                          <Grid
-                            container
-                            direction="column"
-                            alignItems="fles-start"
-                            justifyContent="flex-start"
-                            mt={5}
-                            gap={3}
-                          >
-                            <Grid item>
-                              <Grid container direction="column" gap={2}>
-                                <Grid item>
-                                  <Typography variant="h4" component="h3">
-                                    {posts[0]?.title}
-                                  </Typography>
-                                </Grid>
-                                <Grid item>
-                                  {posts[0]?.date && (
-                                    <Typography variant="caption">
-                                      {dayjs(
-                                        convertFirebaseTimestamp(posts[0]?.date)
-                                      ).format("DD/MM/YYYY")}
-                                    </Typography>
-                                  )}
-                                </Grid>
-                              </Grid>
-                            </Grid>
                           </Grid>
+                          <Grid item xs={12}>
+                            <Typography variant="h4" component="h3">
+                              {truncateString(posts[0]?.title, 55)}
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                        <Grid item>
+                          {posts[0]?.date && (
+                            <Typography variant="caption">
+                              {dayjs(
+                                convertFirebaseTimestamp(posts[0]?.date)
+                              ).format("DD/MM/YYYY")}
+                            </Typography>
+                          )}
                         </Grid>
                       </Grid>
                     </Paper>
@@ -206,7 +186,7 @@ export const News = () => {
                 <Grid
                   item
                   xs={12}
-                  sm={5}
+                  md={5}
                   sx={{ display: "flex", flexDirection: "column" }}
                 >
                   <Grid
@@ -228,7 +208,7 @@ export const News = () => {
                           href={`posts/${post.id}`}
                           style={{ textDecoration: "none" }}
                         >
-                          <Paper>
+                          <Paper sx={{ height: "100%" }}>
                             <Grid
                               container
                               direction="column"
@@ -249,16 +229,23 @@ export const News = () => {
                                   },
                                 }}
                               >
-                                <Image
-                                  src={post.file}
+                                <img
+                                  src={post.file && post.file}
                                   alt="post image"
-                                  fill
-                                  style={{ objectFit: "cover" }}
+                                  style={{
+                                    width: "100%",
+                                    height: "auto",
+                                    maxHeight: "100px",
+                                  }}
                                 />
                               </Grid>
                               <Grid item xs={12}>
-                                <Typography variant="h6" component="h4">
-                                  {post.title}
+                                <Typography
+                                  variant="h6"
+                                  component="h4"
+                                  sx={{ minHeight: "64px" }}
+                                >
+                                  {truncateString(post.title, 40)}
                                 </Typography>
                               </Grid>
                               <Grid item xs={12}>

@@ -48,6 +48,7 @@ export const Partners = () => {
         >
           <Grid
             container
+            item
             direction="row"
             alignItems="center"
             justifyContent="space-between"
@@ -56,42 +57,47 @@ export const Partners = () => {
           >
             <Grid item xs={12} sm={6} md={2} mb={10}>
               <Link href={"https://postolowo.com/"}>
-                <Image
-                  src={postolowoLogo}
+                <img
+                  src={
+                    "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/logos%2Fpostolowo.bmp?alt=media&token=a72bc5fe-e027-4d87-84cd-bb42f5bf3895"
+                  }
                   alt={"postolowo logo"}
-                  width={150}
-                  height={150}
+                  style={{ width: "150px", height: "150px" }}
                 />
               </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={2} mb={10}>
               <Link href={"https://www.gscore.eu/en"}>
-                <Image
-                  src={gscoreLogo}
+                <img
+                  src={
+                    "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/logos%2Fgscore.png?alt=media&token=1dedf616-4e7f-4114-9d2c-7315ef64ed9d"
+                  }
                   alt={"gescore logo"}
-                  width={210}
-                  height={70}
+                  style={{ width: "210px", height: "70px" }}
                 />
               </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={2} mb={10}>
               <Link href={"https://www.binowopark.pl/index.php"}>
-                <Image
-                  src={binowoLogo}
+                <img
+                  src={
+                    "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/logos%2Fbinowo.jpg?alt=media&token=ba077495-24e3-4686-a955-35dd348470f4"
+                  }
                   alt={"binowo"}
-                  width={210}
-                  height={100}
+                  style={{ width: "210px", height: "100px" }}
                 />
               </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={2} mb={10}>
               <Link href={"https://lisiapolana.pl/"}>
-                <Image
-                  src={lisiaPolanaLogo}
+                <img
+                  src={
+                    "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/logos%2FlisiaPolana.jpeg?alt=media&token=7b41d72c-0cd2-442c-b12c-533f387e68dd"
+                  }
                   alt={"lisia polana"}
-                  width={210}
-                  height={150}
                   style={{
+                    width: "210px",
+                    height: "150px",
                     border: "1px solid white",
                     borderRadius: "100px",
                   }}
@@ -100,11 +106,12 @@ export const Partners = () => {
             </Grid>
             <Grid item xs={12} sm={6} md={2} mb={10}>
               <Link href={"https://alte-farm.pl/"}>
-                <Image
-                  src={atleFarmLogo}
+                <img
+                  src={
+                    "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/logos%2FalteFarm.jpeg?alt=media&token=6f388c78-ecc2-4563-b20e-e8e8db267287"
+                  }
                   alt={"atle farm logo"}
-                  width={200}
-                  height={150}
+                  style={{ width: "200px", height: "150px" }}
                 />
               </Link>
             </Grid>

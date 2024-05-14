@@ -1,6 +1,5 @@
 "use client";
 // CORE
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 // ASSETS
@@ -90,14 +89,18 @@ export const MainNavigation = () => {
           item
           sx={{
             margin: "auto",
-            height: { xs: "100px", sm: "180px", md: "300px" },
+            width: "100%",
+            maxWidth: { xs: "70px", sm: "100px", md: "200px" },
           }}
         >
-          <Image
+          <img
             src={"/logo.png"}
-            fill
             alt="logo"
-            style={{ objectFit: "contain" }}
+            style={{
+              objectFit: "contain",
+              width: "100%",
+              height: "auto",
+            }}
           />
         </Grid>
       </Grid>
