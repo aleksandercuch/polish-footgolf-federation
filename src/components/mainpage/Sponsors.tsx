@@ -39,7 +39,7 @@ export const Sponsors = () => {
           sx={{
             textAlign: "center",
             background:
-              "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
+              "linear-gradient(90deg, #5a9628 0%, #005A9C 50%, #5a9628 100%)",
             color: "#FFFFFF",
           }}
           xs={12}
@@ -73,7 +73,11 @@ export const Sponsors = () => {
                   <img
                     src={(sponsors.length && sponsors[0]) || ""}
                     alt={"ndi logo"}
-                    style={{ width: "210px", height: "70px" }}
+                    style={{
+                      maxWidth: "210px",
+                      borderRadius: "5px",
+                      border: "5px solid white",
+                    }}
                   />
                 </Link>
               </Grid>
@@ -86,9 +90,7 @@ export const Sponsors = () => {
                       background: "black",
                       padding: "10px",
                       border: "1px solid red",
-                      borderRadius: "50px",
-                      width: "210px",
-                      height: "70px",
+                      maxWidth: "210px",
                     }}
                   />
                 </Link>
@@ -100,9 +102,7 @@ export const Sponsors = () => {
                   <img
                     src={(sponsors.length && sponsors[2]) || ""}
                     alt={"pzu logo"}
-                    width={270}
-                    height={150}
-                    style={{ width: "270px", height: "150px" }}
+                    style={{ maxWidth: "270px", borderRadius: "5px" }}
                   />
                 </Link>
               </Grid>
@@ -111,7 +111,7 @@ export const Sponsors = () => {
                   <img
                     src={(sponsors.length && sponsors[3]) || ""}
                     alt={"jungle logo"}
-                    style={{ width: "210px", height: "120px" }}
+                    style={{ maxWidth: "210px", borderRadius: "5px" }}
                   />
                 </Link>
               </Grid>

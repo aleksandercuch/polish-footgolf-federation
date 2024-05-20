@@ -68,6 +68,9 @@ export const MainNavigation = () => {
             <NavLink route={"/statue"} text={"REGULAMIN"} />
           </Button>
           <Button style={{ width: "100%", borderColor: "#FFFFFF" }}>
+            <NavLink route={"/scores"} text={"WYNIKI"} />
+          </Button>
+          <Button style={{ width: "100%", borderColor: "#FFFFFF" }}>
             <NavLink route={"/contact"} text={"KONTAKT"} />
           </Button>
         </ButtonGroup>

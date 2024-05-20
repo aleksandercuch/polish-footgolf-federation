@@ -6,7 +6,6 @@ export default () => {
   let [modalContent, setModalContent] = useState("I'm the Modal Content");
 
   let handleModal = (content: any) => {
-    console.log("something");
     setModal(!modal);
     if (content) {
       setModalContent(content);

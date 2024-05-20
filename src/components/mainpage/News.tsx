@@ -94,7 +94,6 @@ export const News = () => {
     querySnapshot.forEach((doc) => {
       data.push({ id: doc.id, ...doc.data() });
     });
-
     setPosts(data.reverse().slice(0, 7));
   };
 
@@ -122,7 +121,7 @@ export const News = () => {
           sx={{
             textAlign: "center",
             background:
-              "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
+              "linear-gradient(90deg, #5a9628 0%, #005A9C 50%, #5a9628 100%)",
             color: "#FFFFFF",
           }}
           xs={12}
@@ -222,6 +221,7 @@ export const News = () => {
                                 sx={{
                                   position: "relative",
                                   width: "100%",
+                                  textAlign: "center",
                                   height: {
                                     xs: "100px",
                                     sm: "180px",
@@ -233,7 +233,7 @@ export const News = () => {
                                   src={post.file && post.file}
                                   alt="post image"
                                   style={{
-                                    width: "100%",
+                                    maxWidth: "100%",
                                     height: "auto",
                                     maxHeight: "100px",
                                   }}

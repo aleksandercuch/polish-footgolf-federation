@@ -1,0 +1,96 @@
+[debug] [2024-05-20T13:08:58.319Z] ----------------------------------------------------------------------
+[debug] [2024-05-20T13:08:58.321Z] Command:       C:\Users\Acer\DOWNLO~1\firebase-tools-instant-win.exe C:\Users\Acer\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase deploy --only hosting
+[debug] [2024-05-20T13:08:58.322Z] CLI Version:   13.6.0
+[debug] [2024-05-20T13:08:58.322Z] Platform:      win32
+[debug] [2024-05-20T13:08:58.322Z] Node Version:  v18.5.0
+[debug] [2024-05-20T13:08:58.323Z] Time:          Mon May 20 2024 15:08:58 GMT+0200 (GMT+02:00)
+[debug] [2024-05-20T13:08:58.324Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-20T13:08:58.417Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-20T13:08:58.418Z] > authorizing via signed-in user (cuch.aleksander@gmail.com)
+[debug] [2024-05-20T13:08:58.418Z] [iam] checking project pffg-8233f for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-20T13:08:58.421Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions [none]
+[debug] [2024-05-20T13:08:58.421Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions x-goog-quota-user=projects/pffg-8233f
+[debug] [2024-05-20T13:08:58.421Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-20T13:08:59.322Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions 200
+[debug] [2024-05-20T13:08:59.323Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-20T13:08:59.327Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pffg-8233f [none]
+[debug] [2024-05-20T13:08:59.710Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pffg-8233f 200
+[debug] [2024-05-20T13:08:59.711Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pffg-8233f {"projectId":"pffg-8233f","projectNumber":"491732775256","displayName":"PFFG","name":"projects/pffg-8233f","resources":{"hostingSite":"pffg-8233f","realtimeDatabaseInstance":"pffg-8233f-default-rtdb","storageBucket":"pffg-8233f.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_51906365-edb7-4d96-b2a5-3414d4b20cf5"}
+[debug] [2024-05-20T13:09:04.617Z] defaultcredentials: writing to file C:\Users\Acer\AppData\Roaming\firebase\cuch_aleksander_gmail.com_application_default_credentials.json
+[debug] [2024-05-20T13:09:04.620Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites pageToken=&pageSize=10
+[debug] [2024-05-20T13:09:06.471Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites 200
+[debug] [2024-05-20T13:09:06.471Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites {"sites":[{"name":"projects/pffg-8233f/sites/pffg-8233f","defaultUrl":"https://pffg-8233f.web.app","appId":"1:491732775256:web:48bb939e119ba84c80752d","type":"DEFAULT_SITE"}]}
+[debug] [2024-05-20T13:09:06.472Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:491732775256:web:48bb939e119ba84c80752d/config [none]
+[debug] [2024-05-20T13:09:07.174Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:491732775256:web:48bb939e119ba84c80752d/config 200
+[debug] [2024-05-20T13:09:07.175Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:491732775256:web:48bb939e119ba84c80752d/config {"projectId":"pffg-8233f","appId":"1:491732775256:web:48bb939e119ba84c80752d","databaseURL":"https://pffg-8233f-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"pffg-8233f.appspot.com","locationId":"europe-west","apiKey":"AIzaSyCzn4Scs1dY52Mu6iBszw6sLCjrU6LSO8c","authDomain":"pffg-8233f.firebaseapp.com","messagingSenderId":"491732775256","measurementId":"G-XLD19XFSTG"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-05-20T13:09:20.819Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites/pffg-8233f [none]
+[debug] [2024-05-20T13:09:21.981Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites/pffg-8233f 200
+[debug] [2024-05-20T13:09:21.981Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites/pffg-8233f {"name":"projects/pffg-8233f/sites/pffg-8233f","defaultUrl":"https://pffg-8233f.web.app","appId":"1:491732775256:web:48bb939e119ba84c80752d","type":"DEFAULT_SITE"}
+[info] - info Loaded env from C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\.env
+
+[info] - info Creating an optimized production build...
+
+[info] uncaughtException [Error: EPERM: operation not permitted, open 'C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\.next\trace'] {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'open',
+  path: 'C:\\Users\\Acer\\Documents\\Archiwum\\polish-footgolf-federation\\.next\\trace'
+}
+
+[debug] [2024-05-20T13:09:30.566Z] Error: ENOENT: no such file or directory, open 'C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\.next\server\middleware-manifest.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-05-20T13:12:13.926Z] ----------------------------------------------------------------------
+[debug] [2024-05-20T13:12:13.929Z] Command:       C:\Users\Acer\DOWNLO~1\firebase-tools-instant-win.exe C:\Users\Acer\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase deploy --only hosting
+[debug] [2024-05-20T13:12:13.929Z] CLI Version:   13.6.0
+[debug] [2024-05-20T13:12:13.929Z] Platform:      win32
+[debug] [2024-05-20T13:12:13.929Z] Node Version:  v18.5.0
+[debug] [2024-05-20T13:12:13.931Z] Time:          Mon May 20 2024 15:12:13 GMT+0200 (GMT+02:00)
+[debug] [2024-05-20T13:12:13.931Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-20T13:12:14.018Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-20T13:12:14.019Z] > authorizing via signed-in user (cuch.aleksander@gmail.com)
+[debug] [2024-05-20T13:12:14.019Z] [iam] checking project pffg-8233f for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-20T13:12:14.022Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions [none]
+[debug] [2024-05-20T13:12:14.022Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions x-goog-quota-user=projects/pffg-8233f
+[debug] [2024-05-20T13:12:14.022Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-20T13:12:14.853Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions 200
+[debug] [2024-05-20T13:12:14.853Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-20T13:12:14.855Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pffg-8233f [none]
+[debug] [2024-05-20T13:12:15.125Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pffg-8233f 200
+[debug] [2024-05-20T13:12:15.125Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pffg-8233f {"projectId":"pffg-8233f","projectNumber":"491732775256","displayName":"PFFG","name":"projects/pffg-8233f","resources":{"hostingSite":"pffg-8233f","realtimeDatabaseInstance":"pffg-8233f-default-rtdb","storageBucket":"pffg-8233f.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_51906365-edb7-4d96-b2a5-3414d4b20cf5"}
+[debug] [2024-05-20T13:12:19.136Z] defaultcredentials: writing to file C:\Users\Acer\AppData\Roaming\firebase\cuch_aleksander_gmail.com_application_default_credentials.json
+[debug] [2024-05-20T13:12:19.138Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites pageToken=&pageSize=10
+[debug] [2024-05-20T13:12:20.420Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites 200
+[debug] [2024-05-20T13:12:20.420Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites {"sites":[{"name":"projects/pffg-8233f/sites/pffg-8233f","defaultUrl":"https://pffg-8233f.web.app","appId":"1:491732775256:web:48bb939e119ba84c80752d","type":"DEFAULT_SITE"}]}
+[debug] [2024-05-20T13:12:20.421Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:491732775256:web:48bb939e119ba84c80752d/config [none]
+[debug] [2024-05-20T13:12:21.140Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:491732775256:web:48bb939e119ba84c80752d/config 200
+[debug] [2024-05-20T13:12:21.141Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:491732775256:web:48bb939e119ba84c80752d/config {"projectId":"pffg-8233f","appId":"1:491732775256:web:48bb939e119ba84c80752d","databaseURL":"https://pffg-8233f-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"pffg-8233f.appspot.com","locationId":"europe-west","apiKey":"AIzaSyCzn4Scs1dY52Mu6iBszw6sLCjrU6LSO8c","authDomain":"pffg-8233f.firebaseapp.com","messagingSenderId":"491732775256","measurementId":"G-XLD19XFSTG"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-05-20T13:12:30.877Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites/pffg-8233f [none]
+[debug] [2024-05-20T13:12:31.948Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites/pffg-8233f 200
+[debug] [2024-05-20T13:12:31.948Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites/pffg-8233f {"name":"projects/pffg-8233f/sites/pffg-8233f","defaultUrl":"https://pffg-8233f.web.app","appId":"1:491732775256:web:48bb939e119ba84c80752d","type":"DEFAULT_SITE"}
+[info] - info Loaded env from C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\.env
+
+[info] - info Creating an optimized production build...
+

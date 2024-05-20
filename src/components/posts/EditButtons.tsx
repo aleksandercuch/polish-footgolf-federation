@@ -5,26 +5,33 @@ import { useRouter } from "next/navigation";
 
 // ASSETS
 import { Button, Grid, Paper, Typography } from "@mui/material";
+
 // FIREBASE
 import { deleteDoc, doc } from "firebase/firestore";
-import { db } from "../../../firebase/config/clientApp";
+import { db, storage } from "../../../firebase/config/clientApp";
+import { deleteObject, ref } from "firebase/storage";
 
 // TYPES
 import { postParams, pageProps } from "@/app/posts/(post)/[id]/page";
+
 interface Iprops {
   id: string;
+  name: string;
   setEditionActive: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const EditButtons = ({ id, setEditionActive }: Iprops) => {
+const EditButtons = ({ id, name, setEditionActive }: Iprops) => {
   const [toDelete, setToDelete] = useState(false);
   const router = useRouter();
   const deletePost = async () => {
+    const deleteRef = ref(storage, `postsImages/${name}`);
     await deleteDoc(doc(db, "posts", id))
       .then(() => {
-        alert("Post usunięty!");
-        router.replace("/");
-        router.refresh();
+        deleteObject(deleteRef).then(() => {
+          alert("Post usunięty!");
+          router.replace("/");
+          router.refresh();
+        });
       })
       .catch((error) => alert(error));
   };

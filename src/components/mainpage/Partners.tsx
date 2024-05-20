@@ -27,7 +27,7 @@ export const Partners = () => {
           sx={{
             textAlign: "center",
             background:
-              "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
+              "linear-gradient(90deg, #5a9628 0%, #005A9C 50%, #5a9628 100%)",
             color: "#FFFFFF",
           }}
           xs={12}
@@ -62,7 +62,7 @@ export const Partners = () => {
                     "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/logos%2Fpostolowo.bmp?alt=media&token=a72bc5fe-e027-4d87-84cd-bb42f5bf3895"
                   }
                   alt={"postolowo logo"}
-                  style={{ width: "150px", height: "150px" }}
+                  style={{ maxWidth: "150px", borderRadius: "100px" }}
                 />
               </Link>
             </Grid>
@@ -73,7 +73,7 @@ export const Partners = () => {
                     "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/logos%2Fgscore.png?alt=media&token=1dedf616-4e7f-4114-9d2c-7315ef64ed9d"
                   }
                   alt={"gescore logo"}
-                  style={{ width: "210px", height: "70px" }}
+                  style={{ maxWidth: "210px", borderRadius: "5px" }}
                 />
               </Link>
             </Grid>
@@ -84,7 +84,7 @@ export const Partners = () => {
                     "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/logos%2Fbinowo.jpg?alt=media&token=ba077495-24e3-4686-a955-35dd348470f4"
                   }
                   alt={"binowo"}
-                  style={{ width: "210px", height: "100px" }}
+                  style={{ maxWidth: "210px", borderRadius: "5px" }}
                 />
               </Link>
             </Grid>
@@ -111,7 +111,7 @@ export const Partners = () => {
                     "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/logos%2FalteFarm.jpeg?alt=media&token=6f388c78-ecc2-4563-b20e-e8e8db267287"
                   }
                   alt={"atle farm logo"}
-                  style={{ width: "200px", height: "150px" }}
+                  style={{ maxWidth: "200px", borderRadius: "5px" }}
                 />
               </Link>
             </Grid>

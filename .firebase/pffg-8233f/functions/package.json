@@ -46,12 +46,11 @@
     "sass": "^1.63.6",
     "sharp": "0.32.1",
     "styled-components": "^6.1.8",
-    "typescript": "5.1.6",
     "yup": "^1.2.0",
-    "firebase-admin": "^11.0.1"
+    "firebase-admin": "^11.11.1"
   },
   "main": "server.js",
   "engines": {
-    "node": "20"
+    "node": "18"
   }
 }

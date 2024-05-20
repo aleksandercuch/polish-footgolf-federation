@@ -23,7 +23,7 @@ const page = () => {
           sx={{
             textAlign: "center",
             background:
-              "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
+              "linear-gradient(90deg, #5a9628 0%, #005A9C 50%, #5a9628 100%)",
             color: "#FFFFFF",
           }}
           sm={8}
@@ -37,9 +37,6 @@ const page = () => {
         </Grid>
 
         <Grid item sm={8} xs={12} sx={{ textAlign: "center" }}>
-          <Typography variant="subtitle1">
-            Strona w budowie - zapraszany wkrótce.
-          </Typography>
           <Typography variant="subtitle1">
             <strong>POLSKA FEDERACJA FOOTGOLFA</strong>
           </Typography>

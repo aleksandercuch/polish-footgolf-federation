@@ -46,6 +46,7 @@ interface postParams {
 export interface getParams {
   id: string;
   title: string;
+  name: string;
   description: any;
   file: string;
   date: Date;
@@ -79,7 +80,6 @@ export const AddPost = ({ id, title, description, file, date }: IProps) => {
     if (id) {
       if (data.file) {
         const storageRef = ref(storage, `postsImages/${data.file.name}`);
-        console.log(1);
         uploadBytes(storageRef, data.file)
           .then(async (snapshot) => {
             const downloadURL = data.file
@@ -88,6 +88,7 @@ export const AddPost = ({ id, title, description, file, date }: IProps) => {
             updateDoc(doc(db, "posts", id), {
               title: data.title,
               description: data.description,
+              name: data.file.name,
               file: downloadURL,
               date: data.date,
             }).then(() => {
@@ -150,10 +151,6 @@ export const AddPost = ({ id, title, description, file, date }: IProps) => {
     }, "");*/
     let text = editorState.getCurrentContent().getPlainText("\u0001");
   };
-
-  useEffect(() => {
-    // !currentUser?.user && redirect("/");
-  }, [currentUser?.user]);
 
   return (
     <FormControl

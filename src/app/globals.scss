@@ -1,21 +1,23 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #5a9628;
 }
 
 @media (min-width: 600px) {
-    .content-wrapper {
-        margin: 0 15rem;
-    }
+  .content-wrapper {
+    margin: 0 15rem;
+  }
 }
