@@ -101,7 +101,7 @@ const page = () => {
                     <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
-                        src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
+                        src="https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FRafa%C5%82.jpg?alt=media&token=aa2864de-0789-4d96-9c3e-282546274865"
                         sx={{ width: 150, height: 150 }}
                       />
                     </Grid>
@@ -122,7 +122,7 @@ const page = () => {
                     <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
-                        src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
+                        src="https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FMaciej.jpg?alt=media&token=c885e021-508f-4371-81b3-3621f8a56a5d"
                         sx={{ width: 150, height: 150 }}
                       />
                     </Grid>
@@ -143,7 +143,7 @@ const page = () => {
                     <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
-                        src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
+                        src="https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FKarol.jpg?alt=media&token=52b5e32a-2071-4b88-bbe5-efe5753679dc"
                         sx={{ width: 150, height: 150 }}
                       />
                     </Grid>
@@ -161,6 +161,7 @@ const page = () => {
                   alignItems="center"
                   mt={5}
                   mb={5}
+                  ml={5}
                 >
                   <SportsSoccerIcon />
                   <Grid item>
@@ -177,7 +178,7 @@ const page = () => {
                 <Grid item mt={5} mb={5}>
                   <Divider />
                 </Grid>
-                <Grid container direction="column">
+                <Grid container direction="column" sx={{ padding: "0 10px" }}>
                   <Typography>
                     Turniej otwarty dla graczy posiadających licencję
                     Międzynarodowej Federacji Footgolfa (FIFG) rozgrywany na 27
@@ -188,7 +189,13 @@ const page = () => {
                       Kolejność startów oraz grupy w rundach turniejowych :
                     </strong>
                   </Typography>
-                  <Grid item container direction="column" component="ul">
+                  <Grid
+                    item
+                    container
+                    direction="column"
+                    component="ul"
+                    sx={{ padding: "0 10px" }}
+                  >
                     <Grid item component="li">
                       ogłoszone na stronie gscore.eu i obowiązują przez pierwsze
                       18 dołków turnieju,
@@ -216,6 +223,7 @@ const page = () => {
                   alignItems="center"
                   mt={5}
                   mb={5}
+                  sx={{ padding: "0 10px" }}
                 >
                   <SportsSoccerIcon />
                   <Grid item>
@@ -232,7 +240,12 @@ const page = () => {
                 <Grid item mt={5} mb={5}>
                   <Divider />
                 </Grid>
-                <Grid container direction="column" component="ul">
+                <Grid
+                  container
+                  direction="column"
+                  component="ul"
+                  sx={{ padding: "0 10px" }}
+                >
                   <Grid item component="li">
                     Rundy turniejowe rozgrywane są zgodnie z harmonogramem
                     zamieszczonym na{" "}
@@ -251,7 +264,12 @@ const page = () => {
               </Grid>
               <Grid item xs={12}>
                 <strong>OPŁATY</strong>
-                <Grid container direction="column" component="ul">
+                <Grid
+                  container
+                  direction="column"
+                  component="ul"
+                  sx={{ padding: "0 10px" }}
+                >
                   <Grid item component="li">
                     150,00 PLN – osoby dorosłe
                   </Grid>
@@ -269,6 +287,7 @@ const page = () => {
                   alignItems="center"
                   mt={5}
                   mb={5}
+                  sx={{ padding: "0 10px" }}
                 >
                   <SportsSoccerIcon />
                   <Grid item>
@@ -317,7 +336,12 @@ const page = () => {
                 <Grid item mt={5} mb={5}>
                   <Divider />
                 </Grid>
-                <Grid container direction="column" component="ul">
+                <Grid
+                  container
+                  direction="column"
+                  component="ul"
+                  sx={{ padding: "0 10px" }}
+                >
                   <Grid item component="li">
                     Punktacja turnieju
                   </Grid>
@@ -381,82 +405,84 @@ const page = () => {
                 <Grid item mt={5} mb={5}>
                   <Divider />
                 </Grid>
-                <Typography>
-                  Oprócz klasyfikacji głównej LIGI FOOTGOLFA będzie
-                  przeprowadzona klasyfikacja w następujących kategoriach:
-                </Typography>
-                <Grid container direction="column" component="ul">
-                  <Grid item component="li">
-                    MEN; zawodnicy urodzeni w 1979 roku i młodsi,
-                  </Grid>
-                  <Grid item component="li">
-                    SENIOR; zawodnicy urodzeni w 1978 roku i starsi,
-                  </Grid>
-                  <Grid item component="li">
-                    WOMEN; zawodniczki urodzone w 2005 roku i starsze,
-                  </Grid>
-                  <Grid item component="li">
-                    JUNIOR/JUNIORKA, zawodnicy/zawodniczki urodzeni w 2006 roku
-                    i młodsi,
-                  </Grid>
-                  <Grid item component="li">
-                    DRUŻYNOWA.
-                  </Grid>
-                </Grid>
-                <Typography>
-                  Do sklasyfikowania w poszczególnej kategorii potrzebny jest
-                  udział w conajmniej:
-                </Typography>
-                <Grid container direction="column" component="ul">
-                  <Grid item component="li">
-                    4 rundach w MEN,
-                  </Grid>
-                  <Grid item component="li">
-                    4 rundach w SENIOR,
-                  </Grid>
-                  <Grid item component="li">
-                    3 rundach w WOMEN,
-                  </Grid>
-                  <Grid item component="li">
-                    3 rundach w JUNIOR/JUNIORKA,
-                  </Grid>
-                </Grid>
-                <Typography>
-                  Natomiast do klasyfikacji w każdej kategorii zaliczane są
-                  wszystkie rundy Ligi Footgolfa 2024 oraz z Mistrzostw Polski
-                  2024.
-                </Typography>
-                <Typography>
-                  W klasyfikacji drużynowej biorą udział zawodnicy
-                  reprezentujący dany klub w dniu rozgrywania zawodów. Zgodnie
-                  ze zgłoszeniem do turnieju. Dopuszcza się start Zawodnika
-                  tylko w jednym Klubie w Lidze FootGolfa 2024.
-                </Typography>
-                <Grid container direction="column" component="ul">
+                <Grid item sx={{ padding: "0 10px" }}>
                   <Typography>
-                    Do punktacji drużynowej wlicza się sumę punktów zawodników
-                    danego klubu ze wszystkich kategorii. Punktuje gracz z
-                    najlepszym wynikiem danej drużyny z każdej kategorii
-                    wiekowej, tj.
+                    Oprócz klasyfikacji głównej LIGI FOOTGOLFA będzie
+                    przeprowadzona klasyfikacja w następujących kategoriach:
                   </Typography>
-                  <Grid item component="li">
-                    MEN,
+                  <Grid container direction="column" component="ul">
+                    <Grid item component="li">
+                      MEN; zawodnicy urodzeni w 1979 roku i młodsi,
+                    </Grid>
+                    <Grid item component="li">
+                      SENIOR; zawodnicy urodzeni w 1978 roku i starsi,
+                    </Grid>
+                    <Grid item component="li">
+                      WOMEN; zawodniczki urodzone w 2005 roku i starsze,
+                    </Grid>
+                    <Grid item component="li">
+                      JUNIOR/JUNIORKA, zawodnicy/zawodniczki urodzeni w 2006
+                      roku i młodsi,
+                    </Grid>
+                    <Grid item component="li">
+                      DRUŻYNOWA.
+                    </Grid>
                   </Grid>
-                  <Grid item component="li">
-                    SENIOR,
+                  <Typography>
+                    Do sklasyfikowania w poszczególnej kategorii potrzebny jest
+                    udział w conajmniej:
+                  </Typography>
+                  <Grid container direction="column" component="ul">
+                    <Grid item component="li">
+                      4 rundach w MEN,
+                    </Grid>
+                    <Grid item component="li">
+                      4 rundach w SENIOR,
+                    </Grid>
+                    <Grid item component="li">
+                      3 rundach w WOMEN,
+                    </Grid>
+                    <Grid item component="li">
+                      3 rundach w JUNIOR/JUNIORKA,
+                    </Grid>
                   </Grid>
-                  <Grid item component="li">
-                    WOMEN,
+                  <Typography>
+                    Natomiast do klasyfikacji w każdej kategorii zaliczane są
+                    wszystkie rundy Ligi Footgolfa 2024 oraz z Mistrzostw Polski
+                    2024.
+                  </Typography>
+                  <Typography>
+                    W klasyfikacji drużynowej biorą udział zawodnicy
+                    reprezentujący dany klub w dniu rozgrywania zawodów. Zgodnie
+                    ze zgłoszeniem do turnieju. Dopuszcza się start Zawodnika
+                    tylko w jednym Klubie w Lidze FootGolfa 2024.
+                  </Typography>
+                  <Grid container direction="column" component="ul">
+                    <Typography>
+                      Do punktacji drużynowej wlicza się sumę punktów zawodników
+                      danego klubu ze wszystkich kategorii. Punktuje gracz z
+                      najlepszym wynikiem danej drużyny z każdej kategorii
+                      wiekowej, tj.
+                    </Typography>
+                    <Grid item component="li">
+                      MEN,
+                    </Grid>
+                    <Grid item component="li">
+                      SENIOR,
+                    </Grid>
+                    <Grid item component="li">
+                      WOMEN,
+                    </Grid>
+                    <Grid item component="li">
+                      JUNIOR/JUNIORKA,
+                    </Grid>
                   </Grid>
-                  <Grid item component="li">
-                    JUNIOR/JUNIORKA,
-                  </Grid>
+                  <Typography>
+                    Do klasyfikacji drużynowej zalicza się punkty ze wszystkich
+                    ośmiu rund ligowych. Nie będą wliczane punkty za start w
+                    Mistrzostwach Polski 2024.
+                  </Typography>
                 </Grid>
-                <Typography>
-                  Do klasyfikacji drużynowej zalicza się punkty ze wszystkich
-                  ośmiu rund ligowych. Nie będą wliczane punkty za start w
-                  Mistrzostwach Polski 2024.
-                </Typography>
               </Grid>
               <Grid item xs={12}>
                 <Grid
@@ -483,19 +509,19 @@ const page = () => {
                   <Divider />
                 </Grid>
                 <Typography>
-                  I-Miejsce Puchar Przechodni oraz Dyplom i Tytuł „Mistrza LIGI
-                  FOOTGOLFA 2024”
+                  I - Miejsce Puchar Przechodni oraz Dyplom i Tytuł „Mistrza
+                  LIGI FOOTGOLFA 2024”
                 </Typography>
                 <Typography>
-                  II-Miejsce: Dyplom i Tytuł „I-Vice- Mistrza LIGI FOOTGOLFA
+                  II - Miejsce: Dyplom i Tytuł „I-Vice- Mistrza LIGI FOOTGOLFA
                   2024”
                 </Typography>
                 <Typography>
-                  III-Miejsce: Dyplom i Tytuł „II-Vice- Mistrza LIGI FOOTGOLFA
+                  III - Miejsce: Dyplom i Tytuł „II-Vice- Mistrza LIGI FOOTGOLFA
                   2024”
                 </Typography>
                 <Typography>
-                  I-Miejsce w kategorii Brutto – Puchar Przechodni Polskiej
+                  I - Miejsce w kategorii Brutto – Puchar Przechodni Polskiej
                   Federacji FootGolfa oraz Tytuł Mistrza Challenger Ligi
                   FootGolfa 2024
                 </Typography>
@@ -534,14 +560,19 @@ const page = () => {
                 <Grid item mt={5} mb={5}>
                   <Divider />
                 </Grid>
-                <Typography>
+                <Typography sx={{ padding: "0 10px" }}>
                   W dniu rozgrywania zawodów zabronione jest trenowanie na polu,
                   na którym odbywają się zawody. Dopuszcza się przejście po
                   obszarze gry w celu zapoznania się z charakterystyką pola.
                   Trening może odbywać się tylko na terenie do tego
                   przeznaczonym lub wyznaczonym przez organizatora.
                 </Typography>
-                <Grid container direction="column" component="ul">
+                <Grid
+                  container
+                  direction="column"
+                  component="ul"
+                  sx={{ padding: "0 10px" }}
+                >
                   <Grid item component="li">
                     Gracz zobowiązany jest do odbioru turniejowej karty wyników
                     przed startem swojej grupy.
@@ -598,14 +629,19 @@ const page = () => {
                 <Grid item mt={5} mb={5}>
                   <Divider />
                 </Grid>
-                <Grid item>
+                <Grid item sx={{ padding: "0 10px" }}>
                   <Typography>
                     O miejscach po rozegraniu 18 dołków, jeśli potrzebne będzie
                     rozstrzygnięcie przy podziale do grup finałowych decyduje
                     kolejno:
                   </Typography>
                 </Grid>
-                <Grid container direction="column" component="ul">
+                <Grid
+                  container
+                  direction="column"
+                  component="ul"
+                  sx={{ padding: "0 10px" }}
+                >
                   <Grid item component="li">
                     lepszy wynik na ostatnich 9 dołkach,
                   </Grid>
@@ -628,12 +664,17 @@ const page = () => {
                     zwycięzcy.
                   </Grid>
                 </Grid>
-                <Grid item>
+                <Grid item sx={{ padding: "0 10px" }}>
                   <Typography>
                     O miejscach po rozegraniu 27 dołków (klasyfikacja rundy)
                   </Typography>
                 </Grid>
-                <Grid container direction="column" component="ul">
+                <Grid
+                  container
+                  direction="column"
+                  component="ul"
+                  sx={{ padding: "0 10px" }}
+                >
                   <Grid item component="li">
                     - o 1 miejscu zadecyduje dogrywka na maksymalnie trzech
                     dołkach wyznaczonych przez organizatora. W przypadku
@@ -651,7 +692,7 @@ const page = () => {
                     zwycięzcy. Dołek na którym rozgrywane będą rzuty karne
                     wyznacza Organizator.
                   </Grid>
-                  <Grid item component="ul">
+                  <Grid item component="ul" sx={{ padding: "0 10px" }}>
                     <Typography>
                       o pozostałych miejscach decyduje kolejno:
                     </Typography>
@@ -707,7 +748,12 @@ const page = () => {
                 <Grid item mt={5} mb={5}>
                   <Divider />
                 </Grid>
-                <Grid container direction="column" component="ul">
+                <Grid
+                  container
+                  direction="column"
+                  component="ul"
+                  sx={{ padding: "0 10px" }}
+                >
                   <Typography>
                     Rejestracja na turniej przez osobę pełnoletnią oznacza, że
                     osoba zapoznała się z:

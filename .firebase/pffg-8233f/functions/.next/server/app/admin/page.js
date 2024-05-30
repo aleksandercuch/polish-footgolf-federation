@@ -581,7 +581,7 @@ const page = ({})=>{
                     item: true,
                     sx: {
                         textAlign: "center",
-                        background: "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
+                        background: "linear-gradient(90deg, #5a9628 0%, #005A9C 50%, #5a9628 100%)",
                         color: "#FFFFFF"
                     },
                     xs: 8,
@@ -635,6 +635,13 @@ const __default__ = proxy.default;
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__default__);
 
+/***/ }),
+
+/***/ 97673:
+/***/ (() => {
+
+
+
 /***/ })
 
 };
@@ -644,7 +651,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [20,743,32], () => (__webpack_exec__(95224)));
+var __webpack_exports__ = __webpack_require__.X(0, [20,558,380], () => (__webpack_exec__(95224)));
 module.exports = __webpack_exports__;
 
 })();

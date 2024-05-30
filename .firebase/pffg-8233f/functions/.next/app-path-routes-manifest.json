@@ -2,8 +2,9 @@
   "/page": "/",
   "/admin/page": "/admin",
   "/about/page": "/about",
-  "/add-post/page": "/add-post",
   "/contact/page": "/contact",
+  "/add-post/page": "/add-post",
   "/statue/page": "/statue",
+  "/scores/page": "/scores",
   "/posts/(post)/[id]/page": "/posts/[id]"
 }

@@ -461,6 +461,8 @@ var navigation = __webpack_require__(57114);
 var dist = __webpack_require__(21735);
 // EXTERNAL MODULE: ./firebase/config/clientApp.ts
 var clientApp = __webpack_require__(65638);
+// EXTERNAL MODULE: ./node_modules/firebase/storage/dist/index.mjs + 1 modules
+var storage_dist = __webpack_require__(31640);
 ;// CONCATENATED MODULE: ./src/components/posts/EditButtons.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 // CORE
@@ -471,14 +473,18 @@ var clientApp = __webpack_require__(65638);
 // FIREBASE
 
 
-const EditButtons = ({ id, setEditionActive })=>{
+
+const EditButtons = ({ id, name, setEditionActive })=>{
     const [toDelete, setToDelete] = (0,react_.useState)(false);
     const router = (0,navigation.useRouter)();
     const deletePost = async ()=>{
+        const deleteRef = (0,storage_dist/* ref */.iH)(clientApp/* storage */.tO, `postsImages/${name}`);
         await (0,dist/* deleteDoc */.oe)((0,dist/* doc */.JU)(clientApp.db, "posts", id)).then(()=>{
-            alert("Post usunięty!");
-            router.replace("/");
-            router.refresh();
+            (0,storage_dist/* deleteObject */.oq)(deleteRef).then(()=>{
+                alert("Post usunięty!");
+                router.replace("/");
+                router.refresh();
+            });
         }).catch((error)=>alert(error));
     };
     return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
@@ -590,6 +596,7 @@ const DisplayPost = ({ params })=>{
                 setPost({
                     id: params.id,
                     title: postData.title,
+                    name: postData.name,
                     description: postData.description,
                     file: postData.file,
                     date: (0,convert_firebase_timestamp/* convertFirebaseTimestamp */.f)(postData.date)
@@ -616,7 +623,7 @@ const DisplayPost = ({ params })=>{
                         item: true,
                         sx: {
                             textAlign: "center",
-                            background: "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
+                            background: "linear-gradient(90deg, #5a9628 0%, #005A9C 50%, #5a9628 100%)",
                             color: "#FFFFFF"
                         },
                         xs: 8,
@@ -701,6 +708,7 @@ const DisplayPost = ({ params })=>{
                                             }),
                                             currentUser?.user?.email && /*#__PURE__*/ jsx_runtime_.jsx(posts_EditButtons, {
                                                 id: params.id,
+                                                name: post.name,
                                                 setEditionActive: setEditionActive
                                             })
                                         ]
@@ -794,7 +802,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [20,173,743,997,689,512,32,913], () => (__webpack_exec__(79474)));
+var __webpack_exports__ = __webpack_require__.X(0, [20,558,173,819,563,689,512,380,913], () => (__webpack_exec__(79474)));
 module.exports = __webpack_exports__;
 
 })();

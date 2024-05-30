@@ -440,7 +440,7 @@ const page = ()=>{
                     item: true,
                     sx: {
                         textAlign: "center",
-                        background: "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
+                        background: "linear-gradient(90deg, #5a9628 0%, #005A9C 50%, #5a9628 100%)",
                         color: "#FFFFFF"
                     },
                     sm: 8,
@@ -463,10 +463,6 @@ const page = ()=>{
                         textAlign: "center"
                     },
                     children: [
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                            variant: "subtitle1",
-                            children: "Strona w budowie - zapraszany wkr\xf3tce."
-                        }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
                             variant: "subtitle1",
                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("strong", {
@@ -529,7 +525,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [20,32], () => (__webpack_exec__(20901)));
+var __webpack_exports__ = __webpack_require__.X(0, [20,380], () => (__webpack_exec__(20901)));
 module.exports = __webpack_exports__;
 
 })();

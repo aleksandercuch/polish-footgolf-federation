@@ -442,7 +442,7 @@ const page = ({})=>{
                     item: true,
                     sx: {
                         textAlign: "center",
-                        background: "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
+                        background: "linear-gradient(90deg, #5a9628 0%, #005A9C 50%, #5a9628 100%)",
                         color: "#FFFFFF"
                     },
                     xs: 12,
@@ -537,7 +537,7 @@ const page = ({})=>{
                                                             },
                                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Avatar, {
                                                                 alt: "Remy Sharp",
-                                                                src: "https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png",
+                                                                src: "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FRafa%C5%82.jpg?alt=media&token=aa2864de-0789-4d96-9c3e-282546274865",
                                                                 sx: {
                                                                     width: 150,
                                                                     height: 150
@@ -576,7 +576,7 @@ const page = ({})=>{
                                                             },
                                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Avatar, {
                                                                 alt: "Remy Sharp",
-                                                                src: "https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png",
+                                                                src: "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FGrzegorz.jpg?alt=media&token=7a4b0ca8-d151-414b-8c3f-c01149361dd8",
                                                                 sx: {
                                                                     width: 150,
                                                                     height: 150
@@ -654,7 +654,7 @@ const page = ({})=>{
                                                             },
                                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Avatar, {
                                                                 alt: "Remy Sharp",
-                                                                src: "https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png",
+                                                                src: "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FKarol.jpg?alt=media&token=52b5e32a-2071-4b88-bbe5-efe5753679dc",
                                                                 sx: {
                                                                     width: 150,
                                                                     height: 150
@@ -794,7 +794,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [20,173,32], () => (__webpack_exec__(53626)));
+var __webpack_exports__ = __webpack_require__.X(0, [20,173,380], () => (__webpack_exec__(53626)));
 module.exports = __webpack_exports__;
 
 })();
