@@ -439,7 +439,7 @@ const page = ({})=>{
                     item: true,
                     sx: {
                         textAlign: "center",
-                        background: "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
+                        background: "linear-gradient(90deg, #5a9628 0%, #005A9C 50%, #5a9628 100%)",
                         color: "#FFFFFF"
                     },
                     xs: 8,
@@ -509,7 +509,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [20,173,743,997,970,913], () => (__webpack_exec__(27471)));
+var __webpack_exports__ = __webpack_require__.X(0, [20,558,173,819,563,380,913], () => (__webpack_exec__(27471)));
 module.exports = __webpack_exports__;
 
 })();

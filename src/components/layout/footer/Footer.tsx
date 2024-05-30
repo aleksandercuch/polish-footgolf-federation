@@ -28,7 +28,7 @@ export const Footer = () => {
           sx={{
             border: "none",
             background:
-              "linear-gradient(90deg, #005A9C 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 55%, #005A9C 100%)",
+              "linear-gradient(90deg, #005A9C 0%, #5a9628  45%, #5a9628  55%, #005A9C 100%)",
             height: "6px",
           }}
         />

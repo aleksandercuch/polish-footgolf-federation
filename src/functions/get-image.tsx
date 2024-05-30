@@ -19,7 +19,6 @@ export const returnImagesFromPaths = (
 
   Promise.all(promises)
     .then((urls) => {
-      console.log(urls);
       setState(urls);
     })
     .catch((error) => {

@@ -39,6 +39,7 @@ const DisplayPost = ({ params }: pageProps) => {
           setPost({
             id: params.id,
             title: postData.title,
+            name: postData.name,
             description: postData.description,
             file: postData.file,
             date: convertFirebaseTimestamp(postData.date),
@@ -71,7 +72,7 @@ const DisplayPost = ({ params }: pageProps) => {
               sx={{
                 textAlign: "center",
                 background:
-                  "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
+                  "linear-gradient(90deg, #5a9628 0%, #005A9C 50%, #5a9628 100%)",
                 color: "#FFFFFF",
               }}
               xs={8}
@@ -141,6 +142,7 @@ const DisplayPost = ({ params }: pageProps) => {
                       {currentUser?.user?.email && (
                         <EditButtons
                           id={params.id}
+                          name={post.name}
                           setEditionActive={setEditionActive}
                         />
                       )}

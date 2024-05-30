@@ -2,8 +2,9 @@
   "/page": "app/page.js",
   "/admin/page": "app/admin/page.js",
   "/about/page": "app/about/page.js",
-  "/add-post/page": "app/add-post/page.js",
   "/contact/page": "app/contact/page.js",
+  "/add-post/page": "app/add-post/page.js",
   "/statue/page": "app/statue/page.js",
+  "/scores/page": "app/scores/page.js",
   "/posts/(post)/[id]/page": "app/posts/(post)/[id]/page.js"
 }

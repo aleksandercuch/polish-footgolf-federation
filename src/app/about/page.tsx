@@ -23,7 +23,7 @@ const page: FC<pageProps> = ({}) => {
           sx={{
             textAlign: "center",
             background:
-              "linear-gradient(90deg, rgba(255,255,255,1) 0%, #005A9C 50%, rgba(255,255,255,1) 100%)",
+              "linear-gradient(90deg, #5a9628 0%, #005A9C 50%, #5a9628 100%)",
             color: "#FFFFFF",
           }}
           xs={12}
@@ -92,7 +92,7 @@ const page: FC<pageProps> = ({}) => {
                     <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
-                        src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
+                        src="https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FRafa%C5%82.jpg?alt=media&token=aa2864de-0789-4d96-9c3e-282546274865"
                         sx={{ width: 150, height: 150 }}
                       />
                     </Grid>
@@ -114,7 +114,7 @@ const page: FC<pageProps> = ({}) => {
                     <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
-                        src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
+                        src="https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FGrzegorz.jpg?alt=media&token=7a4b0ca8-d151-414b-8c3f-c01149361dd8"
                         sx={{ width: 150, height: 150 }}
                       />
                     </Grid>
@@ -160,7 +160,7 @@ const page: FC<pageProps> = ({}) => {
                     <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
-                        src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
+                        src="https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FKarol.jpg?alt=media&token=52b5e32a-2071-4b88-bbe5-efe5753679dc"
                         sx={{ width: 150, height: 150 }}
                       />
                     </Grid>

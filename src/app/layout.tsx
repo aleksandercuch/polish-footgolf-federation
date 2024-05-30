@@ -12,6 +12,7 @@ import { Footer } from "@/components/layout/footer/Footer";
 // CONTEXT
 import { AuthContextProvider } from "@/context/auth-context";
 
+import "./globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
