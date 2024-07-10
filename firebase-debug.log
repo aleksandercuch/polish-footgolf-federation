@@ -1189,3 +1189,138 @@ Import trace for requested module:
 [debug] [2024-07-10T09:49:06.888Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/pffg-8233f/locations/europe-west1/operations/operation-1720604898408-61ce18bc4b97a-eb7a76fb-ad912deb [none]
 [debug] [2024-07-10T09:49:07.054Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/pffg-8233f/locations/europe-west1/operations/operation-1720604898408-61ce18bc4b97a-eb7a76fb-ad912deb 200
 [debug] [2024-07-10T09:49:07.054Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/pffg-8233f/locations/europe-west1/operations/operation-1720604898408-61ce18bc4b97a-eb7a76fb-ad912deb {"name":"projects/pffg-8233f/locations/europe-west1/operations/operation-1720604898408-61ce18bc4b97a-eb7a76fb-ad912deb","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-07-10T09:48:19.210675041Z","target":"projects/pffg-8233f/locations/europe-west1/functions/ssrpffg8233f","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/pffg-8233f/locations/europe-west1/functions/ssrpffg8233f","buildConfig":{"runtime":"nodejs18","entryPoint":"ssrpffg8233f","source":{"storageSource":{"bucket":"gcf-v2-sources-491732775256-europe-west1","object":"ssrpffg8233f/function-source.zip","generation":"1720604899179249"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/pffg-8233f/locations/europe-west1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-491732775256-europe-west1","object":"ssrpffg8233f/function-source.zip","generation":"1720603573652748"}},"dockerRegistry":"ARTIFACT_REGISTRY"},"serviceConfig":{"service":"projects/pffg-8233f/locations/europe-west1/services/ssrpffg8233f","timeoutSeconds":60,"environmentVariables":{"NEXT_PUBLIC_FIREBASE_API_KEY":"AIzaSyCzn4Scs1dY52Mu6iBszw6sLCjrU6LSO8c","NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN":"pffg-8233f.firebaseapp.com","NEXT_PUBLIC_FIREBASE_PROJECT_ID":"pffg-8233f","NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET":"pffg-8233f.appspot.com","NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID":"491732775256","NEXT_PUBLIC_FIREBASE_APP_ID":"1:491732775256:web:48bb939e119ba84c80752d","NEXT_PUBLIC_FIREBASE_MEASUREMENT":"G-XLD19XFSTG","VERCEL_URL":"pffg-8233f.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"pffg-8233f\",\"appId\":\"1:491732775256:web:48bb939e119ba84c80752d\",\"databaseURL\":\"https://pffg-8233f-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"pffg-8233f.appspot.com\",\"locationId\":\"europe-west\",\"apiKey\":\"AIzaSyCzn4Scs1dY52Mu6iBszw6sLCjrU6LSO8c\",\"authDomain\":\"pffg-8233f.firebaseapp.com\",\"messagingSenderId\":\"491732775256\",\"measurementId\":\"G-XLD19XFSTG\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"pffg-8233f\",\"databaseURL\":\"https://pffg-8233f-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"pffg-8233f.appspot.com\",\"locationId\":\"europe-west\"}","GCLOUD_PROJECT":"pffg-8233f","EVENTARC_CLOUD_EVENT_SOURCE":"projects/pffg-8233f/locations/europe-west1/services/ssrpffg8233f","FUNCTION_TARGET":"ssrpffg8233f","LOG_EXECUTION_ID":"true"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://ssrpffg8233f-b5n2vel2ya-ew.a.run.app","serviceAccountEmail":"491732775256-compute@developer.gserviceaccount.com","availableMemory":"1024Mi","allTrafficOnLatestRevision":true,"revision":"ssrpffg8233f-00024-xel","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-pffg-8233f","firebase-functions-hash":"e3533a70431b78964d083baf0af5e3f8cc222f28"},"environment":"GEN_2","url":"https://europe-west1-pffg-8233f.cloudfunctions.net/ssrpffg8233f"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/491732775256/locations/europe-west1/builds/f6b8f244-f875-46ba-9b54-b1fc6e136e34","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=europe-west1/f6b8f244-f875-46ba-9b54-b1fc6e136e34?project=491732775256"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION"},"done":false}
+[debug] [2024-07-10T09:52:17.555Z] ----------------------------------------------------------------------
+[debug] [2024-07-10T09:52:17.561Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2024-07-10T09:52:17.562Z] CLI Version:   12.6.2
+[debug] [2024-07-10T09:52:17.562Z] Platform:      win32
+[debug] [2024-07-10T09:52:17.562Z] Node Version:  v20.3.0
+[debug] [2024-07-10T09:52:17.563Z] Time:          Wed Jul 10 2024 11:52:17 GMT+0200 (czas środkowoeuropejski letni)
+[debug] [2024-07-10T09:52:17.563Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-10T09:52:17.742Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-10T09:52:17.743Z] > authorizing via signed-in user (cuch.aleksander@gmail.com)
+[debug] [2024-07-10T09:52:17.743Z] [iam] checking project pffg-8233f for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-10T09:52:17.747Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions [none]
+[debug] [2024-07-10T09:52:17.747Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions x-goog-quota-user=projects/pffg-8233f
+[debug] [2024-07-10T09:52:17.748Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-10T09:52:18.634Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions 200
+[debug] [2024-07-10T09:52:18.635Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pffg-8233f:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-10T09:52:18.635Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pffg-8233f [none]
+[debug] [2024-07-10T09:52:19.020Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pffg-8233f 200
+[debug] [2024-07-10T09:52:19.020Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pffg-8233f {"projectId":"pffg-8233f","projectNumber":"491732775256","displayName":"PFFG","name":"projects/pffg-8233f","resources":{"hostingSite":"pffg-8233f","realtimeDatabaseInstance":"pffg-8233f-default-rtdb","storageBucket":"pffg-8233f.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_d0ac4ecd-45e7-410b-83db-d973ddeb969c"}
+[debug] [2024-07-10T09:52:25.827Z] defaultcredentials: writing to file C:\Users\Acer\AppData\Roaming\firebase\cuch_aleksander_gmail.com_application_default_credentials.json
+[debug] [2024-07-10T09:52:25.831Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites pageToken=&pageSize=10
+[debug] [2024-07-10T09:52:27.179Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites 200
+[debug] [2024-07-10T09:52:27.179Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/pffg-8233f/sites {"sites":[{"name":"projects/pffg-8233f/sites/pffg-8233f","defaultUrl":"https://pffg-8233f.web.app","appId":"1:491732775256:web:48bb939e119ba84c80752d","type":"DEFAULT_SITE"}]}
+[debug] [2024-07-10T09:52:27.180Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:491732775256:web:48bb939e119ba84c80752d/config [none]
+[debug] [2024-07-10T09:52:28.040Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:491732775256:web:48bb939e119ba84c80752d/config 200
+[debug] [2024-07-10T09:52:28.040Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:491732775256:web:48bb939e119ba84c80752d/config {"projectId":"pffg-8233f","appId":"1:491732775256:web:48bb939e119ba84c80752d","databaseURL":"https://pffg-8233f-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"pffg-8233f.appspot.com","locationId":"europe-west","apiKey":"AIzaSyCzn4Scs1dY52Mu6iBszw6sLCjrU6LSO8c","authDomain":"pffg-8233f.firebaseapp.com","messagingSenderId":"491732775256","measurementId":"G-XLD19XFSTG"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] - info Loaded env from C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\.env
+
+[info] - info Creating an optimized production build...
+
+[info] - warn Compiled with warnings
+
+
+[info] ./node_modules/@firebase/auth-compat/node_modules/node-fetch/lib/index.js
+Module not found: Can't resolve 'encoding' in 'C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\node_modules\@firebase\auth-compat\node_modules\node-fetch\lib'
+
+Import trace for requested module:
+./node_modules/@firebase/auth-compat/node_modules/node-fetch/lib/index.js
+./node_modules/@firebase/auth-compat/dist/esm/index.node.esm.js
+./node_modules/firebase/compat/auth/dist/index.mjs
+./firebase/config/clientApp.ts
+./src/context/auth-context.tsx
+
+./node_modules/@firebase/auth/node_modules/node-fetch/lib/index.js
+Module not found: Can't resolve 'encoding' in 'C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\node_modules\@firebase\auth\node_modules\node-fetch\lib'
+
+Import trace for requested module:
+./node_modules/@firebase/auth/node_modules/node-fetch/lib/index.js
+./node_modules/@firebase/auth/dist/node-esm/index.js
+./node_modules/firebase/auth/dist/index.mjs
+./src/context/auth-context.tsx
+
+./node_modules/@firebase/storage/node_modules/node-fetch/lib/index.js
+Module not found: Can't resolve 'encoding' in 'C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\node_modules\@firebase\storage\node_modules\node-fetch\lib'
+
+Import trace for requested module:
+./node_modules/@firebase/storage/node_modules/node-fetch/lib/index.js
+./node_modules/@firebase/storage/dist/node-esm/index.node.esm.js
+./node_modules/firebase/storage/dist/index.mjs
+./src/components/layout/main-navigation/MainNavigation.tsx
+
+
+[info] - info Linting and checking validity of types...
+
+[info] 
+./src/components/layout/footer/Footer.tsx
+35:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/layout/main-navigation/MainNavigation.tsx
+99:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/mainpage/News.tsx
+160:29  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+232:33  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/mainpage/Partners.tsx
+60:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+71:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+82:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+93:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+109:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/mainpage/Sponsors.tsx
+26:6  Warning: React Hook useEffect has a missing dependency: 'paths'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+73:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+86:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+102:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+111:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/posts/AddPost.tsx
+209:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/posts/DisplayPost.tsx
+58:6  Warning: React Hook useEffect has a missing dependency: 'fetchPost'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+124:23  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/scores/scores.tsx
+155:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/hooks/useModal/useModal.tsx
+3:1  Warning: Assign arrow function to a variable before exporting as module default  import/no-anonymous-default-export
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+[info] Failed to compile.
+
+
+[info] ./src/app/statue/page.tsx:150:35
+Type error: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any>; } & TypographyOwnProps & CommonProps & Omit<any, "className" | "style" | "classes" | "border" | ... 109 more ... | "variantMapping">): Element | null', gave the following error.
+    Type '"h"' is not assignable to type 'OverridableStringUnion<"inherit" | Variant, TypographyPropsVariantOverrides> | undefined'.
+  Overload 2 of 2, '(props: DefaultComponentProps<TypographyTypeMap<{}, "span">>): Element | null', gave the following error.
+    Type '"h"' is not assignable to type 'OverridableStringUnion<"inherit" | Variant, TypographyPropsVariantOverrides> | undefined'.
+
+  148 |                     </Grid>
+  149 |                     <Grid item>
+> 150 |                       <Typography variant="h">Karol Kusaj</Typography>
+      |                                   ^
+  151 |                     </Grid>
+  152 |                   </Grid>
+  153 |                 </Grid>
+
+[debug] [2024-07-10T09:53:03.401Z] Error: ENOENT: no such file or directory, open 'C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
