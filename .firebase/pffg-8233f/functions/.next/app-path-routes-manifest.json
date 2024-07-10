@@ -1,10 +1,10 @@
 {
   "/page": "/",
-  "/admin/page": "/admin",
   "/about/page": "/about",
-  "/contact/page": "/contact",
   "/add-post/page": "/add-post",
-  "/statue/page": "/statue",
+  "/admin/page": "/admin",
   "/scores/page": "/scores",
+  "/statue/page": "/statue",
+  "/contact/page": "/contact",
   "/posts/(post)/[id]/page": "/posts/[id]"
 }

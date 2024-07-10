@@ -446,8 +446,7 @@ const page = ({})=>{
                     mt: 6,
                     mb: 6,
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                        variant: "h3",
-                        component: "h2",
+                        variant: "h1",
                         mt: 3,
                         mb: 2,
                         children: "Dodaj post"
@@ -509,7 +508,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [20,558,173,819,563,380,913], () => (__webpack_exec__(27471)));
+var __webpack_exports__ = __webpack_require__.X(0, [20,558,173,819,563,598,913], () => (__webpack_exec__(27471)));
 module.exports = __webpack_exports__;
 
 })();

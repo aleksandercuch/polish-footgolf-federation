@@ -451,8 +451,7 @@ const page = ()=>{
                     mb: 6,
                     children: [
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                            variant: "h3",
-                            component: "h2",
+                            variant: "h1",
                             mt: 3,
                             mb: 2,
                             children: "Regulamin Footgolfa"
@@ -503,8 +502,7 @@ const page = ()=>{
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                        variant: "h5",
-                                                        component: "h4",
+                                                        variant: "h3",
                                                         sx: {
                                                             textAlign: "center",
                                                             padding: "0 10px"
@@ -559,7 +557,7 @@ const page = ()=>{
                                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                             item: true,
                                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                variant: "h5",
+                                                                variant: "h4",
                                                                 children: "Rafał Bielawa"
                                                             })
                                                         })
@@ -592,7 +590,7 @@ const page = ()=>{
                                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                             item: true,
                                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                variant: "h5",
+                                                                variant: "h4",
                                                                 children: "Maciej Gemborys"
                                                             })
                                                         })
@@ -625,7 +623,7 @@ const page = ()=>{
                                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                             item: true,
                                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                variant: "h5",
+                                                                variant: "h4",
                                                                 children: "Karol Kusaj"
                                                             })
                                                         })
@@ -652,8 +650,7 @@ const page = ()=>{
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                        variant: "h5",
-                                                        component: "h4",
+                                                        variant: "h3",
                                                         sx: {
                                                             textAlign: "center",
                                                             padding: "0 10px"
@@ -680,9 +677,11 @@ const page = ()=>{
                                             },
                                             children: [
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                    variant: "subtitle1",
                                                     children: "Turniej otwarty dla graczy posiadających licencję Międzynarodowej Federacji Footgolfa (FIFG) rozgrywany na 27 dołkach Pola. PAR 36 (3 rundy po 9 dołk\xf3w)."
                                                 }),
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                    variant: "subtitle1",
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("strong", {
                                                         children: "Kolejność start\xf3w oraz grupy w rundach turniejowych :"
                                                     })
@@ -736,8 +735,7 @@ const page = ()=>{
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                        variant: "h5",
-                                                        component: "h4",
+                                                        variant: "h3",
                                                         sx: {
                                                             textAlign: "center",
                                                             padding: "0 10px"
@@ -843,8 +841,7 @@ const page = ()=>{
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                        variant: "h5",
-                                                        component: "h4",
+                                                        variant: "h3",
                                                         sx: {
                                                             textAlign: "center",
                                                             padding: "0 10px"
@@ -886,8 +883,7 @@ const page = ()=>{
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                        variant: "h5",
-                                                        component: "h4",
+                                                        variant: "h3",
                                                         sx: {
                                                             textAlign: "center",
                                                             padding: "0 10px"
@@ -920,6 +916,7 @@ const page = ()=>{
                                                     children: "Punktacja turnieju"
                                                 }),
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                    variant: "subtitle1",
                                                     children: "Zawodnik otrzymuje punkty według reguły 92% poprzedniej pozycji, gdzie za 1 miejsce można uzyskać 100 punkt\xf3w:"
                                                 }),
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
@@ -993,6 +990,7 @@ const page = ()=>{
                                                     children: "Do klasyfikacji generalnej Ligi Footgolfa 2024 będą także doliczone punkty za start w Mistrzostwach Polski 2024. Z punktacji tej będą wyłączeni zawodnicy, kt\xf3rzy nie wezmą udziału w żadnej rundzie Ligi Footgolfa 2024."
                                                 }),
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                    variant: "subtitle1",
                                                     children: "Punktacja z Mistrzostw Polski zgodna z zasadami rundy turniejowej."
                                                 })
                                             ]
@@ -1015,8 +1013,7 @@ const page = ()=>{
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                        variant: "h5",
-                                                        component: "h4",
+                                                        variant: "h3",
                                                         sx: {
                                                             textAlign: "center",
                                                             padding: "0 10px"
@@ -1042,6 +1039,7 @@ const page = ()=>{
                                             },
                                             children: [
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                    variant: "subtitle1",
                                                     children: "Opr\xf3cz klasyfikacji gł\xf3wnej LIGI FOOTGOLFA będzie przeprowadzona klasyfikacja w następujących kategoriach:"
                                                 }),
                                                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
@@ -1077,6 +1075,7 @@ const page = ()=>{
                                                     ]
                                                 }),
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                    variant: "subtitle1",
                                                     children: "Do sklasyfikowania w poszczeg\xf3lnej kategorii potrzebny jest udział w conajmniej:"
                                                 }),
                                                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
@@ -1107,9 +1106,11 @@ const page = ()=>{
                                                     ]
                                                 }),
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                    variant: "subtitle1",
                                                     children: "Natomiast do klasyfikacji w każdej kategorii zaliczane są wszystkie rundy Ligi Footgolfa 2024 oraz z Mistrzostw Polski 2024."
                                                 }),
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                    variant: "subtitle1",
                                                     children: "W klasyfikacji drużynowej biorą udział zawodnicy reprezentujący dany klub w dniu rozgrywania zawod\xf3w. Zgodnie ze zgłoszeniem do turnieju. Dopuszcza się start Zawodnika tylko w jednym Klubie w Lidze FootGolfa 2024."
                                                 }),
                                                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
@@ -1118,6 +1119,7 @@ const page = ()=>{
                                                     component: "ul",
                                                     children: [
                                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                            variant: "subtitle1",
                                                             children: "Do punktacji drużynowej wlicza się sumę punkt\xf3w zawodnik\xf3w danego klubu ze wszystkich kategorii. Punktuje gracz z najlepszym wynikiem danej drużyny z każdej kategorii wiekowej, tj."
                                                         }),
                                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
@@ -1143,6 +1145,7 @@ const page = ()=>{
                                                     ]
                                                 }),
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                    variant: "subtitle1",
                                                     children: "Do klasyfikacji drużynowej zalicza się punkty ze wszystkich ośmiu rund ligowych. Nie będą wliczane punkty za start w Mistrzostwach Polski 2024."
                                                 })
                                             ]
@@ -1165,8 +1168,7 @@ const page = ()=>{
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                        variant: "h5",
-                                                        component: "h4",
+                                                        variant: "h3",
                                                         sx: {
                                                             textAlign: "center",
                                                             padding: "0 10px"
@@ -1186,30 +1188,39 @@ const page = ()=>{
                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Divider, {})
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                            variant: "subtitle1",
                                             children: "I - Miejsce Puchar Przechodni oraz Dyplom i Tytuł „Mistrza LIGI FOOTGOLFA 2024”"
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                            variant: "subtitle1",
                                             children: "II - Miejsce: Dyplom i Tytuł „I-Vice- Mistrza LIGI FOOTGOLFA 2024”"
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                            variant: "subtitle1",
                                             children: "III - Miejsce: Dyplom i Tytuł „II-Vice- Mistrza LIGI FOOTGOLFA 2024”"
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                            variant: "subtitle1",
                                             children: "I - Miejsce w kategorii Brutto – Puchar Przechodni Polskiej Federacji FootGolfa oraz Tytuł Mistrza Challenger Ligi FootGolfa 2024"
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                            variant: "subtitle1",
                                             children: "I Miejsce w Kategorii MEN: Statuetka"
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                            variant: "subtitle1",
                                             children: "I Miejsce w Kategorii SENIOR: Statuetka"
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                            variant: "subtitle1",
                                             children: "I Miejsce w Kategorii WOMEN: Statuetka"
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                            variant: "subtitle1",
                                             children: "I Miejsce w Kategorii JUNIOR/JUNIORKA: Statuetka"
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                            variant: "subtitle1",
                                             children: "I Miejsce w Kategorii DRUŻYN: nagroda finansowa 2000 zł oraz Puchar Przechodni"
                                         })
                                     ]
@@ -1230,8 +1241,7 @@ const page = ()=>{
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                        variant: "h5",
-                                                        component: "h4",
+                                                        variant: "h3",
                                                         sx: {
                                                             textAlign: "center",
                                                             padding: "0 10px"
@@ -1251,6 +1261,7 @@ const page = ()=>{
                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Divider, {})
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                            variant: "subtitle1",
                                             sx: {
                                                 padding: "0 10px"
                                             },
@@ -1321,8 +1332,7 @@ const page = ()=>{
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                        variant: "h5",
-                                                        component: "h4",
+                                                        variant: "h3",
                                                         sx: {
                                                             textAlign: "center",
                                                             padding: "0 10px"
@@ -1347,6 +1357,7 @@ const page = ()=>{
                                                 padding: "0 10px"
                                             },
                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                variant: "subtitle1",
                                                 children: "O miejscach po rozegraniu 18 dołk\xf3w, jeśli potrzebne będzie rozstrzygnięcie przy podziale do grup finałowych decyduje kolejno:"
                                             })
                                         }),
@@ -1396,6 +1407,7 @@ const page = ()=>{
                                                 padding: "0 10px"
                                             },
                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                variant: "subtitle1",
                                                 children: "O miejscach po rozegraniu 27 dołk\xf3w (klasyfikacja rundy)"
                                             })
                                         }),
@@ -1425,7 +1437,8 @@ const page = ()=>{
                                                     },
                                                     children: [
                                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                            children: "o pozostałych miejscach decyduje kolejno:"
+                                                            variant: "subtitle1",
+                                                            children: "O pozostałych miejscach decyduje kolejno:"
                                                         }),
                                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                             item: true,
@@ -1458,9 +1471,11 @@ const page = ()=>{
                                                     item: true,
                                                     children: [
                                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                            variant: "subtitle1",
                                                             children: "Jeśli wynik będzie dalej nierozstrzygnięty punkty z tych miejsc są sumowane i podzielone na tych graczy."
                                                         }),
                                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                            variant: "subtitle1",
                                                             children: "W uzasadnionych przypadkach Komitet Turnieju zastrzega sobie prawo do zmiany tego zapisu."
                                                         })
                                                     ]
@@ -1485,8 +1500,7 @@ const page = ()=>{
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                        variant: "h5",
-                                                        component: "h4",
+                                                        variant: "h3",
                                                         sx: {
                                                             textAlign: "center",
                                                             padding: "0 10px"
@@ -1514,6 +1528,7 @@ const page = ()=>{
                                             },
                                             children: [
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                    variant: "subtitle1",
                                                     children: "Rejestracja na turniej przez osobę pełnoletnią oznacza, że osoba zapoznała się z:"
                                                 }),
                                                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
@@ -1535,17 +1550,14 @@ const page = ()=>{
                                                 }),
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
-                                                    component: "li",
                                                     children: "Rejestracja na turniej przez osobę nieletnią oznacza, że rodzic lub opiekun prawny osoby nieletniej zapoznał się z Regulaminem Ligi Footgolfa 2024 i regułami Gry w Footgolfa Międzynarodowej Federacji FootGolfa i akceptuje ich postanowienia oraz że ponosi odpowiedzialność za prawidłowość danych zawartych w zgłoszeniu nieletniego i wyraża zgodę na uczestnictwo nieletniego w Turnieju."
                                                 }),
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
-                                                    component: "li",
                                                     children: "W uzasadnionych przypadkach Komitet Turnieju zastrzega sobie prawo do zmian w zapisie tego regulaminu."
                                                 }),
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
-                                                    component: "li",
                                                     children: "Wszystkie kwestie sporne, nie zawarte w tym regulaminie, rozstrzyga Organizator."
                                                 })
                                             ]
@@ -1598,7 +1610,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [20,173,380], () => (__webpack_exec__(39995)));
+var __webpack_exports__ = __webpack_require__.X(0, [20,173,598], () => (__webpack_exec__(39995)));
 module.exports = __webpack_exports__;
 
 })();

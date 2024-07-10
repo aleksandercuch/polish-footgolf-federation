@@ -147,7 +147,7 @@ const page = () => {
                       />
                     </Grid>
                     <Grid item>
-                      <Typography variant="h4">Karol Kusaj</Typography>
+                      <Typography variant="h">Karol Kusaj</Typography>
                     </Grid>
                   </Grid>
                 </Grid>
