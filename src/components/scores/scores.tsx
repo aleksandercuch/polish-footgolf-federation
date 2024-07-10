@@ -104,8 +104,7 @@ export const Scores = () => {
         name: doc.data().name,
       });
     });
-    console.log("DATA", data);
-    setScores(data.reverse().slice(0, 7));
+    setScores(data.reverse().slice(0, 13));
   };
 
   useEffect(() => {

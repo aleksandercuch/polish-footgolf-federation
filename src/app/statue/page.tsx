@@ -33,7 +33,7 @@ const page = () => {
           mt={6}
           mb={6}
         >
-          <Typography variant="h3" component="h2" mt={3} mb={2}>
+          <Typography variant="h1" mt={3} mb={2}>
             Regulamin Footgolfa
           </Typography>
           <Typography
@@ -69,8 +69,7 @@ const page = () => {
                   <SportsSoccerIcon />
                   <Grid item>
                     <Typography
-                      variant="h5"
-                      component="h4"
+                      variant="h3"
                       sx={{ textAlign: "center", padding: "0 10px" }}
                     >
                       <strong>KOMITET TURNIEJU</strong>
@@ -106,7 +105,7 @@ const page = () => {
                       />
                     </Grid>
                     <Grid item>
-                      <Typography variant="h5">Rafał Bielawa</Typography>
+                      <Typography variant="h4">Rafał Bielawa</Typography>
                     </Grid>
                   </Grid>
                   <Grid
@@ -127,7 +126,7 @@ const page = () => {
                       />
                     </Grid>
                     <Grid item>
-                      <Typography variant="h5">Maciej Gemborys</Typography>
+                      <Typography variant="h4">Maciej Gemborys</Typography>
                     </Grid>
                   </Grid>
                   <Grid
@@ -148,7 +147,7 @@ const page = () => {
                       />
                     </Grid>
                     <Grid item>
-                      <Typography variant="h5">Karol Kusaj</Typography>
+                      <Typography variant="h4">Karol Kusaj</Typography>
                     </Grid>
                   </Grid>
                 </Grid>
@@ -166,8 +165,7 @@ const page = () => {
                   <SportsSoccerIcon />
                   <Grid item>
                     <Typography
-                      variant="h5"
-                      component="h4"
+                      variant="h3"
                       sx={{ textAlign: "center", padding: "0 10px" }}
                     >
                       <strong>FORMUŁA</strong>
@@ -179,12 +177,12 @@ const page = () => {
                   <Divider />
                 </Grid>
                 <Grid container direction="column" sx={{ padding: "0 10px" }}>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     Turniej otwarty dla graczy posiadających licencję
                     Międzynarodowej Federacji Footgolfa (FIFG) rozgrywany na 27
                     dołkach Pola. PAR 36 (3 rundy po 9 dołków).
                   </Typography>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     <strong>
                       Kolejność startów oraz grupy w rundach turniejowych :
                     </strong>
@@ -228,8 +226,7 @@ const page = () => {
                   <SportsSoccerIcon />
                   <Grid item>
                     <Typography
-                      variant="h5"
-                      component="h4"
+                      variant="h3"
                       sx={{ textAlign: "center", padding: "0 10px" }}
                     >
                       <strong>ROZPOCZĘCIE</strong>
@@ -292,8 +289,7 @@ const page = () => {
                   <SportsSoccerIcon />
                   <Grid item>
                     <Typography
-                      variant="h5"
-                      component="h4"
+                      variant="h3"
                       sx={{ textAlign: "center", padding: "0 10px" }}
                     >
                       <strong>ZGŁOSZENIA</strong>
@@ -324,8 +320,7 @@ const page = () => {
                   <SportsSoccerIcon />
                   <Grid item>
                     <Typography
-                      variant="h5"
-                      component="h4"
+                      variant="h3"
                       sx={{ textAlign: "center", padding: "0 10px" }}
                     >
                       <strong>FORMAT: Stroke Play Brutto</strong>
@@ -345,7 +340,7 @@ const page = () => {
                   <Grid item component="li">
                     Punktacja turnieju
                   </Grid>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     Zawodnik otrzymuje punkty według reguły 92% poprzedniej
                     pozycji, gdzie za 1 miejsce można uzyskać 100 punktów:
                   </Typography>
@@ -375,7 +370,7 @@ const page = () => {
                     punktacji tej będą wyłączeni zawodnicy, którzy nie wezmą
                     udziału w żadnej rundzie Ligi Footgolfa 2024.
                   </Grid>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     Punktacja z Mistrzostw Polski zgodna z zasadami rundy
                     turniejowej.
                   </Typography>
@@ -393,8 +388,7 @@ const page = () => {
                   <SportsSoccerIcon />
                   <Grid item>
                     <Typography
-                      variant="h5"
-                      component="h4"
+                      variant="h3"
                       sx={{ textAlign: "center", padding: "0 10px" }}
                     >
                       <strong>KATEGORIE</strong>
@@ -406,7 +400,7 @@ const page = () => {
                   <Divider />
                 </Grid>
                 <Grid item sx={{ padding: "0 10px" }}>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     Oprócz klasyfikacji głównej LIGI FOOTGOLFA będzie
                     przeprowadzona klasyfikacja w następujących kategoriach:
                   </Typography>
@@ -428,7 +422,7 @@ const page = () => {
                       DRUŻYNOWA.
                     </Grid>
                   </Grid>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     Do sklasyfikowania w poszczególnej kategorii potrzebny jest
                     udział w conajmniej:
                   </Typography>
@@ -446,19 +440,19 @@ const page = () => {
                       3 rundach w JUNIOR/JUNIORKA,
                     </Grid>
                   </Grid>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     Natomiast do klasyfikacji w każdej kategorii zaliczane są
                     wszystkie rundy Ligi Footgolfa 2024 oraz z Mistrzostw Polski
                     2024.
                   </Typography>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     W klasyfikacji drużynowej biorą udział zawodnicy
                     reprezentujący dany klub w dniu rozgrywania zawodów. Zgodnie
                     ze zgłoszeniem do turnieju. Dopuszcza się start Zawodnika
                     tylko w jednym Klubie w Lidze FootGolfa 2024.
                   </Typography>
                   <Grid container direction="column" component="ul">
-                    <Typography>
+                    <Typography variant="subtitle1">
                       Do punktacji drużynowej wlicza się sumę punktów zawodników
                       danego klubu ze wszystkich kategorii. Punktuje gracz z
                       najlepszym wynikiem danej drużyny z każdej kategorii
@@ -477,7 +471,7 @@ const page = () => {
                       JUNIOR/JUNIORKA,
                     </Grid>
                   </Grid>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     Do klasyfikacji drużynowej zalicza się punkty ze wszystkich
                     ośmiu rund ligowych. Nie będą wliczane punkty za start w
                     Mistrzostwach Polski 2024.
@@ -496,8 +490,7 @@ const page = () => {
                   <SportsSoccerIcon />
                   <Grid item>
                     <Typography
-                      variant="h5"
-                      component="h4"
+                      variant="h3"
                       sx={{ textAlign: "center", padding: "0 10px" }}
                     >
                       <strong>NAGRODY</strong>
@@ -508,30 +501,36 @@ const page = () => {
                 <Grid item mt={5} mb={5}>
                   <Divider />
                 </Grid>
-                <Typography>
+                <Typography variant="subtitle1">
                   I - Miejsce Puchar Przechodni oraz Dyplom i Tytuł „Mistrza
                   LIGI FOOTGOLFA 2024”
                 </Typography>
-                <Typography>
+                <Typography variant="subtitle1">
                   II - Miejsce: Dyplom i Tytuł „I-Vice- Mistrza LIGI FOOTGOLFA
                   2024”
                 </Typography>
-                <Typography>
+                <Typography variant="subtitle1">
                   III - Miejsce: Dyplom i Tytuł „II-Vice- Mistrza LIGI FOOTGOLFA
                   2024”
                 </Typography>
-                <Typography>
+                <Typography variant="subtitle1">
                   I - Miejsce w kategorii Brutto – Puchar Przechodni Polskiej
                   Federacji FootGolfa oraz Tytuł Mistrza Challenger Ligi
                   FootGolfa 2024
                 </Typography>
-                <Typography>I Miejsce w Kategorii MEN: Statuetka</Typography>
-                <Typography>I Miejsce w Kategorii SENIOR: Statuetka</Typography>
-                <Typography>I Miejsce w Kategorii WOMEN: Statuetka</Typography>
-                <Typography>
+                <Typography variant="subtitle1">
+                  I Miejsce w Kategorii MEN: Statuetka
+                </Typography>
+                <Typography variant="subtitle1">
+                  I Miejsce w Kategorii SENIOR: Statuetka
+                </Typography>
+                <Typography variant="subtitle1">
+                  I Miejsce w Kategorii WOMEN: Statuetka
+                </Typography>
+                <Typography variant="subtitle1">
                   I Miejsce w Kategorii JUNIOR/JUNIORKA: Statuetka
                 </Typography>
-                <Typography>
+                <Typography variant="subtitle1">
                   I Miejsce w Kategorii DRUŻYN: nagroda finansowa 2000 zł oraz
                   Puchar Przechodni
                 </Typography>
@@ -548,8 +547,7 @@ const page = () => {
                   <SportsSoccerIcon />
                   <Grid item>
                     <Typography
-                      variant="h5"
-                      component="h4"
+                      variant="h3"
                       sx={{ textAlign: "center", padding: "0 10px" }}
                     >
                       <strong>WARUNKI</strong>
@@ -560,7 +558,7 @@ const page = () => {
                 <Grid item mt={5} mb={5}>
                   <Divider />
                 </Grid>
-                <Typography sx={{ padding: "0 10px" }}>
+                <Typography variant="subtitle1" sx={{ padding: "0 10px" }}>
                   W dniu rozgrywania zawodów zabronione jest trenowanie na polu,
                   na którym odbywają się zawody. Dopuszcza się przejście po
                   obszarze gry w celu zapoznania się z charakterystyką pola.
@@ -617,8 +615,7 @@ const page = () => {
                   <SportsSoccerIcon />
                   <Grid item>
                     <Typography
-                      variant="h5"
-                      component="h4"
+                      variant="h3"
                       sx={{ textAlign: "center", padding: "0 10px" }}
                     >
                       <strong>ROZSTRZYGNIĘCIA W PRZYPADKU REMISU</strong>
@@ -630,7 +627,7 @@ const page = () => {
                   <Divider />
                 </Grid>
                 <Grid item sx={{ padding: "0 10px" }}>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     O miejscach po rozegraniu 18 dołków, jeśli potrzebne będzie
                     rozstrzygnięcie przy podziale do grup finałowych decyduje
                     kolejno:
@@ -665,7 +662,7 @@ const page = () => {
                   </Grid>
                 </Grid>
                 <Grid item sx={{ padding: "0 10px" }}>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     O miejscach po rozegraniu 27 dołków (klasyfikacja rundy)
                   </Typography>
                 </Grid>
@@ -693,8 +690,8 @@ const page = () => {
                     wyznacza Organizator.
                   </Grid>
                   <Grid item component="ul" sx={{ padding: "0 10px" }}>
-                    <Typography>
-                      o pozostałych miejscach decyduje kolejno:
+                    <Typography variant="subtitle1">
+                      O pozostałych miejscach decyduje kolejno:
                     </Typography>
                     <Grid item component="li">
                       lepszy wynik na ostatnich 9 dołkach,
@@ -713,11 +710,11 @@ const page = () => {
                     </Grid>
                   </Grid>
                   <Grid item>
-                    <Typography>
+                    <Typography variant="subtitle1">
                       Jeśli wynik będzie dalej nierozstrzygnięty punkty z tych
                       miejsc są sumowane i podzielone na tych graczy.
                     </Typography>
-                    <Typography>
+                    <Typography variant="subtitle1">
                       W uzasadnionych przypadkach Komitet Turnieju zastrzega
                       sobie prawo do zmiany tego zapisu.
                     </Typography>
@@ -736,8 +733,7 @@ const page = () => {
                   <SportsSoccerIcon />
                   <Grid item>
                     <Typography
-                      variant="h5"
-                      component="h4"
+                      variant="h3"
                       sx={{ textAlign: "center", padding: "0 10px" }}
                     >
                       <strong>POSTANOWIENIA KOŃCOWE</strong>
@@ -754,7 +750,7 @@ const page = () => {
                   component="ul"
                   sx={{ padding: "0 10px" }}
                 >
-                  <Typography>
+                  <Typography variant="subtitle1">
                     Rejestracja na turniej przez osobę pełnoletnią oznacza, że
                     osoba zapoznała się z:
                   </Typography>
@@ -767,7 +763,7 @@ const page = () => {
                       FootGolfa i akceptuje ich postanowienia,
                     </Grid>
                   </Grid>
-                  <Grid item component="li">
+                  <Grid item>
                     Rejestracja na turniej przez osobę nieletnią oznacza, że
                     rodzic lub opiekun prawny osoby nieletniej zapoznał się z
                     Regulaminem Ligi Footgolfa 2024 i regułami Gry w Footgolfa
@@ -776,11 +772,11 @@ const page = () => {
                     prawidłowość danych zawartych w zgłoszeniu nieletniego i
                     wyraża zgodę na uczestnictwo nieletniego w Turnieju.
                   </Grid>
-                  <Grid item component="li">
+                  <Grid item>
                     W uzasadnionych przypadkach Komitet Turnieju zastrzega sobie
                     prawo do zmian w zapisie tego regulaminu.
                   </Grid>
-                  <Grid item component="li">
+                  <Grid item>
                     Wszystkie kwestie sporne, nie zawarte w tym regulaminie,
                     rozstrzyga Organizator.
                   </Grid>

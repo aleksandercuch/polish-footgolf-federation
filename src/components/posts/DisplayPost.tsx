@@ -78,7 +78,7 @@ const DisplayPost = ({ params }: pageProps) => {
               xs={8}
               mt={6}
             >
-              <Typography variant="h3" component="h2" mt={3} mb={3}>
+              <Typography variant="h1" mt={3} mb={3}>
                 {post.title}
               </Typography>
             </Grid>

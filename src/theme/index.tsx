@@ -35,6 +35,11 @@ const theme: Theme = createTheme({
   components: {
     MuiLink,
   },
+  typography: {
+    subtitle1: {
+      fontSize: "1.5rem",
+    },
+  },
 });
 
 export default theme;
