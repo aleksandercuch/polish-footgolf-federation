@@ -629,8 +629,7 @@ const DisplayPost = ({ params })=>{
                         xs: 8,
                         mt: 6,
                         children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                            variant: "h3",
-                            component: "h2",
+                            variant: "h1",
                             mt: 3,
                             mb: 3,
                             children: post.title
@@ -802,7 +801,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [20,558,173,819,563,689,512,380,913], () => (__webpack_exec__(79474)));
+var __webpack_exports__ = __webpack_require__.X(0, [20,558,173,819,563,689,512,598,913], () => (__webpack_exec__(79474)));
 module.exports = __webpack_exports__;
 
 })();

@@ -30,7 +30,7 @@ const page: FC<pageProps> = ({}) => {
           mt={6}
           mb={6}
         >
-          <Typography variant="h3" component="h2" mt={3} mb={2}>
+          <Typography variant="h1" mt={3} mb={2}>
             Logowanie do Admina
           </Typography>
         </Grid>

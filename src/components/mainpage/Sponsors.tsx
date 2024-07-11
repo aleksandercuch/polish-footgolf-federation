@@ -46,7 +46,7 @@ export const Sponsors = () => {
           sm={8}
           mt={6}
         >
-          <Typography variant="h3" component="h2" mt={3} mb={3}>
+          <Typography variant="h1" mt={3} mb={3}>
             Sponsorzy
           </Typography>
         </Grid>

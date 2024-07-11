@@ -9,6 +9,7 @@ import { UserAuth } from "@/context/auth-context";
 import { Button, Grid, Paper, Typography } from "@mui/material";
 import { convertFirebaseTimestamp } from "@/functions/convert-firebase-timestamp";
 import draftToHtml from "draftjs-to-html";
+import { RawDraftContentState, RawDraftContentBlock } from "draft-js";
 
 // COMPONENTS
 import EditButtons from "./EditButtons";
@@ -20,6 +21,33 @@ import { db } from "../../../firebase/config/clientApp";
 
 // TYPES
 import { pageProps } from "@/app/posts/(post)/[id]/page";
+
+// Function to pre-process the RawDraftContentState
+const preprocessRawContentState = (
+  rawContentState: RawDraftContentState
+): RawDraftContentState => {
+  const modifiedBlocks = rawContentState.blocks.map((block) => {
+    if (block.type === "unstyled" && !block.text.trim()) {
+      return {
+        ...block,
+        text: "\u200B", // Zero-width space character to preserve empty blocks
+      };
+    }
+    return block;
+  });
+
+  return {
+    ...rawContentState,
+    blocks: modifiedBlocks,
+  };
+};
+
+const convertDraftToHtmlWithEmptyBlocks = (
+  description: RawDraftContentState
+): string => {
+  const preprocessedContentState = preprocessRawContentState(description);
+  return draftToHtml(preprocessedContentState);
+};
 
 const DisplayPost = ({ params }: pageProps) => {
   const [post, setPost] = useState<getParams | null>();
@@ -35,7 +63,7 @@ const DisplayPost = ({ params }: pageProps) => {
         if (docSnapshot.exists()) {
           // Document exists, you can access its data using docSnapshot.data()
           const postData = docSnapshot.data();
-
+          console.log(postData.description);
           setPost({
             id: params.id,
             title: postData.title,
@@ -78,7 +106,7 @@ const DisplayPost = ({ params }: pageProps) => {
               xs={8}
               mt={6}
             >
-              <Typography variant="h3" component="h2" mt={3} mb={3}>
+              <Typography variant="h1" mt={3} mb={3}>
                 {post.title}
               </Typography>
             </Grid>
@@ -150,7 +178,9 @@ const DisplayPost = ({ params }: pageProps) => {
                     <Grid item xs={12} sx={{ padding: "0 15px 15px" }}>
                       <div
                         dangerouslySetInnerHTML={{
-                          __html: draftToHtml(post.description),
+                          __html: convertDraftToHtmlWithEmptyBlocks(
+                            post.description
+                          ),
                         }}
                       />
                     </Grid>

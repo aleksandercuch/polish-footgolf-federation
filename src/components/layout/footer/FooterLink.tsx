@@ -1,5 +1,6 @@
 "use client";
 
+import { Typography } from "@mui/material";
 // CORE
 import Link from "next/link";
 
@@ -21,7 +22,7 @@ export const FooterLink = ({ url, name }: Iprops) => {
         textAlign: "center",
       }}
     >
-      {name}
+      <Typography variant="subtitle1">{name}</Typography>
     </Link>
   );
 };

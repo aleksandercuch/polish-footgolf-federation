@@ -538,8 +538,7 @@ const News = ()=>{
                     sm: 8,
                     mt: 6,
                     children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                        variant: "h3",
-                        component: "h2",
+                        variant: "h1",
                         mt: 3,
                         mb: 3,
                         children: "Aktualności"
@@ -796,8 +795,7 @@ const Sponsors = ()=>{
                     sm: 8,
                     mt: 6,
                     children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                        variant: "h3",
-                        component: "h2",
+                        variant: "h1",
                         mt: 3,
                         mb: 3,
                         children: "Sponsorzy"
@@ -936,8 +934,7 @@ const Partners = ()=>{
                     sm: 8,
                     mt: 6,
                     children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                        variant: "h3",
-                        component: "h2",
+                        variant: "h1",
                         mt: 3,
                         mb: 3,
                         children: "Partnerzy"
@@ -1149,7 +1146,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [20,689,380,749], () => (__webpack_exec__(38544)));
+var __webpack_exports__ = __webpack_require__.X(0, [20,689,598,749], () => (__webpack_exec__(38544)));
 module.exports = __webpack_exports__;
 
 })();

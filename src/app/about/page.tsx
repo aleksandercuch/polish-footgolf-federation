@@ -31,7 +31,7 @@ const page: FC<pageProps> = ({}) => {
           mt={6}
           mb={6}
         >
-          <Typography variant="h3" component="h2" mt={3} mb={2}>
+          <Typography variant="h1" mt={3} mb={2}>
             Polska Federacja Footgolfa
           </Typography>
         </Grid>
@@ -60,8 +60,7 @@ const page: FC<pageProps> = ({}) => {
 
                   <Grid item>
                     <Typography
-                      variant="h5"
-                      component="h4"
+                      variant="h3"
                       sx={{ textAlign: "center", padding: "0 10px" }}
                     >
                       <strong>ZARZĄD PFFG</strong>
@@ -97,8 +96,8 @@ const page: FC<pageProps> = ({}) => {
                       />
                     </Grid>
                     <Grid item>
-                      <Typography variant="h5">Rafał Bielawa</Typography>
-                      <Typography variant="h6">Prezes</Typography>
+                      <Typography variant="h4">Rafał Bielawa</Typography>
+                      <Typography variant="h5">Prezes</Typography>
                     </Grid>
                   </Grid>
                   <Grid
@@ -119,8 +118,8 @@ const page: FC<pageProps> = ({}) => {
                       />
                     </Grid>
                     <Grid item>
-                      <Typography variant="h5">Grzegorz Wardowski</Typography>
-                      <Typography variant="h6">Członek Zarządu</Typography>
+                      <Typography variant="h4">Grzegorz Wardowski</Typography>
+                      <Typography variant="h5">Członek Zarządu</Typography>
                     </Grid>
                   </Grid>
                   <Grid
@@ -141,10 +140,10 @@ const page: FC<pageProps> = ({}) => {
                       />
                     </Grid>
                     <Grid item>
-                      <Typography variant="h5">
+                      <Typography variant="h4">
                         Bartłomiej Karasiewicz
                       </Typography>
-                      <Typography variant="h6">Wiceprezes</Typography>
+                      <Typography variant="h5">Wiceprezes</Typography>
                     </Grid>
                   </Grid>
                   <Grid
@@ -165,8 +164,8 @@ const page: FC<pageProps> = ({}) => {
                       />
                     </Grid>
                     <Grid item>
-                      <Typography variant="h5">Karol Kusaj</Typography>
-                      <Typography variant="h6">Członek Zarządu</Typography>
+                      <Typography variant="h4">Karol Kusaj</Typography>
+                      <Typography variant="h5">Członek Zarządu</Typography>
                     </Grid>
                   </Grid>
                 </Grid>
@@ -183,8 +182,7 @@ const page: FC<pageProps> = ({}) => {
                   <SportsSoccerIcon />
                   <Grid item>
                     <Typography
-                      variant="h5"
-                      component="h4"
+                      variant="h3"
                       sx={{ textAlign: "center", padding: "0 10px" }}
                     >
                       <strong>HISTORIA FOOTGOLFA</strong>

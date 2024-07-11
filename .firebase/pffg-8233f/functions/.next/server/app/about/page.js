@@ -450,8 +450,7 @@ const page = ({})=>{
                     mt: 6,
                     mb: 6,
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                        variant: "h3",
-                        component: "h2",
+                        variant: "h1",
                         mt: 3,
                         mb: 2,
                         children: "Polska Federacja Footgolfa"
@@ -492,8 +491,7 @@ const page = ({})=>{
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                        variant: "h5",
-                                                        component: "h4",
+                                                        variant: "h3",
                                                         sx: {
                                                             textAlign: "center",
                                                             padding: "0 10px"
@@ -548,11 +546,11 @@ const page = ({})=>{
                                                             item: true,
                                                             children: [
                                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h5",
+                                                                    variant: "h4",
                                                                     children: "Rafał Bielawa"
                                                                 }),
                                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h6",
+                                                                    variant: "h5",
                                                                     children: "Prezes"
                                                                 })
                                                             ]
@@ -587,11 +585,11 @@ const page = ({})=>{
                                                             item: true,
                                                             children: [
                                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h5",
+                                                                    variant: "h4",
                                                                     children: "Grzegorz Wardowski"
                                                                 }),
                                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h6",
+                                                                    variant: "h5",
                                                                     children: "Członek Zarządu"
                                                                 })
                                                             ]
@@ -626,11 +624,11 @@ const page = ({})=>{
                                                             item: true,
                                                             children: [
                                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h5",
+                                                                    variant: "h4",
                                                                     children: "Bartłomiej Karasiewicz"
                                                                 }),
                                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h6",
+                                                                    variant: "h5",
                                                                     children: "Wiceprezes"
                                                                 })
                                                             ]
@@ -665,11 +663,11 @@ const page = ({})=>{
                                                             item: true,
                                                             children: [
                                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h5",
+                                                                    variant: "h4",
                                                                     children: "Karol Kusaj"
                                                                 }),
                                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h6",
+                                                                    variant: "h5",
                                                                     children: "Członek Zarządu"
                                                                 })
                                                             ]
@@ -696,8 +694,7 @@ const page = ({})=>{
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                        variant: "h5",
-                                                        component: "h4",
+                                                        variant: "h3",
                                                         sx: {
                                                             textAlign: "center",
                                                             padding: "0 10px"
@@ -794,7 +791,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [20,173,380], () => (__webpack_exec__(53626)));
+var __webpack_exports__ = __webpack_require__.X(0, [20,173,598], () => (__webpack_exec__(53626)));
 module.exports = __webpack_exports__;
 
 })();
