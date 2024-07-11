@@ -1,10 +1,10 @@
 {
   "/page": "app/page.js",
   "/about/page": "app/about/page.js",
-  "/add-post/page": "app/add-post/page.js",
   "/admin/page": "app/admin/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/add-post/page": "app/add-post/page.js",
   "/scores/page": "app/scores/page.js",
   "/statue/page": "app/statue/page.js",
-  "/contact/page": "app/contact/page.js",
   "/posts/(post)/[id]/page": "app/posts/(post)/[id]/page.js"
 }

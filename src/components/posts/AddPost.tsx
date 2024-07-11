@@ -57,7 +57,6 @@ export const AddPost = ({ id, title, description, file, date }: IProps) => {
       ? EditorState.createWithContent(convertFromRaw(description))
       : EditorState.createEmpty()
   );
-  const currentUser = UserAuth();
   const router = useRouter();
 
   const form = useForm<postParams>({
@@ -121,6 +120,7 @@ export const AddPost = ({ id, title, description, file, date }: IProps) => {
     } else {
       const storageRef = ref(storage, `postsImages/${data.file.name}`);
 
+      console.log(data.description);
       uploadBytes(storageRef, data.file)
         .then(async (snapshot) => {
           const downloadURL = await getDownloadURL(snapshot.ref);
