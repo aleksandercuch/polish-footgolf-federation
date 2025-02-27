@@ -161,6 +161,7 @@ const page = () => {
                   mt={5}
                   mb={5}
                   ml={5}
+                  sx={{ flexWrap: "nowrap" }}
                 >
                   <SportsSoccerIcon />
                   <Grid item>
@@ -221,7 +222,7 @@ const page = () => {
                   alignItems="center"
                   mt={5}
                   mb={5}
-                  sx={{ padding: "0 10px" }}
+                  sx={{ padding: "0 10px", flexWrap: "nowrap" }}
                 >
                   <SportsSoccerIcon />
                   <Grid item>
@@ -284,7 +285,7 @@ const page = () => {
                   alignItems="center"
                   mt={5}
                   mb={5}
-                  sx={{ padding: "0 10px" }}
+                  sx={{ padding: "0 10px", flexWrap: "nowrap" }}
                 >
                   <SportsSoccerIcon />
                   <Grid item>
@@ -316,6 +317,7 @@ const page = () => {
                   alignItems="center"
                   mt={5}
                   mb={5}
+                  sx={{ flexWrap: "nowrap" }}
                 >
                   <SportsSoccerIcon />
                   <Grid item>
@@ -486,6 +488,7 @@ const page = () => {
                   alignItems="center"
                   mt={5}
                   mb={5}
+                  sx={{ flexWrap: "nowrap" }}
                 >
                   <SportsSoccerIcon />
                   <Grid item>
@@ -543,6 +546,7 @@ const page = () => {
                   alignItems="center"
                   mt={5}
                   mb={5}
+                  sx={{ flexWrap: "nowrap" }}
                 >
                   <SportsSoccerIcon />
                   <Grid item>
@@ -611,6 +615,7 @@ const page = () => {
                   alignItems="center"
                   mt={5}
                   mb={5}
+                  sx={{ flexWrap: "nowrap" }}
                 >
                   <SportsSoccerIcon />
                   <Grid item>
@@ -729,6 +734,7 @@ const page = () => {
                   alignItems="center"
                   mt={5}
                   mb={5}
+                  sx={{ flexWrap: "nowrap" }}
                 >
                   <SportsSoccerIcon />
                   <Grid item>
