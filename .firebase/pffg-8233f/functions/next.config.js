@@ -1,16 +1,16 @@
-/** @type {import('next').NextConfig} */
-const path = require("path");
+"use strict";
 
+// next.config.js
+var path = require("path");
 module.exports = {
   sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
+    includePaths: [path.join(__dirname, "styles")]
   },
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: ["firebasestorage.googleapis.com", "www.gscore.eu"],
+    domains: ["firebasestorage.googleapis.com", "www.gscore.eu"]
   },
   webpack: (config, { isServer }) => {
-    // Add a rule for video files
     config.module.rules.push({
       test: /\.(mp4|webm)$/,
       use: [
@@ -19,17 +19,14 @@ module.exports = {
           options: {
             outputPath: "static/media/",
             publicPath: "/_next/static/media/",
-            name: "[name].[ext]",
-          },
-        },
-      ],
+            name: "[name].[ext]"
+          }
+        }
+      ]
     });
-
-    // If you are using a newer version of Next.js (Next.js 12+), you might need to add this for backward compatibility
     if (!isServer) {
       config.resolve.fallback.fs = false;
     }
-
     return config;
-  },
+  }
 };

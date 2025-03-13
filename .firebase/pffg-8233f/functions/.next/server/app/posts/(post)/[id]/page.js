@@ -316,7 +316,7 @@ module.exports = require("zlib");
 
 /***/ }),
 
-/***/ 79474:
+/***/ 3805:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -359,7 +359,7 @@ const tree = {
         '[id]',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 19771)), "C:\\Users\\Acer\\Documents\\Archiwum\\polish-footgolf-federation\\src\\app\\posts\\(post)\\[id]\\page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 19771)), "C:\\Users\\Acer\\Documents\\Archiwum\\IT\\footgolf\\polish-footgolf-federation\\src\\app\\posts\\(post)\\[id]\\page.tsx"],
           
         }]
       },
@@ -382,13 +382,13 @@ const tree = {
       ]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 55855)), "C:\\Users\\Acer\\Documents\\Archiwum\\polish-footgolf-federation\\src\\app\\layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 55855)), "C:\\Users\\Acer\\Documents\\Archiwum\\IT\\footgolf\\polish-footgolf-federation\\src\\app\\layout.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 95493, 23)), "next/dist/client/components/not-found-error"],
         
       }
       ]
       }.children;
-const pages = ["C:\\Users\\Acer\\Documents\\Archiwum\\polish-footgolf-federation\\src\\app\\posts\\(post)\\[id]\\page.tsx"];
+const pages = ["C:\\Users\\Acer\\Documents\\Archiwum\\IT\\footgolf\\polish-footgolf-federation\\src\\app\\posts\\(post)\\[id]\\page.tsx"];
 
 // @ts-expect-error - replaced by webpack/turbopack loader
 
@@ -420,7 +420,7 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 60265:
+/***/ 81238:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 40940))
@@ -582,6 +582,26 @@ var AddPost = __webpack_require__(16913);
 // FIREBASE
 
 
+// Function to pre-process the RawDraftContentState
+const preprocessRawContentState = (rawContentState)=>{
+    const modifiedBlocks = rawContentState.blocks.map((block)=>{
+        if (block.type === "unstyled" && !block.text.trim()) {
+            return {
+                ...block,
+                text: "​"
+            };
+        }
+        return block;
+    });
+    return {
+        ...rawContentState,
+        blocks: modifiedBlocks
+    };
+};
+const convertDraftToHtmlWithEmptyBlocks = (description)=>{
+    const preprocessedContentState = preprocessRawContentState(description);
+    return draftjs_to_html_default()(preprocessedContentState);
+};
 const DisplayPost = ({ params })=>{
     const [post, setPost] = (0,react_.useState)();
     const [editionActive, setEditionActive] = (0,react_.useState)(false);
@@ -593,6 +613,7 @@ const DisplayPost = ({ params })=>{
             if (docSnapshot.exists()) {
                 // Document exists, you can access its data using docSnapshot.data()
                 const postData = docSnapshot.data();
+                console.log(postData.description);
                 setPost({
                     id: params.id,
                     title: postData.title,
@@ -720,7 +741,7 @@ const DisplayPost = ({ params })=>{
                                         },
                                         children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
                                             dangerouslySetInnerHTML: {
-                                                __html: draftjs_to_html_default()(post.description)
+                                                __html: convertDraftToHtmlWithEmptyBlocks(post.description)
                                             }
                                         })
                                     })
@@ -780,7 +801,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61363);
 
-const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\src\app\posts\(post)\[id]\page.tsx`)
+const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Acer\Documents\Archiwum\IT\footgolf\polish-footgolf-federation\src\app\posts\(post)\[id]\page.tsx`)
 
 // Accessing the __esModule property and exporting $$typeof are required here.
 // The __esModule getter forces the proxy target to create the default export
@@ -801,7 +822,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [20,558,173,819,563,689,512,598,913], () => (__webpack_exec__(79474)));
+var __webpack_exports__ = __webpack_require__.X(0, [20,558,173,819,563,689,512,176,78,913], () => (__webpack_exec__(3805)));
 module.exports = __webpack_exports__;
 
 })();

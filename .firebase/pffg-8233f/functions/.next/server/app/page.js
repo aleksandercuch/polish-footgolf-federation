@@ -316,7 +316,7 @@ module.exports = require("zlib");
 
 /***/ }),
 
-/***/ 38544:
+/***/ 37958:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -350,18 +350,18 @@ const tree = {
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 78159)), "C:\\Users\\Acer\\Documents\\Archiwum\\polish-footgolf-federation\\src\\app\\page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 78159)), "C:\\Users\\Acer\\Documents\\Archiwum\\IT\\footgolf\\polish-footgolf-federation\\src\\app\\page.tsx"],
           
         }]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 55855)), "C:\\Users\\Acer\\Documents\\Archiwum\\polish-footgolf-federation\\src\\app\\layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 55855)), "C:\\Users\\Acer\\Documents\\Archiwum\\IT\\footgolf\\polish-footgolf-federation\\src\\app\\layout.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 95493, 23)), "next/dist/client/components/not-found-error"],
         
       }
       ]
       }.children;
-const pages = ["C:\\Users\\Acer\\Documents\\Archiwum\\polish-footgolf-federation\\src\\app\\page.tsx"];
+const pages = ["C:\\Users\\Acer\\Documents\\Archiwum\\IT\\footgolf\\polish-footgolf-federation\\src\\app\\page.tsx"];
 
 // @ts-expect-error - replaced by webpack/turbopack loader
 
@@ -393,7 +393,19 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 4266:
+/***/ 30032:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 52987, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 50831, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 56926, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 44282, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 16505, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 31232, 23))
+
+/***/ }),
+
+/***/ 7390:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5731))
@@ -520,151 +532,154 @@ const News = ()=>{
     (0,react_.useEffect)(()=>{
         fetchNews();
     }, []);
-    return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
-        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Grid, {
-            container: true,
-            direction: "row",
-            alignItems: "center",
-            justifyContent: "center",
-            children: [
-                /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                    item: true,
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Grid, {
+        container: true,
+        direction: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                item: true,
+                sx: {
+                    textAlign: "center",
+                    background: "linear-gradient(90deg, #5a9628 0%, #005A9C 50%, #5a9628 100%)",
+                    color: "#FFFFFF"
+                },
+                xs: 12,
+                sm: 8,
+                mt: 6,
+                children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                    variant: "h1",
+                    mt: 3,
+                    mb: 3,
+                    children: "Aktualności"
+                })
+            }),
+            posts.length !== 0 ? /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                item: true,
+                xs: 12,
+                children: /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                    container: true,
+                    direction: "row",
+                    alignItems: "stretch",
+                    justifyContent: "center",
                     sx: {
-                        textAlign: "center",
-                        background: "linear-gradient(90deg, #5a9628 0%, #005A9C 50%, #5a9628 100%)",
-                        color: "#FFFFFF"
+                        rowGap: {
+                            xs: 1,
+                            sm: 0
+                        }
                     },
-                    xs: 12,
-                    sm: 8,
-                    mt: 6,
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                        variant: "h1",
-                        mt: 3,
-                        mb: 3,
-                        children: "Aktualności"
-                    })
-                }),
-                posts.length !== 0 ? /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                    item: true,
-                    xs: 12,
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                        container: true,
-                        direction: "row",
-                        alignItems: "stretch",
-                        justifyContent: "center",
-                        sx: {
-                            rowGap: {
-                                xs: 1,
-                                sm: 0
-                            }
-                        },
-                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
-                            children: [
-                                /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                                    item: true,
-                                    xs: 12,
-                                    md: 3,
-                                    sx: {
-                                        margin: "10px 0"
+                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                item: true,
+                                xs: 12,
+                                md: 3,
+                                sx: {
+                                    margin: "10px 0"
+                                },
+                                children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                    href: `posts/${posts[0]?.id}`,
+                                    style: {
+                                        textDecoration: "none"
                                     },
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
-                                        href: `posts/${posts[0]?.id}`,
-                                        style: {
-                                            textDecoration: "none"
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx(node.Paper, {
+                                        sx: {
+                                            height: "100%",
+                                            padding: "10px"
                                         },
-                                        children: /*#__PURE__*/ jsx_runtime_.jsx(node.Paper, {
+                                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Grid, {
+                                            container: true,
+                                            direction: "column",
+                                            alignItems: "flex-start",
+                                            justifyContent: "space-between",
                                             sx: {
-                                                height: "100%",
-                                                padding: "10px"
+                                                height: "inherit"
                                             },
-                                            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Grid, {
-                                                container: true,
-                                                direction: "column",
-                                                alignItems: "flex-start",
-                                                justifyContent: "space-between",
-                                                sx: {
-                                                    height: "inherit"
-                                                },
-                                                children: [
-                                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Grid, {
-                                                        item: true,
-                                                        container: true,
-                                                        direction: "row",
-                                                        children: [
-                                                            /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                                                                item: true,
-                                                                xs: 12,
-                                                                children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                                                    src: posts[0].file && posts[0].file,
-                                                                    alt: "post image",
-                                                                    style: {
-                                                                        width: "100%"
-                                                                    }
-                                                                })
-                                                            }),
-                                                            /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                                                                item: true,
-                                                                xs: 12,
-                                                                children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                                                                    variant: "h4",
-                                                                    component: "h3",
-                                                                    children: truncateString(posts[0]?.title, 55)
-                                                                })
+                                            children: [
+                                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Grid, {
+                                                    item: true,
+                                                    container: true,
+                                                    direction: "row",
+                                                    children: [
+                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                                            item: true,
+                                                            xs: 12,
+                                                            children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                                                                src: posts[0].file && posts[0].file,
+                                                                alt: "post image",
+                                                                style: {
+                                                                    width: "100%"
+                                                                }
                                                             })
-                                                        ]
-                                                    }),
-                                                    /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                                                        item: true,
-                                                        children: posts[0]?.date && /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                                                            variant: "caption",
-                                                            children: dayjs_min_default()((0,convert_firebase_timestamp/* convertFirebaseTimestamp */.f)(posts[0]?.date)).format("DD/MM/YYYY")
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                                            item: true,
+                                                            xs: 12,
+                                                            sx: {
+                                                                padding: "10px 0"
+                                                            },
+                                                            children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                                variant: "h4",
+                                                                component: "h3",
+                                                                children: posts[0]?.title
+                                                            })
                                                         })
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                                    item: true,
+                                                    children: posts[0]?.date && /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                        variant: "caption",
+                                                        children: dayjs_min_default()((0,convert_firebase_timestamp/* convertFirebaseTimestamp */.f)(posts[0]?.date)).format("DD/MM/YYYY")
                                                     })
-                                                ]
-                                            })
+                                                })
+                                            ]
                                         })
                                     })
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                                    item: true,
-                                    xs: 12,
-                                    md: 5,
-                                    sx: {
-                                        display: "flex",
-                                        flexDirection: "column"
-                                    },
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                                        container: true,
+                                })
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                container: true,
+                                item: true,
+                                direction: "row",
+                                alignItems: "stretch",
+                                xs: 12,
+                                md: 5,
+                                children: posts.slice(1).map((post)=>/*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
                                         item: true,
-                                        direction: "row",
-                                        alignItems: "flex-start",
-                                        xs: 12,
-                                        children: posts.slice(1).map((post)=>/*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                                                item: true,
-                                                xs: 6,
-                                                sm: 4,
+                                        xs: 6,
+                                        sm: 4,
+                                        sx: {
+                                            padding: {
+                                                xs: "0",
+                                                sm: "10px"
+                                            }
+                                        },
+                                        children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                            href: `posts/${post.id}`,
+                                            style: {
+                                                textDecoration: "none"
+                                            },
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx(node.Paper, {
                                                 sx: {
-                                                    padding: {
-                                                        xs: "0",
-                                                        sm: "10px"
-                                                    }
+                                                    height: "100%"
                                                 },
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
-                                                    href: `posts/${post.id}`,
-                                                    style: {
-                                                        textDecoration: "none"
+                                                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Grid, {
+                                                    container: true,
+                                                    direction: "row",
+                                                    alignItems: "flex-start",
+                                                    justifyContent: "space-between",
+                                                    sx: {
+                                                        padding: "10px",
+                                                        height: "inherit"
                                                     },
-                                                    children: /*#__PURE__*/ jsx_runtime_.jsx(node.Paper, {
-                                                        sx: {
-                                                            height: "100%"
-                                                        },
-                                                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Grid, {
-                                                            container: true,
-                                                            direction: "column",
-                                                            alignItems: "flex-start",
-                                                            justifyContent: "center",
+                                                    children: [
+                                                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Grid, {
+                                                            item: true,
+                                                            xs: 12,
                                                             sx: {
-                                                                padding: "10px"
+                                                                height: "inherit"
                                                             },
                                                             children: [
                                                                 /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
@@ -673,20 +688,14 @@ const News = ()=>{
                                                                     sx: {
                                                                         position: "relative",
                                                                         width: "100%",
-                                                                        textAlign: "center",
-                                                                        height: {
-                                                                            xs: "100px",
-                                                                            sm: "180px",
-                                                                            md: "120px"
-                                                                        }
+                                                                        textAlign: "center"
                                                                     },
                                                                     children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
                                                                         src: post.file && post.file,
                                                                         alt: "post image",
                                                                         style: {
                                                                             maxWidth: "100%",
-                                                                            height: "auto",
-                                                                            maxHeight: "100px"
+                                                                            height: "auto"
                                                                         }
                                                                     })
                                                                 }),
@@ -694,41 +703,46 @@ const News = ()=>{
                                                                     item: true,
                                                                     xs: 12,
                                                                     children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                                                                        variant: "h6",
+                                                                        variant: "h4",
                                                                         component: "h4",
                                                                         sx: {
-                                                                            minHeight: "64px"
+                                                                            minHeight: "64px",
+                                                                            paddingTop: "10px"
                                                                         },
-                                                                        children: truncateString(post.title, 40)
-                                                                    })
-                                                                }),
-                                                                /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                                                                    item: true,
-                                                                    xs: 12,
-                                                                    children: post?.date && /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                                                                        variant: "caption",
-                                                                        children: dayjs_min_default()((0,convert_firebase_timestamp/* convertFirebaseTimestamp */.f)(post?.date)).format("DD/MM/YYYY")
+                                                                        children: post.title
                                                                     })
                                                                 })
                                                             ]
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                                            item: true,
+                                                            xs: 12,
+                                                            sx: {
+                                                                position: "relative",
+                                                                bottom: "15px"
+                                                            },
+                                                            children: post?.date && /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                                variant: "caption",
+                                                                children: dayjs_min_default()((0,convert_firebase_timestamp/* convertFirebaseTimestamp */.f)(post?.date)).format("DD/MM/YYYY")
+                                                            })
                                                         })
-                                                    })
+                                                    ]
                                                 })
-                                            }, post.id))
-                                    })
-                                })
-                            ]
-                        })
-                    })
-                }) : /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                    item: true,
-                    xs: 12,
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(loader/* FootballLoader */.L, {
-                        fixed: false
+                                            })
+                                        })
+                                    }, post.id))
+                            })
+                        ]
                     })
                 })
-            ]
-        })
+            }) : /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                item: true,
+                xs: 12,
+                children: /*#__PURE__*/ jsx_runtime_.jsx(loader/* FootballLoader */.L, {
+                    fixed: false
+                })
+            })
+        ]
     });
 };
 
@@ -1125,7 +1139,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61363);
 
-const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\src\app\page.tsx`)
+const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Acer\Documents\Archiwum\IT\footgolf\polish-footgolf-federation\src\app\page.tsx`)
 
 // Accessing the __esModule property and exporting $$typeof are required here.
 // The __esModule getter forces the proxy target to create the default export
@@ -1146,7 +1160,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [20,689,598,749], () => (__webpack_exec__(38544)));
+var __webpack_exports__ = __webpack_require__.X(0, [20,689,176,749], () => (__webpack_exec__(37958)));
 module.exports = __webpack_exports__;
 
 })();

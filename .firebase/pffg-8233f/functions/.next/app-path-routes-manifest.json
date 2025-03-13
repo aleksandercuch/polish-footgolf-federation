@@ -1,9 +1,9 @@
 {
   "/page": "/",
-  "/about/page": "/about",
-  "/admin/page": "/admin",
-  "/contact/page": "/contact",
   "/add-post/page": "/add-post",
+  "/about/page": "/about",
+  "/contact/page": "/contact",
+  "/admin/page": "/admin",
   "/scores/page": "/scores",
   "/statue/page": "/statue",
   "/posts/(post)/[id]/page": "/posts/[id]"

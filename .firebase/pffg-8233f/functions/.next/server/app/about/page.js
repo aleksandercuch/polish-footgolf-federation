@@ -316,7 +316,7 @@ module.exports = require("zlib");
 
 /***/ }),
 
-/***/ 53626:
+/***/ 76747:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -353,7 +353,7 @@ const tree = {
         'about',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 41569)), "C:\\Users\\Acer\\Documents\\Archiwum\\polish-footgolf-federation\\src\\app\\about\\page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 41569)), "C:\\Users\\Acer\\Documents\\Archiwum\\IT\\footgolf\\polish-footgolf-federation\\src\\app\\about\\page.tsx"],
           
         }]
       },
@@ -364,13 +364,13 @@ const tree = {
       ]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 55855)), "C:\\Users\\Acer\\Documents\\Archiwum\\polish-footgolf-federation\\src\\app\\layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 55855)), "C:\\Users\\Acer\\Documents\\Archiwum\\IT\\footgolf\\polish-footgolf-federation\\src\\app\\layout.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 95493, 23)), "next/dist/client/components/not-found-error"],
         
       }
       ]
       }.children;
-const pages = ["C:\\Users\\Acer\\Documents\\Archiwum\\polish-footgolf-federation\\src\\app\\about\\page.tsx"];
+const pages = ["C:\\Users\\Acer\\Documents\\Archiwum\\IT\\footgolf\\polish-footgolf-federation\\src\\app\\about\\page.tsx"];
 
 // @ts-expect-error - replaced by webpack/turbopack loader
 
@@ -402,7 +402,7 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 5045:
+/***/ 9020:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 77858))
@@ -519,45 +519,30 @@ const page = ({})=>{
                                             },
                                             gap: 10,
                                             children: [
-                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     container: true,
                                                     justifyItems: "center",
                                                     alignContent: "center",
                                                     direction: "column",
                                                     xs: 12,
+                                                    sm: 3,
                                                     gap: 3,
-                                                    children: [
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
-                                                            item: true,
-                                                            sx: {
-                                                                margin: "auto"
-                                                            },
-                                                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Avatar, {
-                                                                alt: "Remy Sharp",
-                                                                src: "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FRafa%C5%82.jpg?alt=media&token=aa2864de-0789-4d96-9c3e-282546274865",
-                                                                sx: {
-                                                                    width: 150,
-                                                                    height: 150
-                                                                }
+                                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
+                                                        item: true,
+                                                        children: [
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                                variant: "h4",
+                                                                children: "Rafał Bielawa"
+                                                            }),
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                                variant: "h5",
+                                                                children: "Prezes"
                                                             })
-                                                        }),
-                                                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
-                                                            item: true,
-                                                            children: [
-                                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h4",
-                                                                    children: "Rafał Bielawa"
-                                                                }),
-                                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h5",
-                                                                    children: "Prezes"
-                                                                })
-                                                            ]
-                                                        })
-                                                    ]
+                                                        ]
+                                                    })
                                                 }),
-                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     container: true,
                                                     justifyItems: "center",
@@ -566,37 +551,21 @@ const page = ({})=>{
                                                     sm: 3,
                                                     xs: 12,
                                                     gap: 3,
-                                                    children: [
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
-                                                            item: true,
-                                                            sx: {
-                                                                margin: "auto"
-                                                            },
-                                                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Avatar, {
-                                                                alt: "Remy Sharp",
-                                                                src: "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FGrzegorz.jpg?alt=media&token=7a4b0ca8-d151-414b-8c3f-c01149361dd8",
-                                                                sx: {
-                                                                    width: 150,
-                                                                    height: 150
-                                                                }
+                                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
+                                                        item: true,
+                                                        children: [
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                                variant: "h4",
+                                                                children: "Grzegorz Wardowski"
+                                                            }),
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                                variant: "h5",
+                                                                children: "Członek Zarządu"
                                                             })
-                                                        }),
-                                                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
-                                                            item: true,
-                                                            children: [
-                                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h4",
-                                                                    children: "Grzegorz Wardowski"
-                                                                }),
-                                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h5",
-                                                                    children: "Członek Zarządu"
-                                                                })
-                                                            ]
-                                                        })
-                                                    ]
+                                                        ]
+                                                    })
                                                 }),
-                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     container: true,
                                                     justifyItems: "center",
@@ -605,37 +574,21 @@ const page = ({})=>{
                                                     sm: 3,
                                                     xs: 12,
                                                     gap: 3,
-                                                    children: [
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
-                                                            item: true,
-                                                            sx: {
-                                                                margin: "auto"
-                                                            },
-                                                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Avatar, {
-                                                                alt: "Remy Sharp",
-                                                                src: "https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png",
-                                                                sx: {
-                                                                    width: 150,
-                                                                    height: 150
-                                                                }
+                                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
+                                                        item: true,
+                                                        children: [
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                                variant: "h4",
+                                                                children: "Bartłomiej Karasiewicz"
+                                                            }),
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                                variant: "h5",
+                                                                children: "Wiceprezes"
                                                             })
-                                                        }),
-                                                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
-                                                            item: true,
-                                                            children: [
-                                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h4",
-                                                                    children: "Bartłomiej Karasiewicz"
-                                                                }),
-                                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h5",
-                                                                    children: "Wiceprezes"
-                                                                })
-                                                            ]
-                                                        })
-                                                    ]
+                                                        ]
+                                                    })
                                                 }),
-                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
                                                     item: true,
                                                     container: true,
                                                     justifyItems: "center",
@@ -644,35 +597,42 @@ const page = ({})=>{
                                                     sm: 3,
                                                     xs: 12,
                                                     gap: 3,
-                                                    children: [
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
-                                                            item: true,
-                                                            sx: {
-                                                                margin: "auto"
-                                                            },
-                                                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Avatar, {
-                                                                alt: "Remy Sharp",
-                                                                src: "https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FKarol.jpg?alt=media&token=52b5e32a-2071-4b88-bbe5-efe5753679dc",
-                                                                sx: {
-                                                                    width: 150,
-                                                                    height: 150
-                                                                }
+                                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
+                                                        item: true,
+                                                        children: [
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                                variant: "h4",
+                                                                children: "Dominik Socha"
+                                                            }),
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                                variant: "h5",
+                                                                children: "Członek Zarządu"
                                                             })
-                                                        }),
-                                                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
-                                                            item: true,
-                                                            children: [
-                                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h4",
-                                                                    children: "Karol Kusaj"
-                                                                }),
-                                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
-                                                                    variant: "h5",
-                                                                    children: "Członek Zarządu"
-                                                                })
-                                                            ]
-                                                        })
-                                                    ]
+                                                        ]
+                                                    })
+                                                }),
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
+                                                    item: true,
+                                                    container: true,
+                                                    justifyItems: "center",
+                                                    alignContent: "center",
+                                                    direction: "column",
+                                                    sm: 3,
+                                                    xs: 12,
+                                                    gap: 3,
+                                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Grid, {
+                                                        item: true,
+                                                        children: [
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                                variant: "h4",
+                                                                children: "Paweł Sokołowski"
+                                                            }),
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+                                                                variant: "h5",
+                                                                children: "Członek Zarządu"
+                                                            })
+                                                        ]
+                                                    })
                                                 })
                                             ]
                                         })
@@ -770,7 +730,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61363);
 
-const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\src\app\about\page.tsx`)
+const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Acer\Documents\Archiwum\IT\footgolf\polish-footgolf-federation\src\app\about\page.tsx`)
 
 // Accessing the __esModule property and exporting $$typeof are required here.
 // The __esModule getter forces the proxy target to create the default export
@@ -791,7 +751,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [20,173,598], () => (__webpack_exec__(53626)));
+var __webpack_exports__ = __webpack_require__.X(0, [20,173,176,78], () => (__webpack_exec__(76747)));
 module.exports = __webpack_exports__;
 
 })();
