@@ -1,4 +1,4 @@
-// File: C:\Users\Acer\Documents\Archiwum\polish-footgolf-federation\src\app\statue\page.tsx
+// File: C:\Users\Acer\Documents\Archiwum\IT\footgolf\polish-footgolf-federation\src\app\statue\page.tsx
 import * as entry from '../../../../src/app/statue/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
