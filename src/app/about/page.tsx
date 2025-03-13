@@ -86,15 +86,16 @@ const page: FC<pageProps> = ({}) => {
                     alignContent={"center"}
                     direction="column"
                     xs={12}
+                    sm={3}
                     gap={3}
                   >
-                    <Grid item sx={{ margin: "auto" }}>
+                    {/* <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
                         src="https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FRafa%C5%82.jpg?alt=media&token=aa2864de-0789-4d96-9c3e-282546274865"
                         sx={{ width: 150, height: 150 }}
                       />
-                    </Grid>
+                    </Grid> */}
                     <Grid item>
                       <Typography variant="h4">Rafał Bielawa</Typography>
                       <Typography variant="h5">Prezes</Typography>
@@ -110,13 +111,13 @@ const page: FC<pageProps> = ({}) => {
                     xs={12}
                     gap={3}
                   >
-                    <Grid item sx={{ margin: "auto" }}>
+                    {/* <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
                         src="https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FGrzegorz.jpg?alt=media&token=7a4b0ca8-d151-414b-8c3f-c01149361dd8"
                         sx={{ width: 150, height: 150 }}
                       />
-                    </Grid>
+                    </Grid> */}
                     <Grid item>
                       <Typography variant="h4">Grzegorz Wardowski</Typography>
                       <Typography variant="h5">Członek Zarządu</Typography>
@@ -132,13 +133,13 @@ const page: FC<pageProps> = ({}) => {
                     xs={12}
                     gap={3}
                   >
-                    <Grid item sx={{ margin: "auto" }}>
+                    {/* <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
                         src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
                         sx={{ width: 150, height: 150 }}
                       />
-                    </Grid>
+                    </Grid> */}
                     <Grid item>
                       <Typography variant="h4">
                         Bartłomiej Karasiewicz
@@ -156,15 +157,37 @@ const page: FC<pageProps> = ({}) => {
                     xs={12}
                     gap={3}
                   >
-                    <Grid item sx={{ margin: "auto" }}>
+                    {/* <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
                         src="https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FKarol.jpg?alt=media&token=52b5e32a-2071-4b88-bbe5-efe5753679dc"
                         sx={{ width: 150, height: 150 }}
                       />
-                    </Grid>
+                    </Grid> */}
                     <Grid item>
-                      <Typography variant="h4">Karol Kusaj</Typography>
+                      <Typography variant="h4">Dominik Socha</Typography>
+                      <Typography variant="h5">Członek Zarządu</Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid
+                    item
+                    container
+                    justifyItems={"center"}
+                    alignContent={"center"}
+                    direction="column"
+                    sm={3}
+                    xs={12}
+                    gap={3}
+                  >
+                    {/* <Grid item sx={{ margin: "auto" }}>
+                      <Avatar
+                        alt="Remy Sharp"
+                        src="https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FKarol.jpg?alt=media&token=52b5e32a-2071-4b88-bbe5-efe5753679dc"
+                        sx={{ width: 150, height: 150 }}
+                      />
+                    </Grid> */}
+                    <Grid item>
+                      <Typography variant="h4">Paweł Sokołowski</Typography>
                       <Typography variant="h5">Członek Zarządu</Typography>
                     </Grid>
                   </Grid>

@@ -97,13 +97,13 @@ const page = () => {
                     xs={12}
                     gap={3}
                   >
-                    <Grid item sx={{ margin: "auto" }}>
+                    {/* <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
                         src="https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FRafa%C5%82.jpg?alt=media&token=aa2864de-0789-4d96-9c3e-282546274865"
                         sx={{ width: 150, height: 150 }}
                       />
-                    </Grid>
+                    </Grid> */}
                     <Grid item>
                       <Typography variant="h4">Rafał Bielawa</Typography>
                     </Grid>
@@ -118,13 +118,13 @@ const page = () => {
                     xs={12}
                     gap={3}
                   >
-                    <Grid item sx={{ margin: "auto" }}>
+                    {/* <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
                         src="https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FMaciej.jpg?alt=media&token=c885e021-508f-4371-81b3-3621f8a56a5d"
                         sx={{ width: 150, height: 150 }}
                       />
-                    </Grid>
+                    </Grid> */}
                     <Grid item>
                       <Typography variant="h4">Maciej Gemborys</Typography>
                     </Grid>
@@ -139,15 +139,67 @@ const page = () => {
                     xs={12}
                     gap={3}
                   >
-                    <Grid item sx={{ margin: "auto" }}>
+                    {/* <Grid item sx={{ margin: "auto" }}>
                       <Avatar
                         alt="Remy Sharp"
                         src="https://firebasestorage.googleapis.com/v0/b/pffg-8233f.appspot.com/o/members%2FKarol.jpg?alt=media&token=52b5e32a-2071-4b88-bbe5-efe5753679dc"
                         sx={{ width: 150, height: 150 }}
                       />
-                    </Grid>
+                    </Grid> */}
                     <Grid item>
                       <Typography variant="h4">Karol Kusaj</Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid item xs={12}>
+                <Grid
+                  container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center"
+                  mt={5}
+                  mb={5}
+                  ml={5}
+                  sx={{ flexWrap: "nowrap" }}
+                >
+                  <SportsSoccerIcon />
+                  <Grid item>
+                    <Typography
+                      variant="h3"
+                      sx={{ textAlign: "center", padding: "0 10px" }}
+                    >
+                      <strong>CEL ZAWODÓW</strong>
+                    </Typography>
+                  </Grid>
+                  <SportsSoccerIcon />
+                </Grid>
+                <Grid item mt={5} mb={5}>
+                  <Divider />
+                </Grid>
+                <Grid container direction="column" sx={{ padding: "0 10px" }}>
+                  <Grid
+                    item
+                    container
+                    direction="column"
+                    component="ul"
+                    sx={{ padding: "0 10px" }}
+                  >
+                    <Grid item component="li">
+                    Popularyzacja aktywności fizycznej prorodzinnej oraz zdrowego stylu życia dzięki
+                    dyscyplinie sportowej jaką jest FootGolf.
+                    </Grid>
+                    <Grid item component="li">
+                    Wzrost świadomości oraz wyrobienie nawyku systematycznej aktywności fizycznej w życiu
+                    człowieka.
+                    </Grid>
+                    <Grid item component="li">
+                    Propagowanie idei aktywności fizycznej poprzez FootGolf oraz integracji społecznej wśród
+                    mieszkańców Polski i innych krajów.
+                    </Grid>
+                    <Grid item component="li">
+                    Promowanie i utrwalanie zasad „fair play” w społeczeństwie, w szczególności wśród
+                    uczestników zawodów.
                     </Grid>
                   </Grid>
                 </Grid>
@@ -179,11 +231,25 @@ const page = () => {
                 </Grid>
                 <Grid container direction="column" sx={{ padding: "0 10px" }}>
                   <Typography variant="subtitle1">
-                    Turniej otwarty dla graczy posiadających licencję
-                    Międzynarodowej Federacji Footgolfa (FIFG) rozgrywany na 27
-                    dołkach Pola. PAR 36 (3 rundy po 9 dołków).
+                    Turniej otwarty dla graczy posiadających licencję Międzynarodowej Federacji Footgolfa
+                    (FIFG) rozgrywany:
                   </Typography>
-                  <Typography variant="subtitle1">
+                  <Grid
+                    item
+                    container
+                    direction="column"
+                    component="ul"
+                    sx={{ padding: "0 10px" }}
+                  >
+                    <Grid item component="li">
+                    na 27 dołkach pola 9 dołkowego do footgolfa (2 rundy - pierwsza 18 dołków , druga 9
+                      dołków).
+                    </Grid>
+                    <Grid item component="li">
+                    na 18 dołkach pola 18 dołkowego do footgolfa ( 1 runda )
+                    </Grid>
+                  </Grid>
+                  <Typography variant="subtitle1" sx={{mt: 4}}>
                     <strong>
                       Kolejność startów oraz grupy w rundach turniejowych :
                     </strong>
@@ -200,15 +266,14 @@ const page = () => {
                       18 dołków turnieju,
                     </Grid>
                     <Grid item component="li">
-                      po rozegraniu 18 dołków turnieju przeprowadza się
-                      klasyfikację i podział na grupy zgodnie z zajętymi
-                      miejscami oraz rozgrywa się kolejne 9 dołków turnieju.
-                      Zawodnicy w rundzie finałowej turnieju starują w odwrotnej
-                      kolejności do zajętych miejsc w pierwszej rundzie
-                      turnieju,
+                      po rozegraniu 18 dołków turnieju przeprowadza się klasyfikację i podział na grupy
+                      zgodnie z zajętymi miejscami oraz rozgrywa się kolejne 9 dołków turnieju. Zawodnicy
+                      w rundzie finałowej turnieju starują w odwrotnej kolejności do zajętych miejsc w
+                      pierwszej rundzie turnieju. Niniejsze zasady dotyczą tylko zawodów rozgrywanych na
+                      polach 9 -dołkowych.
                     </Grid>
                     <Grid item component="li">
-                      Limit uczestników turnieju – 36 zawodników, decyduje
+                      Limit uczestników turnieju – 72 zawodników, decyduje
                       kolejność zgłoszeń.
                     </Grid>
                   </Grid>
@@ -230,7 +295,7 @@ const page = () => {
                       variant="h3"
                       sx={{ textAlign: "center", padding: "0 10px" }}
                     >
-                      <strong>ROZPOCZĘCIE</strong>
+                      <strong>RUNDY</strong>
                     </Typography>
                   </Grid>
                   <SportsSoccerIcon />
@@ -250,18 +315,30 @@ const page = () => {
                     <a href="https://www.facebook.com/PFFG1">
                       https://www.facebook.com/PFFG1
                     </a>{" "}
-                    <u>od 07.04.2024 r do 29.09.2024</u> r.
+                    oraz <a href="www.pffg.pl">www.pffg.pl</a> w dniach od 13.04.2025 r. do
+                      05.10.2025 r.
                   </Grid>
                   <Grid item component="li">
-                    Liga Footgolfa 2024 składa się z ośmiu rund turniejowych,
+                    Liga Footgolfa 2025 składa się z ośmiu rund turniejowych oraz dwóch rund Otwartych
+                    Mistrzostw Polski w FootGolfie Polish Open 2025.
                   </Grid>
                   <Grid item component="li">
-                    Start każdej rundy - godz. 10:00.
+                    Start godzinowy poszczególnych rund:
+                    <p>1 runda Postołowo – 10:00</p>
+                    <p>2 runda Binowo – 14:00</p>
+                    <p>3 runda Ustronie Morskie – 10:00</p>
+                    <p>4 runda Świdnica – 14:00</p>
+                    <p>5 runda Brzeźno – 10:00</p>
+                    <p>6 runda Lisia Polana – 14:00</p>
+                    <p>7 runda – TBA</p>
+                    <p>8 runda Postołowo – 10:00</p>
                   </Grid>
+                  <Grid item component="li">Zawody 5 rundy Ligi FootGolfa Brzeźno będą jednocześnie zawodami o „Koronę Bolesława
+                  Chrobrego”</ Grid>
                 </Grid>
               </Grid>
               <Grid item xs={12}>
-                <strong>OPŁATY</strong>
+                <strong>OPŁATA STARTOWA</strong>
                 <Grid
                   container
                   direction="column"
@@ -269,12 +346,13 @@ const page = () => {
                   sx={{ padding: "0 10px" }}
                 >
                   <Grid item component="li">
-                    150,00 PLN – osoby dorosłe
+                    160,00 PLN – osoba dorosła/zawody*
                   </Grid>
                   <Grid item component="li">
-                    50,00 PLN – juniorzy ( zawodnik/zawodniczka urodzony/a w
-                    2006 roku lub młodszy)
+                    60,00 PLN – juniorzy ( zawodnik/zawodniczka urodzony/a w 2007 roku lub
+                    młodszy)/zawody*
                   </Grid>
+                  <p>(*) – udział w zawodach tj. jednej z ośmiu rund Ligi FootGolfa</p>
                 </Grid>
               </Grid>
               <Grid item xs={12}>
@@ -302,10 +380,39 @@ const page = () => {
                   <Divider />
                 </Grid>
                 <Grid item>
-                  Przed każdą rundą, na 18 godzin przed startem, poprzez
-                  elektroniczne zgłoszenie na stronie gscore.eu oraz dokonaniem
-                  wpłaty na konto Polskiej Federacji Footgolfa : Numer rachunku
-                  17 1750 0012 0000 0000 3572 6837 lub poprzez gscore.eu.
+                  Przed każdą rundą do 18 godzin przed startem rundy, poprzez elektroniczne zgłoszenie na
+                  stronie gscore.eu Potwierdzeniem udziału jest dokonanie opłaty startowej na konto Polskiej
+                  Federacji Footgolfa numer rachunku BNP PARIBAS 17 1750 0012 0000 0000 3572 6837 .
+                </Grid>
+                <Grid item>
+                  Dokonanie rejestracji na zawody Ligi FootGolfa 2025, wniesienie opłaty startowej i
+                  przystąpienie do startu w zawodach jest równoznaczne z :
+                  <ul>
+                    <li>
+                      oświadczeniem zawodnika, że bierze on udział w zawodach na własną
+                      odpowiedzialność,
+                    </li>
+                    <li>
+                      oświadczeniem zawodnika o zapoznaniu się z Regulaminem Ligi FootGolfa 2025 oraz
+                      zobowiązaniem do jego przestrzegania,
+                    </li>
+                    <li>
+                      zgodą na przetwarzanie swoich danych osobowych przez Polską Federację FootGolfa
+                      jako organizatora zawodów,
+                    </li>
+                    <li>
+                      zgodą na wykorzystanie wizerunku startującego do celów promocyjnych przez PFFG,
+                    </li>
+                    <li>
+                      Osoba startująca w zawodach Ligi FootGolfa 2025 oświadcza, że nie posiada
+                      przeciwskazań zdrowotnych oraz że jest zdolna do udziału w zawodach,
+                    </li>
+                    <li>
+                      Osoba, która nie ukończyła 18 lat do dnia rozpoczęcia zawodów, zostaje
+                      dopuszczona do startu w zawodach pod warunkiem posiadania pisemnej zgody
+                      rodzica lub opiekuna prawnego na udział w zawodach (formularz w załączniku nr 1)
+                    </li>
+                  </ul>
                 </Grid>
               </Grid>
               <Grid item xs={12}>
@@ -363,19 +470,14 @@ const page = () => {
                   <Grid item>XV miejsce - 31 pkt.</Grid>
                   <Grid item component="li">
                     Do punktacji końcowej w klasyfikacji generalnej Ligi
-                    Footgolfa 2024 Stroke Play Brutto zalicza się sumę punktów
+                    Footgolfa 2025 Stroke Play Brutto zalicza się sumę punktów
                     zdobytych w sześciu najlepszych rundach ligowych.
                   </Grid>
                   <Grid item component="li">
-                    Do klasyfikacji generalnej Ligi Footgolfa 2024 będą także
-                    doliczone punkty za start w Mistrzostwach Polski 2024. Z
-                    punktacji tej będą wyłączeni zawodnicy, którzy nie wezmą
-                    udziału w żadnej rundzie Ligi Footgolfa 2024.
+                    Do klasyfikacji generalnej Ligi Footgolfa 2025 będą także doliczone punkty za start w
+                    Otwartych Mistrzostwach Polski w FootGolfie Polish Open 2025. Przyznawanie punktów z
+                    Mistrzostw Polski do Ligi FootGolfa zgodna z zasadami rundy turniejowej.
                   </Grid>
-                  <Typography variant="subtitle1">
-                    Punktacja z Mistrzostw Polski zgodna z zasadami rundy
-                    turniejowej.
-                  </Typography>
                 </Grid>
               </Grid>
               <Grid item xs={12}>
@@ -402,22 +504,21 @@ const page = () => {
                   <Divider />
                 </Grid>
                 <Grid item sx={{ padding: "0 10px" }}>
-                  <Typography variant="subtitle1">
-                    Oprócz klasyfikacji głównej LIGI FOOTGOLFA będzie
-                    przeprowadzona klasyfikacja w następujących kategoriach:
-                  </Typography>
                   <Grid container direction="column" component="ul">
                     <Grid item component="li">
-                      MEN; zawodnicy urodzeni w 1979 roku i młodsi,
+                      klasyfikacja główna/generalna LIGI FOOTGOLFA,
                     </Grid>
                     <Grid item component="li">
-                      SENIOR; zawodnicy urodzeni w 1978 roku i starsi,
+                      MEN; zawodnicy urodzeni w latach 1980 roku do 2006 roku,
                     </Grid>
                     <Grid item component="li">
-                      WOMEN; zawodniczki urodzone w 2005 roku i starsze,
+                      SENIOR; zawodnicy urodzeni w 1979 roku i starsi,
                     </Grid>
                     <Grid item component="li">
-                      JUNIOR/JUNIORKA, zawodnicy/zawodniczki urodzeni w 2006
+                      WOMEN; zawodniczki urodzone w 2006 roku i starsze,
+                    </Grid>
+                    <Grid item component="li">
+                      JUNIOR/JUNIORKA, zawodnicy/zawodniczki urodzeni w 2007
                       roku i młodsi,
                     </Grid>
                     <Grid item component="li">
@@ -444,14 +545,14 @@ const page = () => {
                   </Grid>
                   <Typography variant="subtitle1">
                     Natomiast do klasyfikacji w każdej kategorii zaliczane są
-                    wszystkie rundy Ligi Footgolfa 2024 oraz z Mistrzostw Polski
+                    wszystkie rundy Ligi Footgolfa 2025 oraz z Mistrzostw Polski
                     2024.
                   </Typography>
                   <Typography variant="subtitle1">
                     W klasyfikacji drużynowej biorą udział zawodnicy
                     reprezentujący dany klub w dniu rozgrywania zawodów. Zgodnie
                     ze zgłoszeniem do turnieju. Dopuszcza się start Zawodnika
-                    tylko w jednym Klubie w Lidze FootGolfa 2024.
+                    tylko w jednym Klubie w Lidze FootGolfa 2025.
                   </Typography>
                   <Grid container direction="column" component="ul">
                     <Typography variant="subtitle1">
@@ -476,7 +577,7 @@ const page = () => {
                   <Typography variant="subtitle1">
                     Do klasyfikacji drużynowej zalicza się punkty ze wszystkich
                     ośmiu rund ligowych. Nie będą wliczane punkty za start w
-                    Mistrzostwach Polski 2024.
+                    Mistrzostwach Polski 2025.
                   </Typography>
                 </Grid>
               </Grid>
@@ -505,21 +606,18 @@ const page = () => {
                   <Divider />
                 </Grid>
                 <Typography variant="subtitle1">
-                  I - Miejsce Puchar Przechodni oraz Dyplom i Tytuł „Mistrza
-                  LIGI FOOTGOLFA 2024”
+                  I-Miejsce w klasyfikacji głównej/generalnej - Puchar Przechodni oraz Dyplom i Tytuł
+                  „Mistrza LIGI FOOTGOLFA 2025” oraz bezpłatny udział w Mistrzostwach Polski 2026
                 </Typography>
                 <Typography variant="subtitle1">
-                  II - Miejsce: Dyplom i Tytuł „I-Vice- Mistrza LIGI FOOTGOLFA
-                  2024”
+                  II-Miejsce: Dyplom i Tytuł „I-Vice- Mistrza LIGI FOOTGOLFA 2025”
                 </Typography>
                 <Typography variant="subtitle1">
-                  III - Miejsce: Dyplom i Tytuł „II-Vice- Mistrza LIGI FOOTGOLFA
-                  2024”
+                  III-Miejsce: Dyplom i Tytuł „II-Vice- Mistrza LIGI FOOTGOLFA 2025”
                 </Typography>
                 <Typography variant="subtitle1">
-                  I - Miejsce w kategorii Brutto – Puchar Przechodni Polskiej
-                  Federacji FootGolfa oraz Tytuł Mistrza Challenger Ligi
-                  FootGolfa 2024
+                  I-Miejsce w kategorii Brutto – Puchar Przechodni Polskiej Federacji FootGolfa oraz
+                  Tytuł Mistrza Challenger Ligi FootGolfa 2025
                 </Typography>
                 <Typography variant="subtitle1">
                   I Miejsce w Kategorii MEN: Statuetka
@@ -534,8 +632,8 @@ const page = () => {
                   I Miejsce w Kategorii JUNIOR/JUNIORKA: Statuetka
                 </Typography>
                 <Typography variant="subtitle1">
-                  I Miejsce w Kategorii DRUŻYN: nagroda finansowa 2000 zł oraz
-                  Puchar Przechodni
+                  I Miejsce w Kategorii DRUŻYN: Puchar Przechodni oraz uzyskuje możliwość startu w
+                  kwalifikacjach do klubowych Mistrzostw Świata w 2026 r.
                 </Typography>
               </Grid>
               <Grid item xs={12}>
@@ -633,9 +731,8 @@ const page = () => {
                 </Grid>
                 <Grid item sx={{ padding: "0 10px" }}>
                   <Typography variant="subtitle1">
-                    O miejscach po rozegraniu 18 dołków, jeśli potrzebne będzie
-                    rozstrzygnięcie przy podziale do grup finałowych decyduje
-                    kolejno:
+                    O miejscach po rozegraniu 18 dołków, jeśli potrzebne będzie rozstrzygnięcie przy podziale
+                    do grup finałowych (na polu 9 dołkowym) decyduje kolejno:
                   </Typography>
                 </Grid>
                 <Grid
@@ -668,7 +765,8 @@ const page = () => {
                 </Grid>
                 <Grid item sx={{ padding: "0 10px" }}>
                   <Typography variant="subtitle1">
-                    O miejscach po rozegraniu 27 dołków (klasyfikacja rundy)
+                    O miejscach po rozegraniu 27 dołków (klasyfikacja rundy na polu 9 dołkowym) oraz po 18
+                    dołkach (klasyfikacja rundy na polu 18 dołkowym)
                   </Typography>
                 </Grid>
                 <Grid
@@ -762,29 +860,36 @@ const page = () => {
                   </Typography>
                   <Grid container direction="column" component="ul">
                     <Grid item component="li">
-                      Regulaminem Ligi FootGolfa 2024,
+                      Regulaminem Ligi FootGolfa 2025,
                     </Grid>
                     <Grid item component="li">
-                      Regułami Gry w Footgolfa Międzynarodowej Federacji
-                      FootGolfa i akceptuje ich postanowienia,
+                      Regułami Gry w Footgolfa Międzynarodowej Federacji FootGolfa (FIFG),
+                    </Grid>
+                    <Grid item component="li">
+                      Regulamin rozgrywek WT Międzynarodowej Federacji FootGolfa (FIFG)2025 i
+                      akceptuje ich postanowienia,
                     </Grid>
                   </Grid>
                   <Grid item>
-                    Rejestracja na turniej przez osobę nieletnią oznacza, że
-                    rodzic lub opiekun prawny osoby nieletniej zapoznał się z
-                    Regulaminem Ligi Footgolfa 2024 i regułami Gry w Footgolfa
-                    Międzynarodowej Federacji FootGolfa i akceptuje ich
-                    postanowienia oraz że ponosi odpowiedzialność za
-                    prawidłowość danych zawartych w zgłoszeniu nieletniego i
+                    Rejestracja na turniej przez osobę nieletnią oznacza, że rodzic lub opiekun prawny osoby
+                    nieletniej zapoznał się z Regulaminem Ligi Footgolfa 2025, regułami Gry w Footgolfa
+                    Międzynarodowej Federacji FootGolfa (FIFG) oraz z regulaminem rozgrywek WT
+                  </Grid>
+                  <Grid item>
+                    Międzynarodowej Federacji FootGolfa (FIFG)2025 i akceptuje ich postanowienia oraz że
+                    ponosi odpowiedzialność za prawidłowość danych zawartych w zgłoszeniu nieletniego i
                     wyraża zgodę na uczestnictwo nieletniego w Turnieju.
                   </Grid>
                   <Grid item>
-                    W uzasadnionych przypadkach Komitet Turnieju zastrzega sobie
-                    prawo do zmian w zapisie tego regulaminu.
+                    Organizator nie ponosi odpowiedzialności za szkody powstałe podczas uczestnictwa w
+                    Lidze Footgolfa 2025
                   </Grid>
                   <Grid item>
-                    Wszystkie kwestie sporne, nie zawarte w tym regulaminie,
-                    rozstrzyga Organizator.
+                    W uzasadnionych przypadkach Komitet Turnieju zastrzega sobie prawo do zmian w zapisie
+                    tego regulaminu.
+                  </Grid>
+                  <Grid item>
+                    Wszystkie kwestie sporne, nie zawarte w tym regulaminie, rozstrzyga Organizator.
                   </Grid>
                 </Grid>
               </Grid>
